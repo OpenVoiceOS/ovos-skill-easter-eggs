@@ -24,6 +24,7 @@ from os import listdir
 from os.path import dirname
 import random
 from mycroft.skills.audioservice import AudioService
+from mycroft.util import play_wav
 
 __author__ = 'jarbas'
 
@@ -103,29 +104,30 @@ class EasterEggsSkill(MycroftSkill):
         self.speak_dialog("languages")
 
     def handle_glados_intent(self, message):
-        files = [mp3 for mp3 in listdir(dirname(__file__)+"/sounds/portal") if
+        path = dirname(__file__)+"/sounds/portal"
+        files = [mp3 for mp3 in listdir(path) if
                  ".mp3" in mp3]
         if len(files):
-            mp3 = random.choice(files)
+            mp3 =  path + "/" + random.choice(files)
             self.audio_service.play(mp3)
         else:
             self.speak_dialog("bad_file")
 
     def handle_hal_intent(self, message):
-        files = [mp3 for mp3 in listdir(dirname(__file__)+"/sounds/hal") if
-                 ".mp3" in mp3]
+        path = dirname(__file__) + "/sounds/hal"
+        files = [mp3 for mp3 in listdir(path) if ".mp3" in mp3]
         if len(files):
-            mp3 = random.choice(files)
+            mp3 =  path + "/" + random.choice(files)
             self.audio_service.play(mp3)
         else:
             self.speak_dialog("bad_file")
 
     def handle_dukenukem_intent(self, message):
-        files = [wav for wav in listdir(dirname(__file__) +
-                                        "/sounds/dukenukem") if ".wav" in wav]
+        path = dirname(__file__) + "/sounds/dukenukem"
+        files = [wav for wav in listdir(path) if ".wav" in wav]
         if len(files):
-            wav = random.choice(files)
-            self.audio_service.play(wav)
+            wav = path + "/" + random.choice(files)
+            play_wav(wav)
         else:
             self.speak_dialog("bad_file")
 
