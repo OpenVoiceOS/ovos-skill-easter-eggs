@@ -7,3 +7,4 @@ Some funny things for mycroft
 - laws of robotics
 - how to play rock_paper_scissors_lizard_spock
 - how many languages do you speak
+- are you glados

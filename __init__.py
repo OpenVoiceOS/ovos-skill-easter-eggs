@@ -17,8 +17,13 @@
 
 from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill
+from mycroft.util import play_wav
+
 import datetime
 import re
+from os import listdir
+from os.path import dirname
+import random
 
 __author__ = 'jarbas'
 
@@ -54,6 +59,11 @@ class EasterEggsSkill(MycroftSkill):
         self.register_intent(intent,
                              self.handle_rock_paper_scissors_lizard_spock_intent)
 
+        intent = IntentBuilder("GladosIntent"). \
+            require("GladosKeyword").build()
+        self.register_intent(intent,
+                             self.handle_glados_intent)
+
     def handle_stardate_intent(self, message):
         sd = Stardate().toStardate()
         self.speak_dialog("stardate", {"stardate": sd})
@@ -79,6 +89,15 @@ class EasterEggsSkill(MycroftSkill):
 
     def handle_number_of_languages_intent(self, message):
         self.speak_dialog("languages")
+
+    def handle_glados_intent(self, message):
+        files = [wav for wav in listdir(dirname(__file__)+"/glados") if
+                 ".wav" in wav]
+        if len(files):
+            wav = random.choice(files)
+            play_wav(wav)
+        else:
+            self.speak_dialog("bad_glados")
 
     def stop(self):
         pass
