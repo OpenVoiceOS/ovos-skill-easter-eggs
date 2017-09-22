@@ -55,15 +55,15 @@ class EasterEggsSkill(MycroftSkill):
         self.register_intent(intent,
                              self.handle_robotic_laws_intent)
 
-        intent = IntentBuilder("rock_paper_scissors_lizard_spockIntent"). \
+        intent = IntentBuilder("rock_paper_scissors_lizard_spock_Intent"). \
             require("rock_paper_scissors_lizard_spock_Keyword").build()
         self.register_intent(intent,
                              self.handle_rock_paper_scissors_lizard_spock_intent)
 
-        intent = IntentBuilder("GladosIntent"). \
-            require("GladosKeyword").build()
+        intent = IntentBuilder("PortalIntent"). \
+            require("PortalKeyword").build()
         self.register_intent(intent,
-                             self.handle_glados_intent)
+                             self.handle_portal_intent)
 
         intent = IntentBuilder("DukeNukemIntent"). \
             require("DukeNukemKeyword").build()
@@ -74,6 +74,21 @@ class EasterEggsSkill(MycroftSkill):
             require("HALKeyword").build()
         self.register_intent(intent,
                              self.handle_hal_intent)
+
+        intent = IntentBuilder("BenderIntent"). \
+            require("BenderKeyword").build()
+        self.register_intent(intent,
+                             self.handle_bender_intent)
+
+        intent = IntentBuilder("ArnoldIntent"). \
+            require("ArnoldKeyword").build()
+        self.register_intent(intent,
+                             self.handle_arnold_intent)
+
+        intent = IntentBuilder("GladosIntent"). \
+            require("GladosKeyword").build()
+        self.register_intent(intent,
+                             self.handle_glados_intent)
 
         self.audio_service = AudioService(self.emitter)
 
@@ -103,7 +118,7 @@ class EasterEggsSkill(MycroftSkill):
     def handle_number_of_languages_intent(self, message):
         self.speak_dialog("languages")
 
-    def handle_glados_intent(self, message):
+    def handle_portal_intent(self, message):
         path = dirname(__file__)+"/sounds/portal"
         files = [mp3 for mp3 in listdir(path) if
                  ".mp3" in mp3]
@@ -128,6 +143,33 @@ class EasterEggsSkill(MycroftSkill):
         if len(files):
             wav = path + "/" + random.choice(files)
             play_wav(wav)
+        else:
+            self.speak_dialog("bad_file")
+
+    def handle_arnold_intent(self, message):
+        path = dirname(__file__) + "/sounds/arnold"
+        files = [wav for wav in listdir(path) if ".wav" in wav]
+        if len(files):
+            wav = path + "/" + random.choice(files)
+            play_wav(wav)
+        else:
+            self.speak_dialog("bad_file")
+
+    def handle_bender_intent(self, message):
+        path = dirname(__file__) + "/sounds/bender"
+        files = [mp3 for mp3 in listdir(path) if ".mp3" in mp3]
+        if len(files):
+            mp3 = path + "/" + random.choice(files)
+            self.audio_service.play(mp3)
+        else:
+            self.speak_dialog("bad_file")
+
+    def handle_glados_intent(self, message):
+        path = dirname(__file__) + "/sounds/glados"
+        files = [mp3 for mp3 in listdir(path) if ".mp3" in mp3]
+        if len(files):
+            mp3 = path + "/" + random.choice(files)
+            self.audio_service.play(mp3)
         else:
             self.speak_dialog("bad_file")
 

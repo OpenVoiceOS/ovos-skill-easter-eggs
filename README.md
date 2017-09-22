@@ -10,3 +10,6 @@ Some funny things for mycroft
 - do you like portal
 - what would duke nukem say
 - what would HAL 9000 say
+- what would glados say
+- what would arnold say
+- what would bender say
