@@ -64,6 +64,16 @@ class EasterEggsSkill(MycroftSkill):
         self.register_intent(intent,
                              self.handle_glados_intent)
 
+        intent = IntentBuilder("DukeNukemIntent"). \
+            require("DukeNukemKeyword").build()
+        self.register_intent(intent,
+                             self.handle_dukenukem_intent)
+
+        intent = IntentBuilder("HALIntent"). \
+            require("HALKeyword").build()
+        self.register_intent(intent,
+                             self.handle_hal_intent)
+
         self.audio_service = AudioService(self.emitter)
 
     def handle_stardate_intent(self, message):
@@ -93,13 +103,31 @@ class EasterEggsSkill(MycroftSkill):
         self.speak_dialog("languages")
 
     def handle_glados_intent(self, message):
-        files = [mp3 for mp3 in listdir(dirname(__file__)+"/glados") if
+        files = [mp3 for mp3 in listdir(dirname(__file__)+"/sounds/portal") if
                  ".mp3" in mp3]
         if len(files):
             mp3 = random.choice(files)
             self.audio_service.play(mp3)
         else:
-            self.speak_dialog("bad_glados")
+            self.speak_dialog("bad_file")
+
+    def handle_hal_intent(self, message):
+        files = [mp3 for mp3 in listdir(dirname(__file__)+"/sounds/hal") if
+                 ".mp3" in mp3]
+        if len(files):
+            mp3 = random.choice(files)
+            self.audio_service.play(mp3)
+        else:
+            self.speak_dialog("bad_file")
+
+    def handle_dukenukem_intent(self, message):
+        files = [wav for wav in listdir(dirname(__file__) +
+                                        "/sounds/dukenukem") if ".wav" in wav]
+        if len(files):
+            wav = random.choice(files)
+            self.audio_service.play(wav)
+        else:
+            self.speak_dialog("bad_file")
 
     def stop(self):
         pass
