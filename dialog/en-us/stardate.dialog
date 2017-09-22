@@ -1,0 +1,3 @@
+Stardate {{ stardate }}
+Current Stardate is {{ stardate }}
+Today is Stardate {{ stardate }}
