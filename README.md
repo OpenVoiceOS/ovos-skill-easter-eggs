@@ -1,15 +1,21 @@
-# Easter Eggs skill
+## Easter Eggs
+pop culture references skill
 
-Some funny things for mycroft
+## Description 
+Some funny things for mycroft, mostly quotes from movies
 
-- current stardate
-- open the pod bay doors
-- laws of robotics
-- how to play rock_paper_scissors_lizard_spock
-- how many languages do you speak
-- do you like portal
-- what would duke nukem say
-- what would HAL 9000 say
-- what would glados say
-- what would arnold say
-- what would bender say
+## Examples 
+* "current stardate"
+* "open the pod bay doors"
+* "first law of robotics"
+* "how to play rock_paper_scissors_lizard_spock"
+* "how many languages do you speak"
+* "do you like portal"
+* "what would duke nukem say"
+* "what would HAL 9000 say"
+* "what would arnold say"
+* "what would glados say"
+* "what would bender say"
+
+## Credits 
+JarbasAI
