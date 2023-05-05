@@ -34,7 +34,7 @@ dialog:
 # regex entities, not necessarily filenames
 regex:
   en-us:
-    - "(the|is) (?P<test_skill_testLawOfRobotics>.*) (law of robotic|law of robotics)"
+    - "(the|is) (?P<LawOfRobotics>.*) (law of robotic|law of robotics)"
   de-de:
     - "(the|is) (?P<LawOfRobotics>.*) (law of robotic|law of robotics)"
 
