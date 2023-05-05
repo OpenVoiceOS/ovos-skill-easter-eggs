@@ -35,8 +35,18 @@ class EasterEggsSkill(OVOSSkill):
 
     @intent_handler(IntentBuilder("StardateIntent").require("StardateKeyword").build())
     def handle_stardate_intent(self, _):
-        sd = StarDate().getStardate()
-        self.speak_dialog("stardate", {"stardate": sd})
+        spoken_stardate = self._create_spoken_stardate()
+        self.speak_dialog("stardate", {"stardate": spoken_stardate})
+
+    def _create_spoken_stardate(self):
+        spoken_stardate = ""
+        sd = str(StarDate().getStardate())
+        for x in sd:
+            if x.isnumeric():
+                spoken_stardate += f"{x} "
+            if x == ".":
+                spoken_stardate += "point "
+        return spoken_stardate
 
     @intent_handler(IntentBuilder("PodBayDoorsIntent").require("PodBayDoorsKeyword").build())
     def handle_pod_intent(self, _):
