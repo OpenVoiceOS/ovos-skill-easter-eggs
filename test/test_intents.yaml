@@ -1,0 +1,25 @@
+# Specify intents to test
+# Basic intent match tests only:
+en-us:
+  arnoldkeyword:
+    - arnold say
+    - terminator say
+    - schwarzenegger say
+de-de:
+  arnoldkeyword:
+    - arnold sagen
+    - der terminator sagen
+    - schwarzenegger sagen
+# More to come...just want to make sure I have syntax right for now
+
+# Intent tests with specific vocab/entity extraction tests:
+#lang:
+#  intent_name:
+#    - example_utterance:
+#        - expected_vocab_key: expected_vocab_value
+#        - expected_entity_key: expected_entity_value
+
+# Test phrases that should NOT match any skill intent:
+#unmatched intents:
+#  lang:
+#    - example unmatched utterance

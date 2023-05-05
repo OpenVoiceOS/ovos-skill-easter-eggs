@@ -1,0 +1,57 @@
+# Specify resources to test here.
+
+# Specify languages to be tested
+languages:
+  - "en-us"
+
+# vocab is lowercase .voc file basenames
+vocab:
+  - arnoldkeyword
+  - benderkeyword
+  - dukenukemkeyword
+  - gladoskeyword
+  - halkeyword
+  - languagesyouspeakkeyword
+  - lawkeyword
+  - podbaydoorskeyword
+  - portalkeyword
+  - roboticskeyword
+  - rock_paper_scissors_lizard_spock_keyword
+  - stardatekeyword
+
+# dialog is .dialog file basenames (case-sensitive)
+dialog:
+  - bad_file
+  - languages
+  - pod
+  - rock_paper_scissors_lizard_spock
+  - rule0
+  - rule1
+  - rule2
+  - rule3
+  - stardate
+
+# regex entities, not necessarily filenames
+regex:
+  en-us:
+    - "(the|is) (?P<test_skill_testLawOfRobotics>.*) (law of robotic|law of robotics)"
+  de-de:
+    - "(the|is) (?P<LawOfRobotics>.*) (law of robotic|law of robotics)"
+
+intents:
+  # Padatious intents are the `.intent` file names
+  padatious: []
+
+  # Adapt intents are the names passed to `IntentBuilder`
+  adapt:
+    - StardateIntent
+    - PodBayDoorsIntent
+    - rock_paper_scissors_lizard_spock_Intent
+    - RoboticsLawsIntent
+    - LanguagesYouSpeakIntent
+    - PortalIntent
+    - HALIntent
+    - DukeNukemIntent
+    - ArnoldIntent
+    - BenderIntent
+    - GladosIntent
