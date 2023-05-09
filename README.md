@@ -2,7 +2,8 @@
 
 pop culture references skill
 
-## Description 
+## Description
+
 Some funny things for OpenVoiceOS, mostly quotes from movies
 
 ## Examples
