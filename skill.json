@@ -1,6 +1,6 @@
 {
     "title": "",
-    "url": "https://github.com/mikejgray/skill_easter_eggs",
+    "url": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs",
     "summary": "",
     "short_description": null,
     "description": "Some funny things for OpenVoiceOS, mostly quotes from movies",
@@ -45,8 +45,8 @@
         "JarbasAI",
         "mikejgray (revival)"
     ],
-    "skillname": "skill_easter_eggs",
-    "authorname": "mikejgray",
+    "skillname": "ovos-skill-easter-eggs",
+    "authorname": "OpenVoiceOS",
     "foldername": null,
     "easter eggs": "pop culture references skill"
 }
