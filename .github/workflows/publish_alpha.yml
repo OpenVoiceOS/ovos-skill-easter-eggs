@@ -6,7 +6,7 @@ on:
     branches:
       - dev
     paths-ignore:
-      - "ovos_utils/version.py"
+      - "version.py"
       - "test/**"
       - "examples/**"
       - ".github/**"
@@ -23,7 +23,7 @@ jobs:
     uses: neongeckocom/.github/.github/workflows/propose_semver_release.yml@master
     with:
       release_type: "alpha"
-      version_file: ovos_utils/version.py
+      version_file: version.py
       alpha_var: VERSION_ALPHA
       build_var: VERSION_BUILD
       minor_var: VERSION_MINOR
