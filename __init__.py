@@ -33,13 +33,10 @@ __author__ = "jarbas"
 class EasterEggsSkill(OVOSSkill):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.settings_change_callback = self.on_settings_changed
-        self.on_settings_changed()
-        self.grandma_mode = self.settings.get("grandma_mode_enabled", True)
 
-    def on_settings_changed(self):
-        # Even if the setting has been removed somehow, we will still have a value
-        self.grandma_mode = self.settings.get("grandma_mode_enabled", True)
+    @property
+    def grandma_mode(self):
+        return self.settings.get("grandma_mode_enabled", True)
 
     @intent_handler(IntentBuilder("GrandmaModeIntent").require("GrandmaMode").build())
     def handle_grandma_mode(self, _):
