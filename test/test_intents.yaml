@@ -5,12 +5,20 @@ en-us:
     - arnold say
     - terminator say
     - schwarzenegger say
+  stardatekeyword:
+    - current stardate
+    - current star date
+    - current startdate
+    - current start date
 de-de:
   arnoldkeyword:
     - arnold sagen
     - der terminator sagen
     - schwarzenegger sagen
-# More to come...just want to make sure I have syntax right for now
+  stardatekeyword:
+    - Sternenzeit
+    - Stern Zeit
+# More to come...
 
 # Intent tests with specific vocab/entity extraction tests:
 #lang:
