@@ -1,11 +1,12 @@
 # Changelog
 
-## [0.0.1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.0.1) (2023-05-10)
+## [0.1.0a3](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.0a3) (2023-05-12)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/V0.0.1...0.0.1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/V0.0.1...0.1.0a3)
 
 **Closed issues:**
 
+- \[FEAT\] Grandma mode [\#9](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/9)
 - stardate [\#6](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/6)
 
 ## [V0.0.1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/V0.0.1) (2023-05-09)
