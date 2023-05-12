@@ -1,0 +1,17 @@
+{
+    "skillMetadata": {
+        "sections": [
+            {
+                "name": "Grandma Mode",
+                "fields": [
+                    {
+                        "name": "grandma_mode_enabled",
+                        "type": "checkbox",
+                        "label": "Keep the content classy",
+                        "value": "True"
+                    }
+                ]
+            }
+        ]
+    }
+}

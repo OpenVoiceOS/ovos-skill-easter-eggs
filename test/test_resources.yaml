@@ -18,6 +18,8 @@ vocab:
   - roboticskeyword
   - rock_paper_scissors_lizard_spock_keyword
   - stardatekeyword
+  - adultmode
+  - grandmamode
 
 # dialog is .dialog file basenames (case-sensitive)
 dialog:
@@ -56,3 +58,5 @@ intents:
     - ArnoldIntent
     - BenderIntent
     - GladosIntent
+    - AdultModeIntent
+    - GrandmaModeIntent

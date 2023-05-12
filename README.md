@@ -1,4 +1,4 @@
-## Easter Eggs
+# Easter Eggs
 
 pop culture references skill
 
@@ -19,6 +19,12 @@ Some funny things for OpenVoiceOS, mostly quotes from movies
 - "what would arnold say"
 - "what would glados say"
 - "what would bender say"
+
+## Grandma Mode
+
+This skill has some spicy language options. It starts in grandma mode by default. To disable grandma mode, say "hurt me plenty."
+
+If you want to go back into grandma mode, say "I'm too young to die."
 
 ## Credits
 

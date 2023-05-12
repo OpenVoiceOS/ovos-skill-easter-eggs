@@ -10,6 +10,10 @@ en-us:
     - current star date
     - current startdate
     - current start date
+  adultmode:
+    - hurt me plenty
+  grandmamode:
+    - too young to die
 de-de:
   arnoldkeyword:
     - arnold sagen
@@ -18,6 +22,10 @@ de-de:
   stardatekeyword:
     - Sternenzeit
     - Stern Zeit
+  adultmode:
+    - hurt me plenty
+  grandmamode:
+    - too young to die
 # More to come...
 
 # Intent tests with specific vocab/entity extraction tests:
