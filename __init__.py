@@ -21,7 +21,8 @@ from os import listdir
 from os.path import dirname
 
 from ovos_utils.intents import IntentBuilder
-from ovos_workshop.decorators import intent_handler, skill_api_method
+from mycroft import intent_handler
+from ovos_workshop.decorators import skill_api_method
 from ovos_workshop.skills import OVOSSkill
 
 from .stardate import StarDate
