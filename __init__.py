@@ -22,6 +22,7 @@ from os.path import dirname
 
 from ovos_utils.intents import IntentBuilder
 from mycroft import intent_handler
+from ovos_workshop.decorators import skill_api_method
 from ovos_workshop.skills import OVOSSkill
 
 from .stardate import StarDate
@@ -167,6 +168,6 @@ class EasterEggsSkill(OVOSSkill):
     def stop(self):
         pass
 
-
-def create_skill():
-    return EasterEggsSkill()
+    @skill_api_method
+    def get_display_date(self):
+        return StarDate().getStardate()
