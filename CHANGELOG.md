@@ -1,8 +1,8 @@
 # Changelog
 
-## [0.1.0a3](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.0a3) (2023-05-25)
+## [0.1.0a4](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.0a4) (2023-05-31)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/V0.1.0a3...0.1.0a3)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/V0.1.0a3...0.1.0a4)
 
 **Implemented enhancements:**
 
@@ -24,6 +24,21 @@
 **Closed issues:**
 
 - failed to initialize [\#5](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/5)
+
+## [0.0.1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.0.1) (2023-05-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/e3466f453d59f97089892bf95e63a07a81e10faf...0.0.1)
+
+**Closed issues:**
+
+- "What would bender say?" [\#4](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/4)
+- Vocabs identical  [\#3](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/3)
+
+**Merged pull requests:**
+
+- modernization [\#7](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/7) ([mikejgray](https://github.com/mikejgray))
+- Create rule0.dialog [\#2](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/2) ([WalterKlosse](https://github.com/WalterKlosse))
+- German Translate [\#1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/1) ([gras64](https://github.com/gras64))
 
 
 
