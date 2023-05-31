@@ -1,5 +1,9 @@
 # Changelog
 
+## [V0.1.0a4](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/V0.1.0a4) (2023-05-31)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.0a4...V0.1.0a4)
+
 ## [0.1.0a4](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.0a4) (2023-05-31)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/V0.1.0a3...0.1.0a4)
