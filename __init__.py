@@ -41,12 +41,12 @@ class EasterEggsSkill(OVOSSkill):
 
     @intent_handler(IntentBuilder("GrandmaModeIntent").require("GrandmaMode").build())
     def handle_grandma_mode(self, _):
-        self.grandma_mode = self.settings["grandma_mode_enabled"] = True
+        self.settings["grandma_mode_enabled"] = True
         self.speak("Ok, we'll tone it down a bit.")
 
     @intent_handler(IntentBuilder("AdultModeIntent").require("AdultMode").build())
     def handle_adult_mode(self, _):
-        self.grandma_mode = self.settings["grandma_mode_enabled"] = False
+        self.settings["grandma_mode_enabled"] = False
         self.speak("Do you feel lucky, punk?")
 
     @intent_handler(IntentBuilder("StardateIntent").require("StardateKeyword").build())
