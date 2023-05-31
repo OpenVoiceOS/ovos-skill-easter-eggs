@@ -20,7 +20,7 @@ on:
 
 jobs:
   update_version:
-    uses: neongeckocom/.github/.github/workflows/propose_semver_release.yml@master
+    uses: neongeckocom/.github/.github/workflows/publish_alpha_release.yml@master
     with:
       release_type: "alpha"
       version_file: version.py
