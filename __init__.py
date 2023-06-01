@@ -24,7 +24,6 @@ from ovos_utils.intents import IntentBuilder
 from mycroft import intent_handler
 from ovos_workshop.decorators import skill_api_method
 from ovos_workshop.skills import OVOSSkill
-from ovos_workshop.decorators.killable import killable_event
 
 from .stardate import StarDate
 from .constants import SPICY_SOUNDS
