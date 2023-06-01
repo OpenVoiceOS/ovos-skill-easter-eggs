@@ -51,7 +51,6 @@ class EasterEggsSkill(OVOSSkill):
         self.speak("Do you feel lucky, punk?")
 
     @intent_handler(IntentBuilder("StardateIntent").require("StardateKeyword").build())
-    @killable_event
     def handle_stardate_intent(self, _):
         spoken_stardate = self._create_spoken_stardate()
         self.speak_dialog("stardate", {"stardate": spoken_stardate})
@@ -67,7 +66,6 @@ class EasterEggsSkill(OVOSSkill):
         return spoken_stardate
 
     @intent_handler(IntentBuilder("PodBayDoorsIntent").require("PodBayDoorsKeyword").build())
-    @killable_event
     def handle_pod_intent(self, _):
         self.speak_dialog("pod")
 
@@ -78,7 +76,6 @@ class EasterEggsSkill(OVOSSkill):
         .optionally("LawOfRobotics")
         .build()
     )
-    @killable_event
     def handle_robotic_laws_intent(self, message):
         law = str(message.data.get("LawOfRobotics", "all"))
         if law == "1":
@@ -97,7 +94,6 @@ class EasterEggsSkill(OVOSSkill):
         .require("rock_paper_scissors_lizard_spock_Keyword")
         .build()
     )
-    @killable_event
     def handle_rock_paper_scissors_lizard_spock_intent(self, _):
         self.speak_dialog("rock_paper_scissors_lizard_spock")
 
@@ -106,7 +102,6 @@ class EasterEggsSkill(OVOSSkill):
         self.speak_dialog("languages")
 
     @intent_handler(IntentBuilder("PortalIntent").require("PortalKeyword").build())
-    @killable_event
     def handle_portal_intent(self, _):
         path, files = self.get_reference_files("/sounds/portal", "mp3")
         if len(files):
@@ -124,7 +119,6 @@ class EasterEggsSkill(OVOSSkill):
         return path, files
 
     @intent_handler(IntentBuilder("HALIntent").require("HALKeyword").build())
-    @killable_event
     def handle_hal_intent(self, _):
         path, files = self.get_reference_files("/sounds/hal", "mp3")
         if len(files):
@@ -134,7 +128,6 @@ class EasterEggsSkill(OVOSSkill):
             self.speak_dialog("bad_file")
 
     @intent_handler(IntentBuilder("DukeNukemIntent").require("DukeNukemKeyword").build())
-    @killable_event
     def handle_dukenukem_intent(self, _):
         if not self.grandma_mode:
             path, files = self.get_reference_files("/sounds/dukenukem", "wav")
@@ -147,7 +140,6 @@ class EasterEggsSkill(OVOSSkill):
             self.speak("Duke Who-Kem?")
 
     @intent_handler(IntentBuilder("ArnoldIntent").require("ArnoldKeyword").build())
-    @killable_event
     def handle_arnold_intent(self, _):
         path, files = self.get_reference_files("/sounds/arnold", "wav")
         if len(files):
@@ -157,7 +149,6 @@ class EasterEggsSkill(OVOSSkill):
             self.speak_dialog("bad_file")
 
     @intent_handler(IntentBuilder("BenderIntent").require("BenderKeyword").build())
-    @killable_event
     def handle_bender_intent(self, _):
         path, files = self.get_reference_files("/sounds/bender", "mp3")
         if len(files):
@@ -167,7 +158,6 @@ class EasterEggsSkill(OVOSSkill):
             self.speak_dialog("bad_file")
 
     @intent_handler(IntentBuilder("GladosIntent").require("GladosKeyword").build())
-    @killable_event
     def handle_glados_intent(self, _):
         path, files = self.get_reference_files("/sounds/glados", "mp3")
         if len(files):
