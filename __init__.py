@@ -165,9 +165,6 @@ class EasterEggsSkill(OVOSSkill):
         else:
             self.speak_dialog("bad_file")
 
-    def stop(self):
-        pass
-
     @skill_api_method
     def get_display_date(self):
         return StarDate().getStardate()
