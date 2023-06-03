@@ -1,16 +1,21 @@
 # Changelog
 
-## [Unreleased](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/HEAD)
+## [v0.1.0](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/v0.1.0) (2023-06-03)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/V0.1.0a4...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/V0.1.0a4...v0.1.0)
 
 **Fixed bugs:**
 
 - \[BUG\] "current start date" not picked up by the skill [\#10](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/10)
+- fix: allow settings change [\#17](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/17) ([mikejgray](https://github.com/mikejgray))
+
+**Closed issues:**
+
+- \[FEAT\] Grandma mode [\#9](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/9)
 
 **Merged pull requests:**
 
-- feat: v0.1.0 [\#8](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/8) ([mikejgray](https://github.com/mikejgray))
+- feat: cleanup intents [\#18](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/18) ([mikejgray](https://github.com/mikejgray))
 
 ## [V0.1.0a4](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/V0.1.0a4) (2023-05-31)
 
@@ -24,6 +29,10 @@
 
 - feat - SkillApi [\#15](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/15)
 
+**Merged pull requests:**
+
+- feat: skill api method to get stardate [\#16](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/16) ([mikejgray](https://github.com/mikejgray))
+
 ## [V0.1.0a3](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/V0.1.0a3) (2023-05-12)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/V0.0.1...V0.1.0a3)
@@ -32,6 +41,11 @@
 
 - \[FEAT\] Grandma mode [\#9](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/9)
 - stardate [\#6](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/6)
+
+**Merged pull requests:**
+
+- feat: grandma mode [\#13](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/13) ([mikejgray](https://github.com/mikejgray))
+- fix: current stardate [\#12](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/12) ([mikejgray](https://github.com/mikejgray))
 
 ## [V0.0.1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/V0.0.1) (2023-05-09)
 
