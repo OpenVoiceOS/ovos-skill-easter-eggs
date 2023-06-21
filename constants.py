@@ -1,4 +1,5 @@
 SPICY_SOUNDS = [
+    "sounds/arnold/bullsh.wav",
     "sounds/arnold/bullsh_dont.wav",
     "sounds/arnold/fist.wav",
     "sounds/arnold/no_sh.wav",
