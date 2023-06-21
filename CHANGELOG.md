@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/HEAD)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/v0.1.0...HEAD)
+
+**Fixed bugs:**
+
+- fix: missed one for grandma mode [\#19](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/19) ([mikejgray](https://github.com/mikejgray))
+
 ## [v0.1.0](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/v0.1.0) (2023-06-03)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/V0.1.0a4...v0.1.0)
