@@ -1,12 +1,12 @@
 # Changelog
 
-## [Unreleased](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/HEAD)
+## [0.1.1a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.1a1) (2023-06-22)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/v0.1.0...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/v0.1.0...0.1.1a1)
 
-**Fixed bugs:**
+**Merged pull requests:**
 
-- fix: missed one for grandma mode [\#19](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/19) ([mikejgray](https://github.com/mikejgray))
+- fix: release automation [\#20](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/20) ([mikejgray](https://github.com/mikejgray))
 
 ## [v0.1.0](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/v0.1.0) (2023-06-03)
 
@@ -62,21 +62,6 @@
 **Closed issues:**
 
 - failed to initialize [\#5](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/5)
-
-## [0.0.1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.0.1) (2023-05-09)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/e3466f453d59f97089892bf95e63a07a81e10faf...0.0.1)
-
-**Closed issues:**
-
-- "What would bender say?" [\#4](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/4)
-- Vocabs identical  [\#3](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/3)
-
-**Merged pull requests:**
-
-- modernization [\#7](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/7) ([mikejgray](https://github.com/mikejgray))
-- Create rule0.dialog [\#2](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/2) ([WalterKlosse](https://github.com/WalterKlosse))
-- German Translate [\#1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/1) ([gras64](https://github.com/gras64))
 
 
 
