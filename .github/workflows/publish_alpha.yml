@@ -24,7 +24,7 @@ jobs:
     secrets:
       PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
     with:
-      version_file: "ovos_PHAL_plugin_wifi_setup/version.py"
+      version_file: "version.py"
       publish_prerelease: true
       update_changelog: true
       alpha_var: VERSION_ALPHA
