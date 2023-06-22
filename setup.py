@@ -30,6 +30,30 @@ PLUGIN_ENTRY_POINT = f"{SKILL_NAME}.openvoiceos={SKILL_PKG}:EasterEggsSkill"
 BASE_PATH = path.abspath(path.dirname(__file__))
 
 
+def get_version():
+    """Find the version of the package"""
+    version = None
+    version_file = os.path.join(BASEDIR, "ovos_PHAL_plugin_wifi_setup", "version.py")
+    major, minor, build, alpha = (None, None, None, None)
+    with open(version_file) as f:
+        for line in f:
+            if "VERSION_MAJOR" in line:
+                major = line.split("=")[1].strip()
+            elif "VERSION_MINOR" in line:
+                minor = line.split("=")[1].strip()
+            elif "VERSION_BUILD" in line:
+                build = line.split("=")[1].strip()
+            elif "VERSION_ALPHA" in line:
+                alpha = line.split("=")[1].strip()
+
+            if (major and minor and build and alpha) or "# END_VERSION_BLOCK" in line:
+                break
+    version = f"{major}.{minor}.{build}"
+    if alpha and int(alpha) > 0:
+        version += f"a{alpha}"
+    return version
+
+
 def get_requirements(requirements_filename: str):
     requirements_file = path.join(BASE_PATH, requirements_filename)
     with open(requirements_file, "r", encoding="utf-8") as r:
@@ -63,17 +87,9 @@ def find_resource_files():
 with open(path.join(BASE_PATH, "README.md"), "r") as f:
     long_description = f.read()
 
-with open(path.join(BASE_PATH, "version.py"), "r", encoding="utf-8") as v:
-    for line in v.readlines():
-        if line.startswith("__version__"):
-            if '"' in line:
-                version = line.split('"')[1]
-            else:
-                version = line.split("'")[1]
-
 setup(
     name=f"{SKILL_NAME}",
-    version=version,
+    version=get_version(),
     url=f"https://github.com/OpenVoiceOS/{SKILL_NAME}",
     license="BSD-3-Clause",
     install_requires=get_requirements("requirements.txt"),
