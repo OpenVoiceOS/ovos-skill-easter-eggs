@@ -35,7 +35,7 @@ class StarDate:
         if self.verbose:
             print("Start Date : " + stardateRequested.strftime("%Y-%m-%d %H:%M:%S"))
             print("Origin Date : " + stardateOrigin.strftime("%Y-%m-%d %H:%M:%S"))
-            print("---------------------")
+            print("----------------------")
 
         if self.verbose:
             year = stardateRequested.strftime("%Y")
@@ -50,7 +50,7 @@ class StarDate:
             print("Hour : " + hour)
             print("Minutes : " + minutes)
             print("Seconds : " + seconds)
-            print("---------------------")
+            print("----------------------")
 
         self.stardate = self.to_seconds(stardateRequested) - self.to_seconds(stardateOrigin)
         self.stardate = self.stardate / (60.0 * 60.0 * 24.0 * 0.036525)
@@ -59,16 +59,16 @@ class StarDate:
 
         if self.verbose:
             print("Selection Date - Origin Date = " + str(self.stardate))
-            print("---------------------")
+            print("----------------------")
 
             print("Previous Value / (60.0 * 60.0 * 24.0 * 0.036525) = " + str(self.stardate))
-            print("---------------------")
+            print("----------------------")
 
             print("Floor(Previous Value + 410000.0) = " + str(self.stardate))
-            print("---------------------")
+            print("----------------------")
 
             print("Previous Value / 10.0 = " + str(self.stardate))
-            print("---------------------")
+            print("----------------------")
 
         if self.verbose:
             print()
