@@ -1,40 +1,17 @@
 # pylint: disable=unused-import,missing-docstring,invalid-name
-# Copyright 2016 Mycroft AI, Inc.
-#
-# This file is part of Mycroft Core.
-#
-# Mycroft Core is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# Mycroft Core is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with Mycroft Core.  If not, see <http://www.gnu.org/licenses/>.
-
 import random
 from os import listdir
 from os.path import dirname
 
-from ovos_utils.intents import IntentBuilder
-from mycroft import intent_handler
-from ovos_workshop.decorators import skill_api_method
+from ovos_workshop.intents import IntentBuilder
+from ovos_workshop.decorators import skill_api_method, intent_handler
 from ovos_workshop.skills import OVOSSkill
 
 from .stardate import StarDate
 from .constants import SPICY_SOUNDS
 
-__author__ = "jarbas"
-
 
 class EasterEggsSkill(OVOSSkill):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
     @property
     def grandma_mode(self):
         return self.settings.get("grandma_mode_enabled", True)
