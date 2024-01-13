@@ -50,7 +50,6 @@ intents:
     - pod_bay_doors_intent
     - rock_paper_scissors_lizard_spock_intent
     - robotics_laws_intent
-    - law_intent
     - languages_you_speak_intent
     - portal_intent
     - hal_intent
