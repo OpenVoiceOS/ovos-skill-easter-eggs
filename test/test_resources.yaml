@@ -18,8 +18,8 @@ vocab:
   - robotics_keyword
   - rock_paper_scissors_lizard_spock_keyword
   - stardate_keyword
-  - adult_mode
-  - grandma_mode
+  - adult_mode_keyword
+  - grandma_mode_keyword
 
 # dialog is .dialog file basenames (case-sensitive)
 dialog:
