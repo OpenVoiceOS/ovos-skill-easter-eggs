@@ -1,1 +1,3 @@
 python-dateutil
+ovos-utils~=0.0, >=0.0.38
+ovos_workshop~=0.0, >=0.0.15
