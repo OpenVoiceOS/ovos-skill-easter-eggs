@@ -6,6 +6,7 @@ from os.path import dirname
 from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.decorators import skill_api_method, intent_handler
 from ovos_workshop.skills import OVOSSkill
+from ovos_bus_client.message import Message
 
 from .stardate import StarDate
 from .constants import SPICY_SOUNDS
@@ -138,10 +139,27 @@ class EasterEggsSkill(OVOSSkill):
         path, files = self.get_reference_files("/sounds/glados", "mp3")
         if len(files):
             mp3 = path + "/" + random.choice(files)
-            self.play_audio(mp3)
+            self._play_in_ocp(mp3, title="GlaDOS says...")
         else:
             self.speak_dialog("bad_file")
 
     @skill_api_method
     def get_display_date(self):
         return StarDate().getStardate()
+
+    def _play_in_ocp(self, media, title="Easter Egg!"):
+        data = {
+            "match_confidence": 100,
+            "media_type": 1,  # MediaType.AUDIO
+            "length": 0,
+            "uri": media,
+            "playback": 2,  # PlaybackType.AUDIO
+            "image": "",
+            "bg_image": "",
+            "skill_icon": "",
+            "title": title,
+            "skill_id": self.skill_id,
+        }
+        self.bus.emit(Message(
+            "ovos.common_play.play", {"media": data, "playlist": [data], "disambiguation": [data] }
+        ))
