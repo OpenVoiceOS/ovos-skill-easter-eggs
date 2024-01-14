@@ -153,6 +153,15 @@ class EasterEggsSkill(OVOSSkill):
         else:
             self.speak_dialog("bad_file")
 
+    @intent_handler(IntentBuilder("conan_intent").require("conan_keyword").build())
+    def handle_conan_intent(self, _):
+        path, files = self.get_reference_files("/sounds/conan", "mp3")
+        if len(files):
+            mp3 = path + "/" + random.choice(files)
+            self.play_audio(filename=mp3)
+        else:
+            self.speak_dialog("bad_file")
+
     @skill_api_method
     def get_display_date(self):
         return StarDate().getStardate()

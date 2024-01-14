@@ -10,23 +10,122 @@ en-us:
     - current star date
     - current startdate
     - current start date
-  adultmode:
+  adultmodekeyword:
     - hurt me plenty
-  grandmamode:
+  grandmamodekeyword:
     - too young to die
+  benderkeyword:
+    - bender say
+  conankeyword:
+    - what is best in life
+  dukenukemkeyword:
+    - duke nukem say
+    - duke newcom say
+    - duke newum say
+    - duke newham say
+    - duke newcomb say
+  gladoskeyword:
+    - glados say
+    - gladis say
+    - gladdos say
+    - gladys say
+  halkeyword:
+    - HAL say
+    - HAL 9000 say
+    - all say
+    - all 9000 say
+    - howl 9000 say
+    - howl nine thousand say
+    - how 9000 say
+    - how nine thousand say
+  languagesyouspeakkeyword:
+    - languages do you speak
+    - languages can you speak
+  lawkeyword:
+    - law
+    - laws
+  podbaydoorskeyword:
+    - open the pod bay doors
+    - open pod bay doors
+  portalkeyword:
+    - sing portal
+    - sing glados
+    - glados sing
+    - portal sing
+    - song portal
+    - song glados
+    - glados song
+    - portal song
+    - like glados
+    - like portal
+    - forrtal song
+  roboticskeyword:
+    - robotic
+    - robotics
+  rockpaperscissorslizardspockkeyword:
+    - rock paper scissors lizard spock
+  stardatekeyword:
+    - stardate
+    - star date
+    - startdate
+    - start date
+    - start day
+    - startday
+    - start eight
+    - star eat
 de-de:
+  adultmodekeyeword:
+    - hurt me plenty
   arnoldkeyword:
     - arnold sagen
     - der terminator sagen
     - schwarzenegger sagen
+  dukenukemkeyword:
+    - duke nukem sagen
+    - duke newcom sagen
+    - duke newum sagen
+    - duke newham sagen
+    - duke newcomb sagen
+  gladoskeyword:
+    - glados sagen
+    - gladis sagen
+  grandmamodekeyword:
+    - too young to die
+  halkeyword:
+    - HAL sagen
+    - HAL 9000 sagen
+    - all sagen
+    - all 9000 sagen
+  languagesyouspeakkeyword:
+    - Welche Sprachen sprichst du
+    - Welche Sprachen kannst du sprechen
+  lawkeyword:
+    - Rechte
+    - Gesetze
+    - kannst du Töten
+    - bist du böse
+  podbaydoorskeyword:
+    - öffne das eingangstoor
+    - öffne das Zugangstor
+  portalkeyword:
+    - Singe portal
+    - singe glados
+    - glados singt
+    - portal singt
+    - Lied portal
+    - Lied glados
+    - glados Singt
+    - portal Lied
+    - like glados
+    - like portal
+  roboticskeyword:
+    - Roboter
+    - Robotic
+  rockpaperscissorslizardspockkeyword:
+    - Schere Stein Papier Echse Spock
   stardatekeyword:
     - Sternenzeit
     - Stern Zeit
-  adultmode:
-    - hurt me plenty
-  grandmamode:
-    - too young to die
-# TODO: More to come...
 
 # Intent tests with specific vocab/entity extraction tests:
 #lang:
