@@ -6,20 +6,20 @@ languages:
 
 # vocab is lowercase .voc file basenames
 vocab:
-  - arnoldkeyword
-  - benderkeyword
-  - dukenukemkeyword
-  - gladoskeyword
-  - halkeyword
-  - languagesyouspeakkeyword
-  - lawkeyword
-  - podbaydoorskeyword
-  - portalkeyword
-  - roboticskeyword
+  - arnold_keyword
+  - bender_keyword
+  - duke_nukem_keyword
+  - glados_keyword
+  - hal_keyword
+  - languages_you_speak_keyword
+  - law_keyword
+  - pod_bay_doors_keyword
+  - portal_keyword
+  - robotics_keyword
   - rock_paper_scissors_lizard_spock_keyword
-  - stardatekeyword
-  - adultmode
-  - grandmamode
+  - stardate_keyword
+  - adult_mode_keyword
+  - grandma_mode_keyword
 
 # dialog is .dialog file basenames (case-sensitive)
 dialog:
@@ -35,11 +35,7 @@ dialog:
 
 # regex entities, not necessarily filenames
 regex:
-  []
-  # en-us:
-  #   - "(the|is) (?P<LawOfRobotics>.*) (law of robotic|law of robotics)"
-  # de-de:
-  #   - "(the|is) (?P<LawOfRobotics>.*) (law of robotic|law of robotics)"
+  - LawOfRobotics
 
 intents:
   # Padatious intents are the `.intent` file names
@@ -47,16 +43,16 @@ intents:
 
   # Adapt intents are the names passed to `IntentBuilder`
   adapt:
-    - StardateIntent
-    - PodBayDoorsIntent
-    - rock_paper_scissors_lizard_spock_Intent
-    - RoboticsLawsIntent
-    - LanguagesYouSpeakIntent
-    - PortalIntent
-    - HALIntent
-    - DukeNukemIntent
-    - ArnoldIntent
-    - BenderIntent
-    - GladosIntent
-    - AdultModeIntent
-    - GrandmaModeIntent
+    - stardate_intent
+    - pod_bay_doors_intent
+    - rock_paper_scissors_lizard_spock_intent
+    - robotics_laws_intent
+    - languages_you_speak_intent
+    - portal_intent
+    - hal_intent
+    - duke_nukem_intent
+    - arnold_intent
+    - bender_intent
+    - glados_intent
+    - adult_mode_intent
+    - grandma_mode_intent
