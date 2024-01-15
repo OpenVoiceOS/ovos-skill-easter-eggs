@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2a4](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a4) (2024-01-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a3...0.1.2a4)
+
+**Merged pull requests:**
+
+- chore: standardize naming, move files to locale dir [\#32](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/32) ([mikejgray](https://github.com/mikejgray))
+
 ## [0.1.2a3](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a3) (2024-01-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a2...0.1.2a3)
