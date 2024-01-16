@@ -20,15 +20,7 @@
     "desktopFile": false,
     "warning": "",
     "systemDeps": false,
-    "requirements": {
-        "python": [
-            "ovos-utils~=0.0, >=0.0.38",
-            "ovos_workshop~=0.0, >=0.0.15",
-            "python-dateutil"
-        ],
-        "system": {},
-        "skill": []
-    },
+    "requirements": "Most sounds will play on any device, but longer sounds require OCP to be enabled.",
     "incompatible_skills": [],
     "platforms": [
         "i386",
