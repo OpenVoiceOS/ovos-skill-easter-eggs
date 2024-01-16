@@ -16,7 +16,6 @@ from skill_easter_eggs.constants import SPICY_SOUNDS
 
 @pytest.fixture(scope="session")
 def test_skill(test_skill_id="skill-easter-eggs.openvoiceos", bus=FakeBus()):
-    # TODO: Make sure this is getting the class from the skill directly, for codecov purposes
     # Get test skill
     bus.emitter = bus.ee
     bus.run_forever()
