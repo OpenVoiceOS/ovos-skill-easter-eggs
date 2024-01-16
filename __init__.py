@@ -86,11 +86,7 @@ class EasterEggsSkill(OVOSSkill):
         path, files = self.get_reference_files("sounds/portal", "mp3")
         if len(files):
             mp3 = path + "/" + random.choice(files)
-            if self.ocp:
-                self._play_in_ocp(mp3, title="Portal Easter Egg")
-            else:
-                self.log.warning("OCP not available, playing locally, this is not interruptible so consider enabling OCP")
-                self.play_audio(mp3)
+            self._play_in_ocp(mp3, title="Portal Easter Egg")
         else:
             self.speak_dialog("bad_file")
 
@@ -153,11 +149,7 @@ class EasterEggsSkill(OVOSSkill):
         path, files = self.get_reference_files("sounds/glados", "mp3")
         if len(files):
             mp3 = path + "/" + random.choice(files)
-            if self.ocp:
-                self._play_in_ocp(mp3, title="GlaDOS says...")
-            else:
-                self.log.warning("OCP not available, playing locally, this is not interruptible so consider enabling OCP")
-                self.play_audio(mp3)
+            self._play_in_ocp(mp3, title="GlaDOS says...")
         else:
             self.speak_dialog("bad_file")
 
