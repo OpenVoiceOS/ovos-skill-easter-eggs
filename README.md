@@ -26,10 +26,6 @@ This skill has some spicy language options. It starts in grandma mode by default
 
 If you want to go back into grandma mode, say "I'm too young to die."
 
-## Requirements
-
-Most sounds will play on any device, but longer sounds require OCP to be enabled.
-
 ## Credits
 
 JarbasAI
