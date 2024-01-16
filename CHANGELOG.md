@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.2a5](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a5) (2024-01-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a4...0.1.2a5)
+
+**Implemented enhancements:**
+
+- OCP - portal [\#24](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/24)
+- feat: portal ocp [\#35](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/35) ([mikejgray](https://github.com/mikejgray))
+
 ## [0.1.2a4](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a4) (2024-01-15)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a3...0.1.2a4)
