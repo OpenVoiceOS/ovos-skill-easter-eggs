@@ -1,17 +1,21 @@
 # pylint: disable=unused-import,missing-docstring,invalid-name
 import random
 from os import listdir
-from os.path import dirname
+from os.path import dirname, join
 
 from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.decorators import skill_api_method, intent_handler
 from ovos_workshop.skills import OVOSSkill
+from ovos_bus_client.apis.ocp import OCPInterface
 
-from .stardate import StarDate
-from .constants import SPICY_SOUNDS
+from skill_easter_eggs.stardate import StarDate
+from skill_easter_eggs.constants import SPICY_SOUNDS
 
 
 class EasterEggsSkill(OVOSSkill):
+    def initialize(self):
+        self.ocp = OCPInterface(bus=self.bus)  # pylint: disable=attribute-defined-outside-init
+
     @property
     def grandma_mode(self):
         return self.settings.get("grandma_mode_enabled", True)
@@ -79,24 +83,31 @@ class EasterEggsSkill(OVOSSkill):
 
     @intent_handler(IntentBuilder("portal_intent").require("portal_keyword").build())
     def handle_portal_intent(self, _):
-        path, files = self.get_reference_files("/sounds/portal", "mp3")
+        path, files = self.get_reference_files("sounds/portal", "mp3")
         if len(files):
             mp3 = path + "/" + random.choice(files)
-            self.play_audio(mp3)
+            self._play_in_ocp(mp3, title="Portal Easter Egg")
         else:
             self.speak_dialog("bad_file")
 
-    def get_reference_files(self, path_ending, extension):
-        path = dirname(__file__) + path_ending
+    def get_reference_files(self, path_ending: str, extension: str):
+        """Get a list of files in a directory
+        
+        If grandma mode is enabled, filter out spicy sounds
+        path_ending: str, path to directory, should not start with /
+        extension: str, file extension to filter by
+        """
+        path_ending = path_ending.strip("/")
+        path = join(dirname(__file__), path_ending)
         if self.grandma_mode:
-            files = [sound for sound in listdir(path) if f".{extension}" in sound and sound not in SPICY_SOUNDS]
+            files = [sound for sound in listdir(path) if f".{extension}" in sound and f"{path_ending}/{sound}" not in SPICY_SOUNDS]
         else:
             files = [sound for sound in listdir(path) if f".{extension}" in sound]
         return path, files
 
     @intent_handler(IntentBuilder("hal_intent").require("hal_keyword").build())
     def handle_hal_intent(self, _):
-        path, files = self.get_reference_files("/sounds/hal", "mp3")
+        path, files = self.get_reference_files("sounds/hal", "mp3")
         if len(files):
             mp3 = path + "/" + random.choice(files)
             self.play_audio(mp3)
@@ -106,7 +117,7 @@ class EasterEggsSkill(OVOSSkill):
     @intent_handler(IntentBuilder("duke_nukem_intent").require("duke_nukem_keyword").build())
     def handle_dukenukem_intent(self, _):
         if not self.grandma_mode:
-            path, files = self.get_reference_files("/sounds/dukenukem", "wav")
+            path, files = self.get_reference_files("sounds/dukenukem", "wav")
             if len(files):
                 wav = path + "/" + random.choice(files)
                 self.play_audio(wav)
@@ -117,7 +128,7 @@ class EasterEggsSkill(OVOSSkill):
 
     @intent_handler(IntentBuilder("arnold_intent").require("arnold_keyword").build())
     def handle_arnold_intent(self, _):
-        path, files = self.get_reference_files("/sounds/arnold", "wav")
+        path, files = self.get_reference_files("sounds/arnold", "wav")
         if len(files):
             wav = path + "/" + random.choice(files)
             self.play_audio(wav)
@@ -126,7 +137,7 @@ class EasterEggsSkill(OVOSSkill):
 
     @intent_handler(IntentBuilder("bender_intent").require("bender_keyword").build())
     def handle_bender_intent(self, _):
-        path, files = self.get_reference_files("/sounds/bender", "mp3")
+        path, files = self.get_reference_files("sounds/bender", "mp3")
         if len(files):
             mp3 = path + "/" + random.choice(files)
             self.play_audio(mp3)
@@ -135,13 +146,28 @@ class EasterEggsSkill(OVOSSkill):
 
     @intent_handler(IntentBuilder("glados_intent").require("glados_keyword").build())
     def handle_glados_intent(self, _):
-        path, files = self.get_reference_files("/sounds/glados", "mp3")
+        path, files = self.get_reference_files("sounds/glados", "mp3")
         if len(files):
             mp3 = path + "/" + random.choice(files)
-            self.play_audio(mp3)
+            self._play_in_ocp(mp3, title="GlaDOS says...")
         else:
             self.speak_dialog("bad_file")
 
     @skill_api_method
     def get_display_date(self):
         return StarDate().getStardate()
+
+    def _play_in_ocp(self, media, title="Easter Egg!"):
+        data = {
+            "match_confidence": 100,
+            "media_type": 1,  # MediaType.AUDIO
+            "length": 0,
+            "uri": media,
+            "playback": 2,  # PlaybackType.AUDIO
+            "image": "",
+            "bg_image": "",
+            "skill_icon": "",
+            "title": title,
+            "skill_id": self.skill_id,
+        }
+        self.ocp.play(tracks=[data])

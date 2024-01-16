@@ -92,7 +92,7 @@ setup(
     version=get_version(),
     url=f"https://github.com/OpenVoiceOS/{SKILL_NAME}",
     license="BSD-3-Clause",
-    install_requires=get_requirements("requirements.txt"),
+    install_requires=get_requirements("requirements/requirements.txt"),
     author="Jarbas",
     author_email="jarbas@openvoiceos.com",
     long_description=long_description,
@@ -102,4 +102,5 @@ setup(
     package_data={SKILL_PKG: find_resource_files()},
     include_package_data=True,
     entry_points={"ovos.plugin.skill": PLUGIN_ENTRY_POINT},
+    extras_require={"test": get_requirements("requirements/requirements-dev.txt")}
 )
