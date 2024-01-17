@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.2a6](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a6) (2024-01-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a5...0.1.2a6)
+
+**Implemented enhancements:**
+
+- what is best in life [\#25](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/25)
+- feat: best in life [\#34](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/34) ([mikejgray](https://github.com/mikejgray))
+
 ## [0.1.2a5](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a5) (2024-01-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a4...0.1.2a5)
