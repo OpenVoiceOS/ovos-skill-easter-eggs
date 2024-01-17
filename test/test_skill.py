@@ -33,13 +33,12 @@ def test_skill(test_skill_id="skill-easter-eggs.openvoiceos", bus=FakeBus()):
     shutil.rmtree(join(dirname(__file__), "skill_fs"), ignore_errors=False)
 
 
-@pytest.fixture
+@pytest.fixture(scope="function")
 def reset_skill_mocks(test_skill):
     # Reset mocks before each test
     test_skill.speak.reset_mock()
     test_skill.speak_dialog.reset_mock()
     test_skill.play_audio.reset_mock()
-    yield
 
 
 class TestEasterEggSkill:
@@ -74,7 +73,7 @@ class TestEasterEggSkill:
         # TODO: Fully implement
         assert True
 
-    def test_handle_stardate_intent(self, test_skill):
+    def test_handle_stardate_intent(self, test_skill, reset_skill_mocks):
         test_skill.handle_stardate_intent(None)
         test_skill.speak_dialog.assert_called_once_with(
             "stardate", {"stardate": test_skill._create_spoken_stardate()}
@@ -84,23 +83,23 @@ class TestEasterEggSkill:
         # TODO: Fully implement
         assert True
 
-    def test_handle_pod_intent(self, test_skill):
+    def test_handle_pod_intent(self, test_skill, reset_skill_mocks):
         # TODO: Fully implement
         assert True
 
-    def test_handle_robotic_laws_intent(self, test_skill):
+    def test_handle_robotic_laws_intent(self, test_skill, reset_skill_mocks):
         # TODO: Fully implement
         assert True
 
-    def test_handle_rock_paper_scissors_lizard_spock_intent(self, test_skill):
+    def test_handle_rock_paper_scissors_lizard_spock_intent(self, test_skill, reset_skill_mocks):
         # TODO: Fully implement
         assert True
 
-    def test_handle_number_of_languages_intent(self, test_skill):
+    def test_handle_number_of_languages_intent(self, test_skill, reset_skill_mocks):
         # TODO: Fully implement
         assert True
 
-    def test_handle_portal_intent(self, test_skill):
+    def test_handle_portal_intent(self, test_skill, reset_skill_mocks):
         with patch("skill_easter_eggs.EasterEggsSkill._play_in_ocp") as mock_ocp_play:
             test_skill.handle_portal_intent(None)
             mock_ocp_play.assert_called_once()
@@ -128,25 +127,31 @@ class TestEasterEggSkill:
             ]:
                 assert spicy_arnold in arnold_spicy
 
-    def test_handle_hal_intent(self, test_skill):
+    def test_handle_hal_intent(self, test_skill, reset_skill_mocks):
         # TODO: Fully implement
         assert True
 
-    def test_handle_dukenukem_intent(self, test_skill):
+    def test_handle_dukenukem_intent(self, test_skill, reset_skill_mocks):
         # TODO: Fully implement
         assert True
 
-    def test_handle_handle_arnold_intent(self, test_skill):
+    def test_handle_handle_arnold_intent(self, test_skill, reset_skill_mocks):
         # TODO: Fully implement
         assert True
 
-    def test_handle_bender_intent(self, test_skill):
+    def test_handle_bender_intent(self, test_skill, reset_skill_mocks):
         # TODO: Fully implement
         assert True
 
-    def test_handle_glados_intent(self, test_skill):
+    def test_handle_glados_intent(self, test_skill, reset_skill_mocks):
         # TODO: Fully implement
         assert True
+
+    def test_handle_conan_intent(self, test_skill, reset_skill_mocks):
+        test_skill.handle_conan_intent(None)
+        test_skill.play_audio.assert_called_once()
+        assert "skill_easter_eggs/sounds/conan/" in test_skill.play_audio.call_args.kwargs.get("filename", "")
+        assert test_skill.speak_dialog.called is False
 
     def test_get_display_date(self, test_skill):
         # TODO: Fully implement
