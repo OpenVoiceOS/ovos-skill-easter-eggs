@@ -153,6 +153,18 @@ class TestEasterEggSkill:
         assert "skill_easter_eggs/sounds/conan/" in test_skill.play_audio.call_args.kwargs.get("filename", "")
         assert test_skill.speak_dialog.called is False
 
+    def test_handle_bill_and_ted_intent(self, test_skill, reset_skill_mocks):
+        test_skill.handle_bill_and_ted_intent(None)
+        test_skill.play_audio.assert_called_once()
+        assert "skill_easter_eggs/sounds/billandted/" in test_skill.play_audio.call_args.kwargs.get("filename", "")
+        assert test_skill.speak_dialog.called is False
+
+    def test_handle_malibu_stacey_intent(self, test_skill, reset_skill_mocks):
+        test_skill.handle_malibu_stacey_intent(None)
+        test_skill.play_audio.assert_called_once()
+        assert "skill_easter_eggs/sounds/malibustacey/" in test_skill.play_audio.call_args.kwargs.get("filename", "")
+        assert test_skill.speak_dialog.called is False
+
     def test_get_display_date(self, test_skill):
         # TODO: Fully implement
         assert True
