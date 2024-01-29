@@ -15,7 +15,10 @@
         "What would HAL 9000 say?",
         "What would Arnold say?",
         "What would GLaDOS say?",
-        "What would Bender say?"
+        "What would Bender say?",
+        "What would Malibu Stacey say?",
+        "You know the best band in the world? Wyld Stallions?",
+        "Sing me a song"
     ],
     "desktopFile": false,
     "warning": "",
@@ -45,8 +48,8 @@
     "categories": [],
     "tags": [],
     "credits": [
-        "JarbasAI",
-        "mikejgray (revival)"
+        "- JarbasAI",
+        "- mikejgray (revival)"
     ],
     "skillname": "ovos-skill-easter-eggs",
     "authorname": "OpenVoiceOS",
