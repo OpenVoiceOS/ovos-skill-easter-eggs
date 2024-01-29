@@ -74,6 +74,9 @@ en-us:
     - what would malibu stacy do
     - what wood malley boo stay see do
     - what wood malla boo stay see do
+  singkeyword:
+    - sing
+    - sing me a song
 de-de:
   adult_mode_intent:
     - hurt me plenty

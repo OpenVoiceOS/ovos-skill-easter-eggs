@@ -180,6 +180,33 @@ class EasterEggsSkill(OVOSSkill):
         else:
             self.speak_dialog("bad_file")
 
+    @intent_handler(IntentBuilder("sing_intent").require("sing_keyword").build())
+    def handle_sing_intent(self, _):
+        if not self._sounds_like_popey():
+            self.speak_dialog("too_shy")
+            return
+        self.speak_dialog("sing")
+        path, files = self.get_reference_files("sounds/sing", "mp3")
+        if len(files):
+            mp3 = path + "/" + random.choice(files)
+            self.play_audio(filename=mp3)
+        else:
+            self.speak_dialog("bad_file")
+
+    def _sounds_like_popey(self):
+        tts = self.config_core.get("tts")
+        if "mimic" in tts.get("module", "").lower():
+            return True
+        for k, v in tts.items():
+            if isinstance(v, dict):
+                if "alan" in v.get("voice", "") and tts.get("module", "") == k:
+                    return True
+                if "ap" in v.get("voice", "") and tts.get("module", "") == k:
+                    return True
+                if "alan" in v.get("model", "") and tts.get("module", "") == k:
+                    return True
+        return False
+
     @skill_api_method
     def get_display_date(self):
         return StarDate().getStardate()
@@ -198,3 +225,7 @@ class EasterEggsSkill(OVOSSkill):
             "skill_id": self.skill_id,
         }
         self.ocp.play(tracks=[data])
+
+if __name__ == "__main__":
+    from ovos_utils.fakebus import FakeBus
+    EasterEggsSkill(bus=FakeBus(), skill_id="skill_easter_eggs.test")

@@ -165,6 +165,43 @@ class TestEasterEggSkill:
         assert "skill_easter_eggs/sounds/malibustacey/" in test_skill.play_audio.call_args.kwargs.get("filename", "")
         assert test_skill.speak_dialog.called is False
 
+    def test_sounds_like_popey(self, test_skill):
+        config = {
+            "tts": {
+            "module": "neon-tts-plugin-coqui-remote",
+            "fallback_module": "coqui",
+            "ovos-tts-plugin-mimic": {
+                "voice": "ap"
+            },
+            "neon-tts-plugin-larynx-server": {
+                "host": "https://larynx.2022.us"
+            },
+            "mozilla_remote": {
+                "api_url": "https://mtts.2022.us/api/tts"
+            },
+            "ovos-tts-plugin-piper": {
+                "voice": "alan-low"
+            }
+            }
+        }
+        # Test if we don't sound like Popey at all
+        test_skill.config_core = config
+        assert test_skill._sounds_like_popey() is False
+        # Test if "alan" is the voice name
+        config["tts"]["module"] = "ovos-tts-plugin-piper"
+        test_skill.config_core = config
+        assert test_skill._sounds_like_popey() is True
+        # Test if "mimic" is in the module name
+        config["tts"]["module"] = "ovos-tts-plugin-mimic"
+        test_skill.config_core = config
+        assert test_skill._sounds_like_popey() is True
+
+    def test_handle_sing_intent(self, test_skill, reset_skill_mocks):  # TODO: Expand
+        test_skill.handle_sing_intent(None)
+        test_skill.play_audio.assert_called_once()
+        assert "skill_easter_eggs/sounds/sing/" in test_skill.play_audio.call_args.kwargs.get("filename", "")
+        test_skill.speak_dialog.assert_called_once_with("sing")
+
     def test_get_display_date(self, test_skill):
         # TODO: Fully implement
         assert True
