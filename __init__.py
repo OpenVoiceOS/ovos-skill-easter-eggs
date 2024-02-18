@@ -162,6 +162,24 @@ class EasterEggsSkill(OVOSSkill):
         else:
             self.speak_dialog("bad_file")
 
+    @intent_handler(IntentBuilder("bill_and_ted_intent").require("bill_and_ted_keyword").build())
+    def handle_bill_and_ted_intent(self, _):
+        path, files = self.get_reference_files("sounds/billandted", "mp3")
+        if len(files):
+            mp3 = path + "/" + random.choice(files)
+            self.play_audio(filename=mp3)
+        else:
+            self.speak_dialog("bad_file")
+
+    @intent_handler(IntentBuilder("malibu_stacey_intent").require("malibu_stacey_keyword").build())
+    def handle_malibu_stacey_intent(self, _):
+        path, files = self.get_reference_files("sounds/malibustacey", "mp3")
+        if len(files):
+            mp3 = path + "/" + random.choice(files)
+            self.play_audio(filename=mp3)
+        else:
+            self.speak_dialog("bad_file")
+
     @skill_api_method
     def get_display_date(self):
         return StarDate().getStardate()

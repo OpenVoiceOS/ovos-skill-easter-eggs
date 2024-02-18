@@ -21,6 +21,8 @@ vocab:
   - adult_mode_keyword
   - grandma_mode_keyword
   - conan_keyword
+  - bill_and_ted_keyword
+  - malibu_stacey_keyword
 
 # dialog is .dialog file basenames (case-sensitive)
 dialog:
@@ -58,3 +60,5 @@ intents:
     - adult_mode_intent
     - grandma_mode_intent
     - conan_intent
+    - bill_and_ted_intent
+    - malibu_stacey_intent
