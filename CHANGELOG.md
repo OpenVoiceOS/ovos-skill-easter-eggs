@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2a7](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a7) (2024-02-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a6...0.1.2a7)
+
+**Merged pull requests:**
+
+- feat: malibu stacey and bill and ted easter eggs [\#37](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/37) ([mikejgray](https://github.com/mikejgray))
+
 ## [0.1.2a6](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a6) (2024-01-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a5...0.1.2a6)
