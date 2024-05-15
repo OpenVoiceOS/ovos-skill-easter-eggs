@@ -1,0 +1,31 @@
+{
+    "/dialog/rock_paper_scissors_lizard_spock.dialog": [
+        "Scissors cut paper, Paper covers rock, Rock crushes lizard, Lizard poisons Spock, Spock smashes scissors, Scissors decapitate lizard, Lizard eats paper, Paper disproves Spock, Spock vaporizes rock, Rock crushes scissors"
+    ],
+    "/dialog/stardate.dialog": [
+        "Stardate { stardate }",
+        "Current Stardate is { stardate }",
+        "Today is Stardate { stardate }"
+    ],
+    "/dialog/pod.dialog": [
+        "I'm sorry Dave, I'm afraid i can't do that"
+    ],
+    "/dialog/rule3.dialog": [
+        "A robot may not injure a human being or, through inaction, allow a human being to come to harm. A robot must obey the orders given it by human beings except where such orders would conflict with the First Law. A robot must protect its own existence as long as such protection does not conflict with the First or Second Laws."
+    ],
+    "/dialog/rule1.dialog": [
+        "A robot may not injure a human being or, through inaction, allow a human being to come to harm."
+    ],
+    "/dialog/bad_file.dialog": [
+        "could not open soundfile"
+    ],
+    "/dialog/languages.dialog": [
+        "I mastered six million forms of communication"
+    ],
+    "/dialog/rule2.dialog": [
+        "A robot must obey the orders given it by human beings except where such orders would conflict with the First Law."
+    ],
+    "/dialog/rule0.dialog": [
+        "A robot may not injure humanity, or, by inaction, allow humanity to come to harm."
+    ]
+}

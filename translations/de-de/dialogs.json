@@ -1,0 +1,28 @@
+{
+    "/dialog/rock_paper_scissors_lizard_spock.dialog": [
+        "Schere schneidet Papier, Papier deckt Stein zu, Stein zerdr\u00fcckt Eidechse, Eidechse spuckt Gift auf Spock, Spock zerschmettert Schere, Schere enthauptet Eidechse, Eidechse isst Papier, Papier widerlegt Spock, Spock verdampft Stein, Stein zerdr\u00fcckt Schere"
+    ],
+    "/dialog/stardate.dialog": [
+        "Sternenzeit { stardate }",
+        "Der aktulle Sternenzeit ist { stardate }",
+        "Heute ist Sternenzeit { stardate }"
+    ],
+    "/dialog/pod.dialog": [
+        "Es tut mir leid Dave, ich f\u00fcrchte, das kann ich nicht"
+    ],
+    "/dialog/rule3.dialog": [
+        "Ein Roboter darf einen Menschen nicht verletzen oder durch Unt\u00e4tigkeit einen Menschen dazu bringen, zu Schaden zu kommen. Ein Roboter muss den Befehlen des Menschen gehorchen, au\u00dfer wenn solche Befehle mit dem Ersten Gesetz in Konflikt geraten. Ein Roboter muss seine eigene Existenz sch\u00fctzen, solange dieser Schutz nicht im Widerspruch zu den ersten oder zweiten Gesetzen steht."
+    ],
+    "/dialog/rule1.dialog": [
+        "Ein Roboter darf einen Menschen nicht verletzen oder durch Unt\u00e4tigkeit einen Menschen dazu bringen, zu Schaden zu kommen."
+    ],
+    "/dialog/bad_file.dialog": [
+        "konnte keine Sounddatei \u00f6ffnen"
+    ],
+    "/dialog/languages.dialog": [
+        "Ich beherrschte sechs Millionen Formen der Kommunikation"
+    ],
+    "/dialog/rule2.dialog": [
+        "Ein Roboter muss den Befehlen des Menschen gehorchen, au\u00dfer wenn solche Befehle mit dem Ersten Gesetz in Konflikt geraten."
+    ]
+}

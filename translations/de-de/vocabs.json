@@ -1,0 +1,71 @@
+{
+    "/vocab/arnold_keyword.voc": [
+        "Arnold sagen",
+        "der Terminator sagen",
+        "Schwarzenegger sagen"
+    ],
+    "/vocab/stardate_keyword.voc": [
+        "Sternenzeit",
+        "Stern Zeit"
+    ],
+    "/vocab/pod_bay_doors_keyword.voc": [
+        "\u00f6ffne das eingangstoor",
+        "\u00f6ffne das Zugangstor"
+    ],
+    "/vocab/duke_nukem_keyword.voc": [
+        "duke nukem sagen",
+        "duke newcom sagen",
+        "duke newum sagen",
+        "duke newham sagen",
+        "duke newcomb sagen"
+    ],
+    "/vocab/grandma_mode_keyword.voc": [
+        "too young to die"
+    ],
+    "/vocab/bender_keyword.voc": [
+        "bender sagen",
+        "bender sa\u01f5en"
+    ],
+    "/vocab/robotics_keyword.voc": [
+        "Roboter",
+        "Robotic"
+    ],
+    "/vocab/adult_mode_keyword.voc": [
+        "hurt me plenty"
+    ],
+    "/vocab/rock_paper_scissors_lizard_spock_keyword.voc": [
+        "Schere Stein Papier Echse Spock"
+    ],
+    "/vocab/glados_keyword.voc": [
+        "glados sagen",
+        "gladis sagen"
+    ],
+    "/vocab/portal_keyword.voc": [
+        "Singe portal",
+        "singe glados",
+        "glados singt",
+        "portal singt",
+        "Lied portal",
+        "Lied glados",
+        "glados Singt",
+        "portal Lied",
+        "like glados",
+        "like portal"
+    ],
+    "/vocab/languages_you_speak_keyword.voc": [
+        "Welche Sprachen sprichst du",
+        "Welche Sprachen kannst du sprechen"
+    ],
+    "/vocab/law_keyword.voc": [
+        "Rechte",
+        "Gesetze",
+        "kannst du T\u00f6ten",
+        "bist du b\u00f6se"
+    ],
+    "/vocab/hal_keyword.voc": [
+        "HAL sagen",
+        "HAL 9000 sagen",
+        "all sagen",
+        "all 9000 sagen"
+    ]
+}
