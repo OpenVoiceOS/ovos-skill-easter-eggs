@@ -1,35 +1,35 @@
 # Specify intents to test
 # Basic intent match tests only:
 en-us:
-  arnoldkeyword:
+  arnold_intent:
     - arnold say
     - terminator say
     - schwarzenegger say
-  stardatekeyword:
+  stardate_intent:
     - current stardate
     - current star date
     - current startdate
     - current start date
-  adultmodekeyword:
+  adult_mode_intent:
     - hurt me plenty
-  grandmamodekeyword:
+  grandma_mode_intent:
     - too young to die
-  benderkeyword:
+  bender_intent:
     - bender say
   conankeyword:
     - what is best in life
-  dukenukemkeyword:
+  duke_nukem_intent:
     - duke nukem say
     - duke newcom say
     - duke newum say
     - duke newham say
     - duke newcomb say
-  gladoskeyword:
+  glados_intent:
     - glados say
     - gladis say
     - gladdos say
     - gladys say
-  halkeyword:
+  hal_intent:
     - HAL say
     - HAL 9000 say
     - all say
@@ -38,16 +38,14 @@ en-us:
     - howl nine thousand say
     - how 9000 say
     - how nine thousand say
-  languagesyouspeakkeyword:
+  languages_you_speak_intent:
     - languages do you speak
     - languages can you speak
-  lawkeyword:
-    - law
-    - laws
-  podbaydoorskeyword:
+
+  pod_bay_doors_intent_intent:
     - open the pod bay doors
     - open pod bay doors
-  portalkeyword:
+  portal_intent:
     - sing portal
     - sing glados
     - glados sing
@@ -59,26 +57,17 @@ en-us:
     - like glados
     - like portal
     - forrtal song
-  roboticskeyword:
-    - robotic
-    - robotics
-  rockpaperscissorslizardspockkeyword:
+  robotic_laws_intent:
+    - say the laws of robotics
+    - do you know the rebotic laws
+  rock_paper_scissors_lizard_spock_intent:
     - rock paper scissors lizard spock
-  stardatekeyword:
-    - stardate
-    - star date
-    - startdate
-    - start date
-    - start day
-    - startday
-    - start eight
-    - star eat
-  billandtedkeyword:
+  bill_and_ted_intent:
     - stallion
     - stallions
     - wild stallions
     - wild stallion
-  malibustaceykeyword:
+  malibu_stacy_intent:
     - malibu stacy
     - malley boo stay see
     - malla boo stay see
@@ -88,38 +77,38 @@ en-us:
 de-de:
   adultmodekeyeword:
     - hurt me plenty
-  arnoldkeyword:
+  arnold_intent:
     - arnold sagen
     - der terminator sagen
     - schwarzenegger sagen
-  dukenukemkeyword:
+  duke_nukem_intent:
     - duke nukem sagen
     - duke newcom sagen
     - duke newum sagen
     - duke newham sagen
     - duke newcomb sagen
-  gladoskeyword:
+  glados_intent:
     - glados sagen
     - gladis sagen
-  grandmamodekeyword:
+  grandma_mode_intent:
     - too young to die
-  halkeyword:
+  hal_intent:
     - HAL sagen
     - HAL 9000 sagen
     - all sagen
     - all 9000 sagen
-  languagesyouspeakkeyword:
+  languages_you_speak_intent:
     - Welche Sprachen sprichst du
     - Welche Sprachen kannst du sprechen
-  lawkeyword:
-    - Rechte
-    - Gesetze
-    - kannst du Töten
-    - bist du böse
-  podbaydoorskeyword:
+#  lawkeyword:
+#    - Rechte
+#    - Gesetze
+#    - kannst du Töten
+#    - bist du böse
+  pod_bay_doors_intent_intent:
     - öffne das eingangstoor
     - öffne das Zugangstor
-  portalkeyword:
+  portal_intent:
     - Singe portal
     - singe glados
     - glados singt
@@ -130,12 +119,12 @@ de-de:
     - portal Lied
     - like glados
     - like portal
-  roboticskeyword:
-    - Roboter
-    - Robotic
-  rockpaperscissorslizardspockkeyword:
+#  roboticskeyword:
+#    - Roboter
+#    - Robotic
+  rock_paper_scissors_lizard_spock_intent:
     - Schere Stein Papier Echse Spock
-  stardatekeyword:
+  stardate_intent:
     - Sternenzeit
     - Stern Zeit
 
