@@ -59,7 +59,7 @@ en-us:
     - forrtal song
   robotics_laws_intent:
     - say the laws of robotics
-    - do you know the rebotic laws
+    - do you know the robotic laws
   rock_paper_scissors_lizard_spock_intent:
     - rock paper scissors lizard spock
   bill_and_ted_intent:
