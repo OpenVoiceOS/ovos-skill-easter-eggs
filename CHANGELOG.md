@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.1.2a8](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a8) (2024-05-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a7...0.1.2a8)
+
+**Implemented enhancements:**
+
+- May I have some more sir? [\#28](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/28)
+
+**Fixed bugs:**
+
+- ValueError: unknown skill\_id: skill-easter-eggs.openvoiceos [\#31](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/31)
+
+**Merged pull requests:**
+
+- automations/translations [\#38](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/38) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.2a7](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a7) (2024-02-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a6...0.1.2a7)
