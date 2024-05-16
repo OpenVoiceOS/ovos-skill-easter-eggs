@@ -57,7 +57,7 @@ en-us:
     - like glados
     - like portal
     - forrtal song
-  robotic_laws_intent:
+  robotics_laws_intent:
     - say the laws of robotics
     - do you know the rebotic laws
   rock_paper_scissors_lizard_spock_intent:
