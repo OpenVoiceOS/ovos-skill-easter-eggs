@@ -13,8 +13,8 @@ jobs:
     with:
       neon_versions: "[3.8, 3.9, '3.10', '3.11']"
       ovos_versions: "[3.8, 3.9, '3.10', '3.11']"
-  # skill_intent_tests:
-  #   uses: neongeckocom/.github/.github/workflows/skill_test_intents.yml@master
+  skill_intent_tests:
+   uses: neongeckocom/.github/.github/workflows/skill_test_intents.yml@master
   skill_resource_tests:
     uses: neongeckocom/.github/.github/workflows/skill_test_resources.yml@master
   # skill_install_tests: # May be bugged from alpha
