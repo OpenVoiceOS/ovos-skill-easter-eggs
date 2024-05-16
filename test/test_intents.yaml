@@ -42,7 +42,7 @@ en-us:
     - languages do you speak
     - languages can you speak
 
-  pod_bay_doors_intent_intent:
+  pod_bay_doors_intent:
     - open the pod bay doors
     - open pod bay doors
   portal_intent:
@@ -105,7 +105,7 @@ de-de:
 #    - Gesetze
 #    - kannst du Töten
 #    - bist du böse
-  pod_bay_doors_intent_intent:
+  pod_bay_doors_intent:
     - öffne das eingangstoor
     - öffne das Zugangstor
   portal_intent:
