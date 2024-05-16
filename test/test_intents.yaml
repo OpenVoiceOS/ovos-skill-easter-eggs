@@ -16,7 +16,7 @@ en-us:
     - too young to die
   bender_intent:
     - bender say
-  conankeyword:
+  conan_intent:
     - what is best in life
   duke_nukem_intent:
     - duke nukem say
@@ -75,7 +75,7 @@ en-us:
     - what wood malley boo stay see do
     - what wood malla boo stay see do
 de-de:
-  adultmodekeyeword:
+  adult_mode_intent:
     - hurt me plenty
   arnold_intent:
     - arnold sagen
