@@ -1,6 +1,6 @@
 # pylint: disable=unused-import,missing-docstring,invalid-name
 import random
-from os import listdir
+from os import getenv, listdir
 from os.path import dirname, join
 
 from ovos_workshop.intents import IntentBuilder
@@ -255,6 +255,10 @@ class EasterEggsSkill(OVOSSkill):
             "title": title,
             "skill_id": self.skill_id,
         }
+        if getenv("IS_OVOS_CONTAINER"):
+            data["uri"] = (
+                f"https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/raw/dev/sounds/{'/'.join(media.split('/')[-2:])}"
+            )
         self.ocp.play(tracks=[data])
 
 
@@ -262,4 +266,5 @@ if __name__ == "__main__":
     from ovos_utils.fakebus import FakeBus
 
     skill = EasterEggsSkill(bus=FakeBus(), skill_id="skill_easter_eggs.test")
+    skill.handle_portal_intent(None)
     print("BREAK")

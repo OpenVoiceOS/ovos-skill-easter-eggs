@@ -1,8 +1,10 @@
 # Pytest boilerplate
 from genericpath import isdir
 from json import dumps
+import os
 from os.path import dirname, join
 from os import environ, getenv, makedirs
+from unittest import mock
 from unittest.mock import Mock, patch
 import shutil
 
@@ -253,6 +255,28 @@ class TestEasterEggSkill:
                     "skill_icon": "",
                     "title": "GladOS says...",
                     "skill_id": test_skill.skill_id,
+                }
+            ]
+        )
+
+    @mock.patch.dict(os.environ, {"IS_OVOS_CONTAINER": "True"})
+    def test_play_in_ocp_in_container(self, test_skill):
+        media_path = "~/fake/test.mp3"
+        test_skill.ocp = Mock()
+        test_skill._play_in_ocp(media=media_path)
+        test_skill.ocp.play.assert_called_once_with(
+            tracks=[
+                {
+                    "match_confidence": 100,
+                    "media_type": 1,
+                    "length": 0,
+                    "uri": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/raw/dev/sounds/fake/test.mp3",
+                    "playback": 2,
+                    "image": "",
+                    "bg_image": "",
+                    "skill_icon": "",
+                    "title": "Easter Egg!",
+                    "skill_id": "skill-easter-eggs.openvoiceos",
                 }
             ]
         )
