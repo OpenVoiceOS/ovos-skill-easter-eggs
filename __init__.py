@@ -211,7 +211,7 @@ class EasterEggsSkill(OVOSSkill):
             self.log.debug("User does not sound like Popey, no song today.")
             self.speak_dialog("too_shy")
             return
-        self.speak_dialog("sing")
+        self.speak_dialog("singing")
         path, files = self.get_reference_files("sounds/sing", "mp3")
         if len(files):
             mp3 = path + "/" + random.choice(files)
