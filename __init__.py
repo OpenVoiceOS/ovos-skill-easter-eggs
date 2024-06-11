@@ -208,9 +208,9 @@ class EasterEggsSkill(OVOSSkill):
     @intent_handler(IntentBuilder("sing_intent").require("sing_keyword").build())
     def handle_sing_intent(self, _):
         if not self._sounds_like_popey():
-            self.log.debug("User does not sound like Popey, no song today.")
-            self.speak_dialog("too_shy")
-            return
+            confirm = self.ask_yesno("too_shy")
+            if confirm == "no":
+                return
         self.speak_dialog("singing")
         path, files = self.get_reference_files("sounds/sing", "mp3")
         if len(files):
