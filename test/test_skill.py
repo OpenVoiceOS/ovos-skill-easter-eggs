@@ -208,7 +208,7 @@ class TestEasterEggSkill:
             "skill_easter_eggs/sounds/sing/"
             in test_skill.play_audio.call_args.kwargs.get("filename", "")
         )
-        test_skill.speak_dialog.assert_called_once_with("singing")
+        test_skill.speak_dialog.assert_called_once_with("singing", wait=5)
 
     def test_get_display_date(self, test_skill):
         # TODO: Fully implement
