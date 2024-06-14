@@ -9,6 +9,7 @@ from unittest.mock import Mock, patch
 
 import pytest
 from genericpath import isdir
+from ovos_utils.fakebus import FakeBus
 from ovos_plugin_manager.skills import find_skill_plugins
 from skill_easter_eggs import EasterEggsSkill
 from skill_easter_eggs.constants import SPICY_SOUNDS
