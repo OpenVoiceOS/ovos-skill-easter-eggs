@@ -211,7 +211,7 @@ class EasterEggsSkill(OVOSSkill):
             confirm = self.ask_yesno("too_shy")
             if confirm == "no":
                 return
-        self.speak_dialog("singing")
+        self.speak_dialog("singing", wait=5)
         path, files = self.get_reference_files("sounds/sing", "mp3")
         if len(files):
             mp3 = path + "/" + random.choice(files)

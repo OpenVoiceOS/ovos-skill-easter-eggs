@@ -17,7 +17,7 @@ from skill_easter_eggs.constants import SPICY_SOUNDS
 
 
 @pytest.fixture(scope="session")
-def test_skill(test_skill_id="skill-easter-eggs.openvoiceos", bus=FakeBus()):
+def test_skill(test_skill_id="skill-easter-eggs.openvoiceos", bus=TestFakeBus()):
     # Get test skill
     bus.emitter = bus.ee
     bus.run_forever()
@@ -202,6 +202,7 @@ class TestEasterEggSkill:
         assert test_skill._sounds_like_popey() is True
 
     def test_handle_sing_intent(self, test_skill, reset_skill_mocks):  # TODO: Expand
+
         test_skill.handle_sing_intent(None)
         test_skill.play_audio.assert_called_once()
         assert (
