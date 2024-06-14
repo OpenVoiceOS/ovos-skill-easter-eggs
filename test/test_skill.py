@@ -1,23 +1,21 @@
 # Pytest boilerplate
-from genericpath import isdir
-from json import dumps
 import os
-from os.path import dirname, join
+import shutil
+from json import dumps
 from os import environ, getenv, makedirs
+from os.path import dirname, join
 from unittest import mock
 from unittest.mock import Mock, patch
-import shutil
 
-from ovos_plugin_manager.skills import find_skill_plugins
-from ovos_utils.messagebus import FakeBus
 import pytest
-
+from genericpath import isdir
+from ovos_plugin_manager.skills import find_skill_plugins
 from skill_easter_eggs import EasterEggsSkill
 from skill_easter_eggs.constants import SPICY_SOUNDS
 
 
 @pytest.fixture(scope="session")
-def test_skill(test_skill_id="skill-easter-eggs.openvoiceos", bus=TestFakeBus()):
+def test_skill(test_skill_id="skill-easter-eggs.openvoiceos", bus=FakeBus()):
     # Get test skill
     bus.emitter = bus.ee
     bus.run_forever()
