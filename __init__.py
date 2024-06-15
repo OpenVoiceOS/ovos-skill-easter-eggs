@@ -22,26 +22,13 @@ class EasterEggsSkill(OVOSSkill):
         self.ocp = OCPInterface(
             bus=self.bus
         )  # pylint: disable=attribute-defined-outside-init
-        self._event_scheduler = EventScheduler(bus=self.bus)
         self.bus.on(f"{self.skill_id}.christmas_day", self.handle_christmas_day)
         self._set_easter_egg_events()
-
-    @property
-    def event_scheduler(self) -> EventScheduler:
-        """
-        Get the EventScheduler that tracks all Alert objects and their statuses.
-        """
-        if not self._event_scheduler:
-            raise RuntimeError("Requested EventScheduler before initialize")
-        return self._event_scheduler
 
     @property
     def grandma_mode(self):
         return self.settings.get("grandma_mode_enabled", True)
 
-    @intent_handler(
-        IntentBuilder("grandma_mode_intent").require("grandma_mode_keyword").build()
-    )
     def _get_user_tz(self):
         """
         Gets a timezone object for the user associated with the given message
@@ -55,8 +42,8 @@ class EasterEggsSkill(OVOSSkill):
         )
 
     def _set_easter_egg_events(self):
-        self.event_scheduler.schedule_event(
-            "Christmas Day",
+        self.event_scheduler.schedule_repeating_event(
+            self.handle_christmas_day,
             datetime(
                 year=datetime.now().year,
                 month=12,
@@ -65,8 +52,10 @@ class EasterEggsSkill(OVOSSkill):
                 tzinfo=self._get_user_tz(),
             ).timestamp(),
             ANNUAL,
-            Message("christmas_day").data,
+            {},
+            "Christmas Day",
             {
+                "skill_id": self.skill_id,
                 "event": f"{self.skill_id}.christmas_day",
                 "time": datetime(
                     year=datetime.now().year,
