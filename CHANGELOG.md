@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.1.2a9](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a9) (2024-06-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a8...0.1.2a9)
+
+**Implemented enhancements:**
+
+- \[ENHANCEMENT\] Container compatibility [\#36](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/36)
+- voice specific easter egg - singing [\#27](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/27)
+- feat: singing [\#40](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/40) ([mikejgray](https://github.com/mikejgray))
+
+**Merged pull requests:**
+
+- Re-enable intent tests [\#39](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/39) ([NeonDaniel](https://github.com/NeonDaniel))
+
 ## [0.1.2a8](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a8) (2024-05-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a7...0.1.2a8)
