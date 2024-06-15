@@ -1,21 +1,20 @@
 # pylint: disable=unused-import,missing-docstring,invalid-name
 import random
+from datetime import datetime
 from os import getenv, listdir
 from os.path import dirname, join
-from datetime import datetime
-from dateutil.tz import gettz
 
+from dateutil.tz import gettz
 from lingua_franca.time import default_timezone
+from ovos_bus_client.apis.ocp import OCPInterface
 from ovos_bus_client.message import Message
 from ovos_bus_client.util.scheduler import EventScheduler
-from ovos_mark1_utils.faceplate import FallingDots
-from ovos_workshop.decorators import skill_api_method, intent_handler
+from ovos_mark1.faceplate.animations import FallingDots
+from ovos_workshop.intents import IntentBuilder
+from ovos_workshop.decorators import intent_handler, skill_api_method
 from ovos_workshop.skills import OVOSSkill
-from ovos_bus_client.apis.ocp import OCPInterface
-
+from skill_easter_eggs.constants import ANNUAL, ASCII_SNOW, SPICY_SOUNDS
 from skill_easter_eggs.stardate import StarDate
-from skill_easter_eggs.constants import SPICY_SOUNDS
-from .constants import ANNUAL, ASCII_SNOW, SPICY_SOUNDS
 
 
 class EasterEggsSkill(OVOSSkill):
@@ -26,6 +25,7 @@ class EasterEggsSkill(OVOSSkill):
         self._event_scheduler = EventScheduler(bus=self.bus)
         self.bus.on(f"{self.skill_id}.christmas_day", self.handle_christmas_day)
         self._set_easter_egg_events()
+
     @property
     def event_scheduler(self) -> EventScheduler:
         """
@@ -48,15 +48,36 @@ class EasterEggsSkill(OVOSSkill):
         :param message: Message associated with request
         :return: timezone object
         """
-        return gettz(self.location_timezone) if self.location_timezone else \
-            default_timezone()
+        return (
+            gettz(self.location_timezone)
+            if self.location_timezone
+            else default_timezone()
+        )
 
     def _set_easter_egg_events(self):
-        self.event_scheduler.schedule_event(Message("christmas_day"), {
-            "event": f"{self.skill_id}.christmas_day",
-            "time": datetime(year=datetime.now().year, month=12, day=25, hour=8, tzinfo=self._get_user_tz()),
-            "repeat": ANNUAL
-        })
+        self.event_scheduler.schedule_event(
+            "Christmas Day",
+            datetime(
+                year=datetime.now().year,
+                month=12,
+                day=25,
+                hour=8,
+                tzinfo=self._get_user_tz(),
+            ).timestamp(),
+            ANNUAL,
+            Message("christmas_day").data,
+            {
+                "event": f"{self.skill_id}.christmas_day",
+                "time": datetime(
+                    year=datetime.now().year,
+                    month=12,
+                    day=25,
+                    hour=8,
+                    tzinfo=self._get_user_tz(),
+                ),
+                "repeat": ANNUAL,
+            },
+        )
 
     def handle_christmas_day(self, _: Message):
         # Mark 1
@@ -64,9 +85,11 @@ class EasterEggsSkill(OVOSSkill):
         # GUI
         if self.gui:
             self.gui.show_text(ASCII_SNOW)
-        self.speak("Ho ho ho")
+        self.speak_dialog("santa")
 
-    @intent_handler(IntentBuilder("grandma_mode_intent").require("grandma_mode_keyword").build())
+    @intent_handler(
+        IntentBuilder("grandma_mode_intent").require("grandma_mode_keyword").build()
+    )
     def handle_grandma_mode(self, _):
         self.settings["grandma_mode_enabled"] = True
         self.speak("Ok, we'll tone it down a bit.")

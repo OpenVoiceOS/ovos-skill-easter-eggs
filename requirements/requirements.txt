@@ -1,6 +1,6 @@
-lingua_franca
+ovos-lingua-franca
 python-dateutil
 ovos-utils~=0.0, >=0.0.38
 ovos_workshop~=0.0, >=0.0.15
 ovos_bus_client~=0.0, >=0.0.6
-ovos-mark1-utils
+ovos-mark1-utils~=0.0.0a2

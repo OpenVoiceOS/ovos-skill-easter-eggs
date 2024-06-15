@@ -36,6 +36,7 @@ dialog:
   - rule2
   - rule3
   - stardate
+  - santa
 
 # regex entities, not necessarily filenames
 regex:
