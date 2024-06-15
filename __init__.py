@@ -8,7 +8,6 @@ from dateutil.tz import gettz
 from lingua_franca.time import default_timezone
 from ovos_bus_client.apis.ocp import OCPInterface
 from ovos_bus_client.message import Message
-from ovos_bus_client.util.scheduler import EventScheduler
 from ovos_mark1.faceplate.animations import FallingDots
 from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.decorators import intent_handler, skill_api_method
@@ -63,7 +62,7 @@ class EasterEggsSkill(OVOSSkill):
                     day=25,
                     hour=8,
                     tzinfo=self._get_user_tz(),
-                ),
+                ).timestamp(),
                 "repeat": ANNUAL,
             },
         )
