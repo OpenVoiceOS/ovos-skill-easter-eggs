@@ -19,6 +19,9 @@ Some funny things for OpenVoiceOS, mostly quotes from movies
 - "What would Arnold say?"
 - "What would GLaDOS say?"
 - "What would Bender say?"
+- "What would Malibu Stacey say?"
+- "You know the best band in the world? Wyld Stallions?"
+- "Sing me a song"
 
 ## Grandma Mode
 
@@ -28,5 +31,5 @@ If you want to go back into grandma mode, say "I'm too young to die."
 
 ## Credits
 
-JarbasAI
-mikejgray (revival)
+- JarbasAI
+- mikejgray (revival)

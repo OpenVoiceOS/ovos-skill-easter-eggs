@@ -23,6 +23,7 @@ vocab:
   - conan_keyword
   - bill_and_ted_keyword
   - malibu_stacey_keyword
+  - sing_keyword
 
 # dialog is .dialog file basenames (case-sensitive)
 dialog:
@@ -62,3 +63,4 @@ intents:
     - conan_intent
     - bill_and_ted_intent
     - malibu_stacey_intent
+    - sing_intent

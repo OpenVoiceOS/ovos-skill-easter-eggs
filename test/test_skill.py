@@ -1,15 +1,16 @@
 # Pytest boilerplate
-from genericpath import isdir
-from json import dumps
-from os.path import dirname, join
-from os import environ, getenv, makedirs
-from unittest.mock import Mock, patch
+import os
 import shutil
+from json import dumps
+from os import environ, getenv, makedirs
+from os.path import dirname, join
+from unittest import mock
+from unittest.mock import Mock, patch
 
-from ovos_plugin_manager.skills import find_skill_plugins
-from ovos_utils.messagebus import FakeBus
 import pytest
-
+from genericpath import isdir
+from ovos_utils.fakebus import FakeBus
+from ovos_plugin_manager.skills import find_skill_plugins
 from skill_easter_eggs import EasterEggsSkill
 from skill_easter_eggs.constants import SPICY_SOUNDS
 
@@ -91,7 +92,9 @@ class TestEasterEggSkill:
         # TODO: Fully implement
         assert True
 
-    def test_handle_rock_paper_scissors_lizard_spock_intent(self, test_skill, reset_skill_mocks):
+    def test_handle_rock_paper_scissors_lizard_spock_intent(
+        self, test_skill, reset_skill_mocks
+    ):
         # TODO: Fully implement
         assert True
 
@@ -106,10 +109,10 @@ class TestEasterEggSkill:
 
     def test_get_reference_files_grandma_mode(self, test_skill):
         spicy_arnold_sounds = [
-                gubernator.replace("sounds/arnold/", "")
-                for gubernator in SPICY_SOUNDS
-                if gubernator.startswith("sounds/arnold")
-            ]
+            gubernator.replace("sounds/arnold/", "")
+            for gubernator in SPICY_SOUNDS
+            if gubernator.startswith("sounds/arnold")
+        ]
         with patch("skill_easter_eggs.EasterEggsSkill.grandma_mode", True):
             _, arnold_safe = test_skill.get_reference_files(
                 "/sounds/arnold", extension="wav"
@@ -120,7 +123,7 @@ class TestEasterEggSkill:
             _, arnold_spicy = test_skill.get_reference_files(
                 "sounds/arnold", extension="wav"
             )
-            for spicy_arnold in  [
+            for spicy_arnold in [
                 gubernator.replace("sounds/arnold/", "")
                 for gubernator in SPICY_SOUNDS
                 if gubernator.startswith("sounds/arnold")
@@ -150,20 +153,62 @@ class TestEasterEggSkill:
     def test_handle_conan_intent(self, test_skill, reset_skill_mocks):
         test_skill.handle_conan_intent(None)
         test_skill.play_audio.assert_called_once()
-        assert "skill_easter_eggs/sounds/conan/" in test_skill.play_audio.call_args.kwargs.get("filename", "")
+        assert (
+            "skill_easter_eggs/sounds/conan/"
+            in test_skill.play_audio.call_args.kwargs.get("filename", "")
+        )
         assert test_skill.speak_dialog.called is False
 
     def test_handle_bill_and_ted_intent(self, test_skill, reset_skill_mocks):
         test_skill.handle_bill_and_ted_intent(None)
         test_skill.play_audio.assert_called_once()
-        assert "skill_easter_eggs/sounds/billandted/" in test_skill.play_audio.call_args.kwargs.get("filename", "")
+        assert (
+            "skill_easter_eggs/sounds/billandted/"
+            in test_skill.play_audio.call_args.kwargs.get("filename", "")
+        )
         assert test_skill.speak_dialog.called is False
 
     def test_handle_malibu_stacey_intent(self, test_skill, reset_skill_mocks):
         test_skill.handle_malibu_stacey_intent(None)
         test_skill.play_audio.assert_called_once()
-        assert "skill_easter_eggs/sounds/malibustacey/" in test_skill.play_audio.call_args.kwargs.get("filename", "")
+        assert (
+            "skill_easter_eggs/sounds/malibustacey/"
+            in test_skill.play_audio.call_args.kwargs.get("filename", "")
+        )
         assert test_skill.speak_dialog.called is False
+
+    def test_sounds_like_popey(self, test_skill):
+        config = {
+            "tts": {
+                "module": "neon-tts-plugin-coqui-remote",
+                "fallback_module": "coqui",
+                "ovos-tts-plugin-mimic": {"voice": "ap"},
+                "neon-tts-plugin-larynx-server": {"host": "https://larynx.2022.us"},
+                "mozilla_remote": {"api_url": "https://mtts.2022.us/api/tts"},
+                "ovos-tts-plugin-piper": {"voice": "alan-low"},
+            }
+        }
+        # Test if we don't sound like Popey at all
+        test_skill.config_core = config
+        assert test_skill._sounds_like_popey() is False
+        # Test if "alan" is the voice name
+        config["tts"]["module"] = "ovos-tts-plugin-piper"
+        test_skill.config_core = config
+        assert test_skill._sounds_like_popey() is True
+        # Test if "mimic" is in the module name
+        config["tts"]["module"] = "ovos-tts-plugin-mimic"
+        test_skill.config_core = config
+        assert test_skill._sounds_like_popey() is True
+
+    def test_handle_sing_intent(self, test_skill, reset_skill_mocks):  # TODO: Expand
+
+        test_skill.handle_sing_intent(None)
+        test_skill.play_audio.assert_called_once()
+        assert (
+            "skill_easter_eggs/sounds/sing/"
+            in test_skill.play_audio.call_args.kwargs.get("filename", "")
+        )
+        test_skill.speak_dialog.assert_called_once_with("singing", wait=5)
 
     def test_get_display_date(self, test_skill):
         # TODO: Fully implement
@@ -210,6 +255,28 @@ class TestEasterEggSkill:
                     "skill_icon": "",
                     "title": "GladOS says...",
                     "skill_id": test_skill.skill_id,
+                }
+            ]
+        )
+
+    @mock.patch.dict(os.environ, {"IS_OVOS_CONTAINER": "True"})
+    def test_play_in_ocp_in_container(self, test_skill):
+        media_path = "~/fake/test.mp3"
+        test_skill.ocp = Mock()
+        test_skill._play_in_ocp(media=media_path)
+        test_skill.ocp.play.assert_called_once_with(
+            tracks=[
+                {
+                    "match_confidence": 100,
+                    "media_type": 1,
+                    "length": 0,
+                    "uri": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/raw/dev/sounds/fake/test.mp3",
+                    "playback": 2,
+                    "image": "",
+                    "bg_image": "",
+                    "skill_icon": "",
+                    "title": "Easter Egg!",
+                    "skill_id": "skill-easter-eggs.openvoiceos",
                 }
             ]
         )
