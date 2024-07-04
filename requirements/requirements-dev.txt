@@ -1,4 +1,4 @@
-neon-minerva>=0.1.1a5
+neon-minerva>=0.2.0
 ovos_plugin_manager
 pytest
 pytest-cov

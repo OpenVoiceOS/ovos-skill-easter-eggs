@@ -14,10 +14,8 @@ vocab:
   - glados_keyword
   - hal_keyword
   - languages_you_speak_keyword
-  - law_keyword
   - pod_bay_doors_keyword
   - portal_keyword
-  - robotics_keyword
   - rock_paper_scissors_lizard_spock_keyword
   - stardate_keyword
   - adult_mode_keyword
@@ -43,7 +41,7 @@ dialog:
 intents:
   # Padatious intents are the `.intent` file names
   padatious:
-    - law_of_robotics
+    - law_of_robotics.intent
 
   # Adapt intents are the names passed to `IntentBuilder`
   adapt:
