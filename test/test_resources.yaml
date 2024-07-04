@@ -37,13 +37,10 @@ dialog:
   - rule3
   - stardate
 
-# regex entities, not necessarily filenames
-regex:
-  - LawOfRobotics
-
 intents:
   # Padatious intents are the `.intent` file names
-  padatious: []
+  padatious:
+    - law_of_robotics_intent
 
   # Adapt intents are the names passed to `IntentBuilder`
   adapt:

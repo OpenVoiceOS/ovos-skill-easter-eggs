@@ -9,8 +9,10 @@ from unittest.mock import Mock, patch
 
 import pytest
 from genericpath import isdir
-from ovos_utils.fakebus import FakeBus
+from ovos_bus_client import Message
+from ovos_config.locale import setup_locale
 from ovos_plugin_manager.skills import find_skill_plugins
+from ovos_utils.fakebus import FakeBus
 from skill_easter_eggs import EasterEggsSkill
 from skill_easter_eggs.constants import SPICY_SOUNDS
 
@@ -51,6 +53,7 @@ class TestEasterEggSkill:
     if not isdir(test_fs):
         makedirs(data_dir)
         makedirs(conf_dir)
+    setup_locale()
 
     with open(join(conf_dir, "mycroft.conf"), "w", encoding="utf-8") as f:
         f.write(dumps({"Audio": {"backends": {"ocp": {"active": True}}}}))
@@ -209,6 +212,37 @@ class TestEasterEggSkill:
             in test_skill.play_audio.call_args.kwargs.get("filename", "")
         )
         test_skill.speak_dialog.assert_called_once_with("singing", wait=5)
+
+    def test_laws_of_robotics_all(self, test_skill):
+        test_skill.handle_robotic_laws_intent(Message("test", {"ordinal": ""}))
+        test_skill.speak_dialog.assert_has_calls(
+            [
+                mock.call("rule1"),
+                mock.call("rule2"),
+                mock.call("rule3"),
+            ]
+        )
+
+    @pytest.mark.parametrize(
+        "ordinal,dialog",
+        [
+            ("first", "rule1"),
+            ("1st", "rule1"),
+            ("second", "rule2"),
+            ("2nd", "rule2"),
+            ("third", "rule3"),
+            ("3rd", "rule3"),
+        ],
+    )
+    def test_laws_of_robotics_individual(
+        self, test_skill, reset_skill_mocks, ordinal, dialog
+    ):
+        other_rules = ["rule1", "rule2", "rule3"]
+        other_rules.remove(dialog)
+        test_skill.handle_robotic_laws_intent(Message("test", {"ordinal": ordinal}))
+        test_skill.speak_dialog.assert_has_calls([mock.call(dialog)])
+        for rule in other_rules:
+            assert mock.call(rule) not in test_skill.speak_dialog.mock_calls
 
     def test_get_display_date(self, test_skill):
         # TODO: Fully implement

@@ -3,13 +3,14 @@ import random
 from os import getenv, listdir
 from os.path import dirname, join
 
-from ovos_workshop.intents import IntentBuilder
-from ovos_workshop.decorators import skill_api_method, intent_handler
-from ovos_workshop.skills import OVOSSkill
+from lingua_franca.parse import extract_number
+from ovos_bus_client import Message
 from ovos_bus_client.apis.ocp import OCPInterface
-
-from skill_easter_eggs.stardate import StarDate
+from ovos_workshop.decorators import intent_handler, skill_api_method
+from ovos_workshop.intents import IntentBuilder
+from ovos_workshop.skills import OVOSSkill
 from skill_easter_eggs.constants import SPICY_SOUNDS
+from skill_easter_eggs.stardate import StarDate
 
 
 class EasterEggsSkill(OVOSSkill):
@@ -59,25 +60,30 @@ class EasterEggsSkill(OVOSSkill):
     def handle_pod_intent(self, _):
         self.speak_dialog("pod")
 
-    @intent_handler(
-        IntentBuilder("robotics_laws_intent")
-        .require("robotics_keyword")
-        .require("law_keyword")
-        .optionally("LawOfRobotics")
-        .build()
-    )
-    def handle_robotic_laws_intent(self, message):
-        law = str(message.data.get("LawOfRobotics", "all"))
+    @intent_handler("law_of_robotics.intent")
+    def handle_robotic_laws_intent(self, message: Message):
+        law = str(message.data.get("ordinal", ""))
+        law = extract_number(law, ordinals=True)
+        self.log.debug("law: %s", law)
+        if not law:
+            self.log.debug("No specific law detected, reciting all three")
+            self.speak_dialog("rule1")
+            self.speak_dialog("rule2")
+            self.speak_dialog("rule3")
+        # lingua-franca currently returns a number, but let's not trust, let's ensure
+        law = str(law)
         if law == "1":
+            self.log.debug("First law of robotics requested")
             self.speak_dialog("rule1")
         elif law == "2":
+            self.log.debug("Second law of robotics requested")
             self.speak_dialog("rule2")
         elif law == "3":
+            self.log.debug("Third law of robotics requested")
             self.speak_dialog("rule3")
         else:
-            self.speak_dialog("rule1")
-            self.speak_dialog("rule2")
-            self.speak_dialog("rule3")
+            self.log.debug("Invalid law requested")
+            self.speak_dialog("invalid_law")
 
     @intent_handler(
         IntentBuilder("rock_paper_scissors_lizard_spock_intent")
@@ -267,4 +273,4 @@ if __name__ == "__main__":
 
     skill = EasterEggsSkill(bus=FakeBus(), skill_id="skill_easter_eggs.test")
     skill.handle_portal_intent(None)
-    print("BREAK")
+    self.log.debug("BREAK")
