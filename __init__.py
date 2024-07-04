@@ -1,16 +1,22 @@
 # pylint: disable=unused-import,missing-docstring,invalid-name
 import random
+from datetime import datetime
 from os import getenv, listdir
 from os.path import dirname, join
 
+from dateutil.tz import gettz
 from lingua_franca.parse import extract_number
+from lingua_franca.time import default_timezone
 from ovos_bus_client import Message
 from ovos_bus_client.apis.ocp import OCPInterface
+from ovos_bus_client.message import Message
+from ovos_mark1.faceplate.animations import FallingDots
 from ovos_workshop.decorators import intent_handler, skill_api_method
 from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
-from skill_easter_eggs.constants import SPICY_SOUNDS
+from skill_easter_eggs.constants import ANNUAL, ASCII_SNOW, SPICY_SOUNDS
 from skill_easter_eggs.stardate import StarDate
+
 
 
 class EasterEggsSkill(OVOSSkill):
@@ -18,10 +24,59 @@ class EasterEggsSkill(OVOSSkill):
         self.ocp = OCPInterface(
             bus=self.bus
         )  # pylint: disable=attribute-defined-outside-init
+        self.bus.on(f"{self.skill_id}.christmas_day", self.handle_christmas_day)
+        self._set_easter_egg_events()
 
     @property
     def grandma_mode(self):
         return self.settings.get("grandma_mode_enabled", True)
+
+    def _get_user_tz(self):
+        """
+        Gets a timezone object for the user associated with the given message
+        :param message: Message associated with request
+        :return: timezone object
+        """
+        return (
+            gettz(self.location_timezone)
+            if self.location_timezone
+            else default_timezone()
+        )
+
+    def _set_easter_egg_events(self):
+        self.event_scheduler.schedule_repeating_event(
+            self.handle_christmas_day,
+            datetime(
+                year=datetime.now().year,
+                month=12,
+                day=25,
+                hour=8,
+                tzinfo=self._get_user_tz(),
+            ).timestamp(),
+            ANNUAL,
+            {},
+            "Christmas Day",
+            {
+                "skill_id": self.skill_id,
+                "event": f"{self.skill_id}.christmas_day",
+                "time": datetime(
+                    year=datetime.now().year,
+                    month=12,
+                    day=25,
+                    hour=8,
+                    tzinfo=self._get_user_tz(),
+                ).timestamp(),
+                "repeat": ANNUAL,
+            },
+        )
+
+    def handle_christmas_day(self, _: Message):
+        # Mark 1
+        FallingDots(bus=self.bus).run()
+        # GUI
+        if self.gui:
+            self.gui.show_text(ASCII_SNOW)
+        self.speak_dialog("santa")
 
     @intent_handler(
         IntentBuilder("grandma_mode_intent").require("grandma_mode_keyword").build()

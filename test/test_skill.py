@@ -315,6 +315,10 @@ class TestEasterEggSkill:
             ]
         )
 
+    def test_christmas_day_is_scheduled(self, test_skill):
+        active_events = [x[0] for x in test_skill.event_scheduler.events.events]
+        assert "skill-easter-eggs.openvoiceos:Christmas Day" in active_events
+
 
 if __name__ == "__main__":
     pytest.main()

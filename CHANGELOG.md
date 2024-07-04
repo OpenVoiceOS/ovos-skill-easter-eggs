@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.2a10](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a10) (2024-06-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a9...0.1.2a10)
+
+**Implemented enhancements:**
+
+- make it snow during christmas [\#29](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/29)
+- feat: make it snow [\#33](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/33) ([mikejgray](https://github.com/mikejgray))
+
 ## [0.1.2a9](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a9) (2024-06-15)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a8...0.1.2a9)
