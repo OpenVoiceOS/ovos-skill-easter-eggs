@@ -25,6 +25,7 @@
     "systemDeps": false,
     "requirements": {
         "python": [
+            "ovos-lingua-franca~=0.0, >=0.4.7",
             "ovos-utils~=0.0, >=0.0.38",
             "ovos_bus_client~=0.0, >=0.0.6",
             "ovos_workshop~=0.0, >=0.0.15",
