@@ -7,7 +7,6 @@ from os.path import dirname, join
 from dateutil.tz import gettz
 from lingua_franca.parse import extract_number
 from lingua_franca.time import default_timezone
-from ovos_bus_client import Message
 from ovos_bus_client.apis.ocp import OCPInterface
 from ovos_bus_client.message import Message
 from ovos_mark1.faceplate.animations import FallingDots
@@ -16,7 +15,6 @@ from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
 from skill_easter_eggs.constants import ANNUAL, ASCII_SNOW, SPICY_SOUNDS
 from skill_easter_eggs.stardate import StarDate
-
 
 
 class EasterEggsSkill(OVOSSkill):
@@ -321,11 +319,3 @@ class EasterEggsSkill(OVOSSkill):
                 f"https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/raw/dev/sounds/{'/'.join(media.split('/')[-2:])}"
             )
         self.ocp.play(tracks=[data])
-
-
-if __name__ == "__main__":
-    from ovos_utils.fakebus import FakeBus
-
-    skill = EasterEggsSkill(bus=FakeBus(), skill_id="skill_easter_eggs.test")
-    skill.handle_portal_intent(None)
-    self.log.debug("BREAK")

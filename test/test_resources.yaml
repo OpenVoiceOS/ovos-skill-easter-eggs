@@ -4,6 +4,8 @@
 languages:
   - "en-us"
 
+regex: []
+
 # vocab is lowercase .voc file basenames
 vocab:
   - arnold_keyword
