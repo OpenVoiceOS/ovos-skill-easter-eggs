@@ -43,7 +43,7 @@ dialog:
 intents:
   # Padatious intents are the `.intent` file names
   padatious:
-    - law_of_robotics_intent
+    - law_of_robotics
 
   # Adapt intents are the names passed to `IntentBuilder`
   adapt:
