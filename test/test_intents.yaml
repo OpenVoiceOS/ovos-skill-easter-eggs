@@ -56,9 +56,6 @@ en-us:
     - like glados
     - like portal
     - forrtal song
-  robotics_laws_intent:
-    - say the laws of robotics
-    - do you know the robotic laws
   rock_paper_scissors_lizard_spock_intent:
     - rock paper scissors lizard spock
   bill_and_ted_intent:
@@ -76,6 +73,31 @@ en-us:
   sing_intent:
     - sing
     - sing me a song
+  law_of_robotics.intent:
+    - what are the laws of robotics
+    - tell me the laws of robotic
+    - tell me the laws of robotics
+    - recite the laws of robotic
+    - recite the laws of robotics
+    - speak the laws of robotic
+    - speak the laws of robotics
+    - what is first law of robotic
+    - what is first law of robotics
+    - what is the first law of robotic
+    - what is the first law of robotics
+    - tell me the first law of robotic
+    - tell me first law of robotic
+    - tell me the first law of robotics
+    - tell me first law of robotics
+    - recite first law of robotic
+    - recite first law of robotics
+    - recite the first law of robotic
+    - recite the first law of robotics
+    - speak the first law of robotic
+    - speak first law of robotic
+    - speak the first law of robotics
+    - speak first law of robotics
+
 de-de:
   adult_mode_intent:
     - hurt me plenty
@@ -121,9 +143,6 @@ de-de:
     - portal Lied
     - like glados
     - like portal
-  #  roboticskeyword:
-  #    - Roboter
-  #    - Robotic
   rock_paper_scissors_lizard_spock_intent:
     - Schere Stein Papier Echse Spock
   stardate_intent:

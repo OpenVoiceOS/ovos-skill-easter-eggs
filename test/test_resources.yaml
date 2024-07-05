@@ -4,6 +4,8 @@
 languages:
   - "en-us"
 
+regex: []
+
 # vocab is lowercase .voc file basenames
 vocab:
   - arnold_keyword
@@ -12,10 +14,8 @@ vocab:
   - glados_keyword
   - hal_keyword
   - languages_you_speak_keyword
-  - law_keyword
   - pod_bay_doors_keyword
   - portal_keyword
-  - robotics_keyword
   - rock_paper_scissors_lizard_spock_keyword
   - stardate_keyword
   - adult_mode_keyword
@@ -38,20 +38,16 @@ dialog:
   - stardate
   - santa
 
-# regex entities, not necessarily filenames
-regex:
-  - LawOfRobotics
-
 intents:
   # Padatious intents are the `.intent` file names
-  padatious: []
+  padatious:
+    - law_of_robotics.intent
 
   # Adapt intents are the names passed to `IntentBuilder`
   adapt:
     - stardate_intent
     - pod_bay_doors_intent
     - rock_paper_scissors_lizard_spock_intent
-    - robotics_laws_intent
     - languages_you_speak_intent
     - portal_intent
     - hal_intent
