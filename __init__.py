@@ -123,6 +123,7 @@ class EasterEggsSkill(OVOSSkill):
             self.speak_dialog("rule1")
             self.speak_dialog("rule2")
             self.speak_dialog("rule3")
+            return
         # lingua-franca currently returns a number, but let's not trust, let's ensure
         law = str(law)
         if law == "1":
