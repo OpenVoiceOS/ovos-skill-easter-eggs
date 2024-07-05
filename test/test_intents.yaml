@@ -73,7 +73,7 @@ en-us:
   sing_intent:
     - sing
     - sing me a song
-  law_of_robotics_intent:
+  law_of_robotics.intent:
     - what are the laws of robotics
     - tell me the laws of robotic
     - tell me the laws of robotics
@@ -143,9 +143,6 @@ de-de:
     - portal Lied
     - like glados
     - like portal
-  #  roboticskeyword:
-  #    - Roboter
-  #    - Robotic
   rock_paper_scissors_lizard_spock_intent:
     - Schere Stein Papier Echse Spock
   stardate_intent:
