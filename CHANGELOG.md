@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.2a11](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a11) (2024-07-05)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a10...0.1.2a11)
+
+**Closed issues:**
+
+- \[FIX\] 3 Laws of Robotics doesn't properly speak individual laws [\#41](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/41)
+
+**Merged pull requests:**
+
+- fix: laws of robotics [\#43](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/43) ([mikejgray](https://github.com/mikejgray))
+
 ## [0.1.2a10](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a10) (2024-06-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a9...0.1.2a10)
