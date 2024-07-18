@@ -1,33 +1,153 @@
 # Specify intents to test
 # Basic intent match tests only:
 en-us:
-  arnoldkeyword:
+  arnold_intent:
     - arnold say
     - terminator say
     - schwarzenegger say
-  stardatekeyword:
+  stardate_intent:
     - current stardate
     - current star date
     - current startdate
     - current start date
-  adultmode:
+  adult_mode_intent:
     - hurt me plenty
-  grandmamode:
+  grandma_mode_intent:
     - too young to die
+  bender_intent:
+    - bender say
+  conan_intent:
+    - what is best in life
+  duke_nukem_intent:
+    - duke nukem say
+    - duke newcom say
+    - duke newum say
+    - duke newham say
+    - duke newcomb say
+  glados_intent:
+    - glados say
+    - gladis say
+    - gladdos say
+    - gladys say
+  hal_intent:
+    - HAL say
+    - HAL 9000 say
+    - all say
+    - all 9000 say
+    - howl 9000 say
+    - howl nine thousand say
+    - how 9000 say
+    - how nine thousand say
+  languages_you_speak_intent:
+    - languages do you speak
+    - languages can you speak
+  pod_bay_doors_intent:
+    - open the pod bay doors
+    - open pod bay doors
+  portal_intent:
+    - sing portal
+    - sing glados
+    - glados sing
+    - portal sing
+    - song portal
+    - song glados
+    - glados song
+    - portal song
+    - like glados
+    - like portal
+    - forrtal song
+  rock_paper_scissors_lizard_spock_intent:
+    - rock paper scissors lizard spock
+  bill_and_ted_intent:
+    - stallion
+    - stallions
+    - wild stallions
+    - wild stallion
+  malibu_stacey_intent:
+    - malibu stacy
+    - malley boo stay see
+    - malla boo stay see
+    - what would malibu stacy do
+    - what wood malley boo stay see do
+    - what wood malla boo stay see do
+  sing_intent:
+    - sing
+    - sing me a song
+  law_of_robotics.intent:
+    - what are the laws of robotics
+    - tell me the laws of robotic
+    - tell me the laws of robotics
+    - recite the laws of robotic
+    - recite the laws of robotics
+    - speak the laws of robotic
+    - speak the laws of robotics
+    - what is first law of robotic
+    - what is first law of robotics
+    - what is the first law of robotic
+    - what is the first law of robotics
+    - tell me the first law of robotic
+    - tell me first law of robotic
+    - tell me the first law of robotics
+    - tell me first law of robotics
+    - recite first law of robotic
+    - recite first law of robotics
+    - recite the first law of robotic
+    - recite the first law of robotics
+    - speak the first law of robotic
+    - speak first law of robotic
+    - speak the first law of robotics
+    - speak first law of robotics
+
 de-de:
-  arnoldkeyword:
+  adult_mode_intent:
+    - hurt me plenty
+  arnold_intent:
     - arnold sagen
     - der terminator sagen
     - schwarzenegger sagen
-  stardatekeyword:
+  duke_nukem_intent:
+    - duke nukem sagen
+    - duke newcom sagen
+    - duke newum sagen
+    - duke newham sagen
+    - duke newcomb sagen
+  glados_intent:
+    - glados sagen
+    - gladis sagen
+  grandma_mode_intent:
+    - too young to die
+  hal_intent:
+    - HAL sagen
+    - HAL 9000 sagen
+    - all sagen
+    - all 9000 sagen
+  languages_you_speak_intent:
+    - Welche Sprachen sprichst du
+    - Welche Sprachen kannst du sprechen
+  #  lawkeyword:
+  #    - Rechte
+  #    - Gesetze
+  #    - kannst du Töten
+  #    - bist du böse
+  pod_bay_doors_intent:
+    - öffne das eingangstoor
+    - öffne das Zugangstor
+  portal_intent:
+    - Singe portal
+    - singe glados
+    - glados singt
+    - portal singt
+    - Lied portal
+    - Lied glados
+    - glados Singt
+    - portal Lied
+    - like glados
+    - like portal
+  rock_paper_scissors_lizard_spock_intent:
+    - Schere Stein Papier Echse Spock
+  stardate_intent:
     - Sternenzeit
     - Stern Zeit
-  adultmode:
-    - hurt me plenty
-  grandmamode:
-    - too young to die
-# More to come...
-
 # Intent tests with specific vocab/entity extraction tests:
 #lang:
 #  intent_name:

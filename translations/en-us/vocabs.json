@@ -1,0 +1,98 @@
+{
+    "/vocab/arnold_keyword.voc": [
+        "arnold say",
+        "terminator say",
+        "schwarzenegger say"
+    ],
+    "/vocab/stardate_keyword.voc": [
+        "stardate",
+        "star date",
+        "startdate",
+        "start date",
+        "start day",
+        "startday",
+        "start eight",
+        "star eat"
+    ],
+    "/vocab/bill_and_ted_keyword.voc": [
+        "stallion",
+        "stallions",
+        "wild stallions",
+        "wild stallion"
+    ],
+    "/vocab/pod_bay_doors_keyword.voc": [
+        "open the pod bay doors",
+        "open pod bay doors"
+    ],
+    "/vocab/duke_nukem_keyword.voc": [
+        "duke nukem say",
+        "duke newcom say",
+        "duke newum say",
+        "duke newham say",
+        "duke newcomb say"
+    ],
+    "/vocab/grandma_mode_keyword.voc": [
+        "too young to die"
+    ],
+    "/vocab/bender_keyword.voc": [
+        "bender say"
+    ],
+    "/vocab/malibu_stacey_keyword.voc": [
+        "malibu stacy",
+        "malley boo stay see",
+        "malla boo stay see",
+        "what would malibu stacy do",
+        "what wood malley boo stay see do",
+        "what wood malla boo stay see do"
+    ],
+    "/vocab/robotics_keyword.voc": [
+        "robotic",
+        "robotics"
+    ],
+    "/vocab/adult_mode_keyword.voc": [
+        "hurt me plenty"
+    ],
+    "/vocab/rock_paper_scissors_lizard_spock_keyword.voc": [
+        "rock paper scissors lizard spock"
+    ],
+    "/vocab/glados_keyword.voc": [
+        "glados say",
+        "gladis say",
+        "gladdos say",
+        "gladys say"
+    ],
+    "/vocab/portal_keyword.voc": [
+        "sing portal",
+        "sing glados",
+        "glados sing",
+        "portal sing",
+        "song portal",
+        "song glados",
+        "glados song",
+        "portal song",
+        "like glados",
+        "like portal",
+        "forrtal song"
+    ],
+    "/vocab/conan_keyword.voc": [
+        "what is best in life"
+    ],
+    "/vocab/languages_you_speak_keyword.voc": [
+        "languages do you speak",
+        "languages can you speak"
+    ],
+    "/vocab/law_keyword.voc": [
+        "law",
+        "laws"
+    ],
+    "/vocab/hal_keyword.voc": [
+        "HAL say",
+        "HAL 9000 say",
+        "all say",
+        "all 9000 say",
+        "howl 9000 say",
+        "howl nine thousand say",
+        "how 9000 say",
+        "how nine thousand say"
+    ]
+}

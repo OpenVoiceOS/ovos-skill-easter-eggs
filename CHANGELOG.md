@@ -1,5 +1,111 @@
 # Changelog
 
+## [0.1.2a11](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a11) (2024-07-05)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a10...0.1.2a11)
+
+**Closed issues:**
+
+- \[FIX\] 3 Laws of Robotics doesn't properly speak individual laws [\#41](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/41)
+
+**Merged pull requests:**
+
+- fix: laws of robotics [\#43](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/43) ([mikejgray](https://github.com/mikejgray))
+
+## [0.1.2a10](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a10) (2024-06-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a9...0.1.2a10)
+
+**Implemented enhancements:**
+
+- make it snow during christmas [\#29](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/29)
+- feat: make it snow [\#33](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/33) ([mikejgray](https://github.com/mikejgray))
+
+## [0.1.2a9](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a9) (2024-06-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a8...0.1.2a9)
+
+**Implemented enhancements:**
+
+- \[ENHANCEMENT\] Container compatibility [\#36](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/36)
+- voice specific easter egg - singing [\#27](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/27)
+- feat: singing [\#40](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/40) ([mikejgray](https://github.com/mikejgray))
+
+**Merged pull requests:**
+
+- Re-enable intent tests [\#39](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/39) ([NeonDaniel](https://github.com/NeonDaniel))
+
+## [0.1.2a8](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a8) (2024-05-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a7...0.1.2a8)
+
+**Implemented enhancements:**
+
+- May I have some more sir? [\#28](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/28)
+
+**Fixed bugs:**
+
+- ValueError: unknown skill\_id: skill-easter-eggs.openvoiceos [\#31](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/31)
+
+**Merged pull requests:**
+
+- automations/translations [\#38](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/38) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.1.2a7](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a7) (2024-02-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a6...0.1.2a7)
+
+**Merged pull requests:**
+
+- feat: malibu stacey and bill and ted easter eggs [\#37](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/37) ([mikejgray](https://github.com/mikejgray))
+
+## [0.1.2a6](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a6) (2024-01-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a5...0.1.2a6)
+
+**Implemented enhancements:**
+
+- what is best in life [\#25](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/25)
+- feat: best in life [\#34](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/34) ([mikejgray](https://github.com/mikejgray))
+
+## [0.1.2a5](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a5) (2024-01-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a4...0.1.2a5)
+
+**Implemented enhancements:**
+
+- OCP - portal [\#24](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/24)
+- feat: portal ocp [\#35](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/35) ([mikejgray](https://github.com/mikejgray))
+
+## [0.1.2a4](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a4) (2024-01-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a3...0.1.2a4)
+
+**Merged pull requests:**
+
+- chore: standardize naming, move files to locale dir [\#32](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/32) ([mikejgray](https://github.com/mikejgray))
+
+## [0.1.2a3](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a3) (2024-01-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a2...0.1.2a3)
+
+**Merged pull requests:**
+
+- update imports [\#30](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/30) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.1.2a2](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a2) (2023-12-30)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.2a1...0.1.2a2)
+
+**Merged pull requests:**
+
+- more stt mistranscriptions for DukeNukemKeyword.voc [\#26](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/26) ([mikejgray](https://github.com/mikejgray))
+- Make README.md examples fit typical style [\#22](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/22) ([strugee](https://github.com/strugee))
+
+## [0.1.2a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.2a1) (2023-06-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.1...0.1.2a1)
+
 ## [0.1.1a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.1a1) (2023-06-22)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/v0.1.0...0.1.1a1)
@@ -7,62 +113,5 @@
 **Merged pull requests:**
 
 - fix: release automation [\#20](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/20) ([mikejgray](https://github.com/mikejgray))
-
-## [v0.1.0](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/v0.1.0) (2023-06-03)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/V0.1.0a4...v0.1.0)
-
-**Fixed bugs:**
-
-- \[BUG\] "current start date" not picked up by the skill [\#10](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/10)
-- fix: allow settings change [\#17](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/17) ([mikejgray](https://github.com/mikejgray))
-
-**Closed issues:**
-
-- \[FEAT\] Grandma mode [\#9](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/9)
-
-**Merged pull requests:**
-
-- feat: cleanup intents [\#18](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/18) ([mikejgray](https://github.com/mikejgray))
-
-## [V0.1.0a4](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/V0.1.0a4) (2023-05-31)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.1.0a4...V0.1.0a4)
-
-## [0.1.0a4](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/0.1.0a4) (2023-05-31)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/V0.1.0a3...0.1.0a4)
-
-**Implemented enhancements:**
-
-- feat - SkillApi [\#15](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/15)
-
-**Merged pull requests:**
-
-- feat: skill api method to get stardate [\#16](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/16) ([mikejgray](https://github.com/mikejgray))
-
-## [V0.1.0a3](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/V0.1.0a3) (2023-05-12)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/V0.0.1...V0.1.0a3)
-
-**Closed issues:**
-
-- \[FEAT\] Grandma mode [\#9](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/9)
-- stardate [\#6](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/6)
-
-**Merged pull requests:**
-
-- feat: grandma mode [\#13](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/13) ([mikejgray](https://github.com/mikejgray))
-- fix: current stardate [\#12](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/12) ([mikejgray](https://github.com/mikejgray))
-
-## [V0.0.1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/V0.0.1) (2023-05-09)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/0.0.1...V0.0.1)
-
-**Closed issues:**
-
-- failed to initialize [\#5](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/5)
-
-
 
 \* *This Changelog was automatically generated by [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator)*

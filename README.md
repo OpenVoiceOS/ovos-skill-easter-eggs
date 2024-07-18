@@ -8,17 +8,20 @@ Some funny things for OpenVoiceOS, mostly quotes from movies
 
 ## Examples
 
-- "current stardate"
-- "open the pod bay doors"
-- "first law of robotics"
-- "how to play rock_paper_scissors_lizard_spock"
-- "how many languages do you speak"
-- "do you like portal"
-- "what would duke nukem say"
-- "what would HAL 9000 say"
-- "what would arnold say"
-- "what would glados say"
-- "what would bender say"
+- "Current stardate?"
+- "Open the pod bay doors."
+- "First law of robotics?"
+- "How to play rock paper scissors lizard spock?"
+- "How many languages do you speak?"
+- "Do you like Portal?"
+- "What would Duke Nukem say?"
+- "What would HAL 9000 say?"
+- "What would Arnold say?"
+- "What would GLaDOS say?"
+- "What would Bender say?"
+- "What would Malibu Stacey say?"
+- "You know the best band in the world? Wyld Stallions?"
+- "Sing me a song"
 
 ## Grandma Mode
 
@@ -28,5 +31,5 @@ If you want to go back into grandma mode, say "I'm too young to die."
 
 ## Credits
 
-JarbasAI
-mikejgray (revival)
+- JarbasAI
+- mikejgray (revival)

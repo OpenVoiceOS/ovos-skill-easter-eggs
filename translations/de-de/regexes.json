@@ -1,0 +1,5 @@
+{
+    "/regex/Law.rx": [
+        "(the|is) (?P<LawOfRobotics>.*) (law of robotic|law of robotics)"
+    ]
+}

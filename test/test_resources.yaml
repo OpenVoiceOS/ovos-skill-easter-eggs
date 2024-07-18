@@ -4,22 +4,26 @@
 languages:
   - "en-us"
 
+regex: []
+
 # vocab is lowercase .voc file basenames
 vocab:
-  - arnoldkeyword
-  - benderkeyword
-  - dukenukemkeyword
-  - gladoskeyword
-  - halkeyword
-  - languagesyouspeakkeyword
-  - lawkeyword
-  - podbaydoorskeyword
-  - portalkeyword
-  - roboticskeyword
+  - arnold_keyword
+  - bender_keyword
+  - duke_nukem_keyword
+  - glados_keyword
+  - hal_keyword
+  - languages_you_speak_keyword
+  - pod_bay_doors_keyword
+  - portal_keyword
   - rock_paper_scissors_lizard_spock_keyword
-  - stardatekeyword
-  - adultmode
-  - grandmamode
+  - stardate_keyword
+  - adult_mode_keyword
+  - grandma_mode_keyword
+  - conan_keyword
+  - bill_and_ted_keyword
+  - malibu_stacey_keyword
+  - sing_keyword
 
 # dialog is .dialog file basenames (case-sensitive)
 dialog:
@@ -32,31 +36,28 @@ dialog:
   - rule2
   - rule3
   - stardate
-
-# regex entities, not necessarily filenames
-regex:
-  []
-  # en-us:
-  #   - "(the|is) (?P<LawOfRobotics>.*) (law of robotic|law of robotics)"
-  # de-de:
-  #   - "(the|is) (?P<LawOfRobotics>.*) (law of robotic|law of robotics)"
+  - santa
 
 intents:
   # Padatious intents are the `.intent` file names
-  padatious: []
+  padatious:
+    - law_of_robotics.intent
 
   # Adapt intents are the names passed to `IntentBuilder`
   adapt:
-    - StardateIntent
-    - PodBayDoorsIntent
-    - rock_paper_scissors_lizard_spock_Intent
-    - RoboticsLawsIntent
-    - LanguagesYouSpeakIntent
-    - PortalIntent
-    - HALIntent
-    - DukeNukemIntent
-    - ArnoldIntent
-    - BenderIntent
-    - GladosIntent
-    - AdultModeIntent
-    - GrandmaModeIntent
+    - stardate_intent
+    - pod_bay_doors_intent
+    - rock_paper_scissors_lizard_spock_intent
+    - languages_you_speak_intent
+    - portal_intent
+    - hal_intent
+    - duke_nukem_intent
+    - arnold_intent
+    - bender_intent
+    - glados_intent
+    - adult_mode_intent
+    - grandma_mode_intent
+    - conan_intent
+    - bill_and_ted_intent
+    - malibu_stacey_intent
+    - sing_intent
