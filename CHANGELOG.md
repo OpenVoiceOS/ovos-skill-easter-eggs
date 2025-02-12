@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.1a5](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.1a5) (2025-02-12)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.1a4...1.0.1a5)
+
+**Closed issues:**
+
+- Support newer ovos-utils and ovos-workshop [\#52](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/issues/52)
+
+**Merged pull requests:**
+
+- fix: load with newer versions [\#53](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/53) ([mikejgray](https://github.com/mikejgray))
+
 ## [1.0.1a4](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.1a4) (2025-01-04)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.1a3...1.0.1a4)
