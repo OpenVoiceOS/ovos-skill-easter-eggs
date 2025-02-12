@@ -178,7 +178,7 @@ class EasterEggsSkill(OVOSSkill):
                 sound
                 for sound in listdir(path)
                 if f".{extension}" in sound
-                   and f"{path_ending}/{sound}" not in SPICY_SOUNDS
+                and f"{path_ending}/{sound}" not in SPICY_SOUNDS
             ]
         else:
             files = [sound for sound in listdir(path) if f".{extension}" in sound]
@@ -285,7 +285,7 @@ class EasterEggsSkill(OVOSSkill):
             return True
         # Default ovos-tts-plugin-server voice, Alan Pope
         if tts.get("module") == "ovos-tts-plugin-server" and not tts.get(
-                "ovos-tts-plugin-server"
+            "ovos-tts-plugin-server"
         ):
             return True
         for k, v in tts.items():
@@ -296,6 +296,12 @@ class EasterEggsSkill(OVOSSkill):
                     return True
                 if "alan" in v.get("model", "") and tts.get("module", "") == k:
                     return True
+        return False
+
+    def _sounds_like_sam(self) -> bool:
+        tts = self.config_core.get("tts", {})
+        if "sam" in tts.get("module", "").lower():
+            return True
         return False
 
     @skill_api_method

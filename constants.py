@@ -16,7 +16,7 @@ SPICY_SOUNDS = [
     "sounds/bender/Wanna kill all humans.mp3",
 ]
 
-ASCII_SNOW = """
+ASCII_SNOW = r"""
                      *  .  *
                    . _\/ \/_ .
                     \  \ /  /             .      .
