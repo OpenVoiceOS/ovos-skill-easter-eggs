@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1a6](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.1a6) (2026-03-06)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.1a5...1.0.1a6)
+
+**Merged pull requests:**
+
+- chore: Configure Renovate [\#55](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/55) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [1.0.1a5](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.1a5) (2025-02-12)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.1a4...1.0.1a5)
