@@ -25,7 +25,7 @@
     "license": "BSD-3-Clause",
     "author": "Jarbas",
     "tags": [],
-    "version": "1.0.1a6",
+    "version": "1.0.1",
     "url": "https://github.com/OpenVoiceOS/skill-easter-eggs",
     "skill_id": "skill-easter-eggs.openvoiceos=skill_easter_eggs:EasterEggsSkill",
     "skillname": "skill-easter-eggs",
