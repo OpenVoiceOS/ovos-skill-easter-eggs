@@ -1,0 +1,98 @@
+{
+    "/vocab/arnold_keyword.voc": [
+        "arnold-en esana",
+        "schwarzenegger-en esana",
+        "terminator-en esana"
+    ],
+    "/vocab/stardate_keyword.voc": [
+        "izar-data",
+        "izar-jana",
+        "izardata",
+        "hasiera-data",
+        "hasiera-eguna",
+        "hasiera zortzi",
+        "hasiera-data",
+        "hasiera-eguna"
+    ],
+    "/vocab/bill_and_ted_keyword.voc": [
+        "garaño",
+        "garañoak",
+        "garaño basati",
+        "garaño basatiak"
+    ],
+    "/vocab/pod_bay_doors_keyword.voc": [
+        "ireki kapsulako ateak",
+        "ireki kapsulako ateak"
+    ],
+    "/vocab/duke_nukem_keyword.voc": [
+        "duke newcom-en esana",
+        "duke newcomb-en esana",
+        "duke newham-en esana",
+        "duke newum-en esana",
+        "duke nukem-en esana"
+    ],
+    "/vocab/grandma_mode_keyword.voc": [
+        "hiltzeko gazteegi"
+    ],
+    "/vocab/bender_keyword.voc": [
+        "bender-en esana"
+    ],
+    "/vocab/malibu_stacey_keyword.voc": [
+        "malibu stacy",
+        "malla boo stay see",
+        "malley boo stay see",
+        "zer egingo luke malla boo stay see-k?",
+        "zer egingo luke malley boo stay see-k?",
+        "zer egingo luke malibu stacy-k?"
+    ],
+    "/vocab/robotics_keyword.voc": [
+        "robotiko",
+        "robotikoak"
+    ],
+    "/vocab/adult_mode_keyword.voc": [
+        "min handia ematen dit"
+    ],
+    "/vocab/rock_paper_scissors_lizard_spock_keyword.voc": [
+        "harria papera guraizea muskerra spock"
+    ],
+    "/vocab/glados_keyword.voc": [
+        "gladdos-en esana",
+        "gladis-en esana",
+        "glados-en esana",
+        "gladys-en esana"
+    ],
+    "/vocab/portal_keyword.voc": [
+        "forrtal abestia",
+        "glados-ek abestua",
+        "glados-en abestia",
+        "glados bezala",
+        "portal bezala",
+        "portal-ek abestua",
+        "portal-en abestia",
+        "abestu glados",
+        "abestu portal",
+        "abestia glados",
+        "abestia portal"
+    ],
+    "/vocab/conan_keyword.voc": [
+        "bizitzako onena"
+    ],
+    "/vocab/languages_you_speak_keyword.voc": [
+        "hitz egin ditzakezun hizkuntzak",
+        "hitz egiten dituzun hizkuntzak"
+    ],
+    "/vocab/law_keyword.voc": [
+        "lege",
+        "legeak"
+    ],
+    "/vocab/hal_keyword.voc": [
+        "HAL 9000-en esana",
+        "HAL-en esana",
+        "all 9000-en esana",
+        "all-en esana",
+        "how 9000-en esana",
+        "how bederatzi milaren esana",
+        "howl 9000-en esana",
+        "howl bederatzi milaren esana"
+    ]
+}

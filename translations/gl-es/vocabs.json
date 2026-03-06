@@ -1,0 +1,98 @@
+{
+    "/vocab/arnold_keyword.voc": [
+        "arnold di",
+        "schwarzenegger di",
+        "terminator di"
+    ],
+    "/vocab/stardate_keyword.voc": [
+        "data estelar",
+        "estrela comer",
+        "data estelar",
+        "data de inicio",
+        "día de inicio",
+        "oito de inicio",
+        "data inicial",
+        "día inicial"
+    ],
+    "/vocab/bill_and_ted_keyword.voc": [
+        "semental",
+        "sementais",
+        "semental salvaxe",
+        "sementais salvaxes"
+    ],
+    "/vocab/pod_bay_doors_keyword.voc": [
+        "abrir as portas do compartimento da cápsula",
+        "abrir portas do compartimento da cápsula"
+    ],
+    "/vocab/duke_nukem_keyword.voc": [
+        "duke newcom di",
+        "duke newcomb di",
+        "duke newham di",
+        "duke newum di",
+        "duke nukem di"
+    ],
+    "/vocab/grandma_mode_keyword.voc": [
+        "demasiado novo para morrer"
+    ],
+    "/vocab/bender_keyword.voc": [
+        "bender di"
+    ],
+    "/vocab/malibu_stacey_keyword.voc": [
+        "malibu stacy",
+        "malla boo stay see",
+        "malley boo stay see",
+        "que faría malla boo stay see",
+        "que faría malley boo stay see",
+        "que faría malibu stacy"
+    ],
+    "/vocab/robotics_keyword.voc": [
+        "robótico",
+        "robótica"
+    ],
+    "/vocab/adult_mode_keyword.voc": [
+        "faime dano"
+    ],
+    "/vocab/rock_paper_scissors_lizard_spock_keyword.voc": [
+        "pedra papel tesoira lagarto spock"
+    ],
+    "/vocab/glados_keyword.voc": [
+        "gladdos di",
+        "gladis di",
+        "glados di",
+        "gladys di"
+    ],
+    "/vocab/portal_keyword.voc": [
+        "canción de forrtal",
+        "glados canta",
+        "canción de glados",
+        "coma glados",
+        "coma portal",
+        "portal canta",
+        "canción de portal",
+        "cantar glados",
+        "cantar portal",
+        "canción glados",
+        "canción portal"
+    ],
+    "/vocab/conan_keyword.voc": [
+        "que é o mellor da vida"
+    ],
+    "/vocab/languages_you_speak_keyword.voc": [
+        "idiomas sabes falar",
+        "idiomas falas"
+    ],
+    "/vocab/law_keyword.voc": [
+        "lei",
+        "leis"
+    ],
+    "/vocab/hal_keyword.voc": [
+        "HAL 9000 di",
+        "HAL di",
+        "todos 9000 din",
+        "todos din",
+        "como 9000 di",
+        "como nove mil di",
+        "berra 9000 di",
+        "berra nove mil di"
+    ]
+}

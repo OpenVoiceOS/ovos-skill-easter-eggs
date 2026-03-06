@@ -1,8 +1,4 @@
 {
-    "title": "",
-    "url": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs",
-    "summary": "",
-    "short_description": null,
     "description": "Some funny things for OpenVoiceOS, mostly quotes from movies",
     "examples": [
         "Current stardate?",
@@ -20,22 +16,37 @@
         "You know the best band in the world? Wyld Stallions?",
         "Sing me a song"
     ],
-    "desktopFile": false,
-    "warning": "",
-    "systemDeps": false,
+    "credits": [
+        "Jarbas"
+    ],
+    "category": "",
+    "package_name": "skill-easter-eggs",
+    "pip_spec": "skill-easter-eggs",
+    "license": "BSD-3-Clause",
+    "author": "Jarbas",
+    "tags": [],
+    "version": "1.0.1",
+    "url": "https://github.com/OpenVoiceOS/skill-easter-eggs",
+    "skill_id": "skill-easter-eggs.openvoiceos=skill_easter_eggs:EasterEggsSkill",
+    "skillname": "skill-easter-eggs",
+    "authorname": "OpenVoiceOS",
+    "name": "skill-easter-eggs",
+    "title": "skill-easter-eggs",
     "requirements": {
         "python": [
-            "ovos-lingua-franca~=0.0, >=0.4.7",
-            "ovos-lingua-franca~=0.4.8a1",
-            "ovos-mark1-utils~=0.0.0a2",
-            "ovos-utils~=0.0, >=0.0.38",
-            "ovos_bus_client~=0.0, >=0.0.6",
-            "ovos_workshop~=0.0, >=0.0.15",
-            "python-dateutil~=2.9.0"
+            "python-dateutil~=2.9.0",
+            "ovos-utils>=0.0.38",
+            "ovos_workshop>=0.0.15",
+            "ovos_bus_client>=0.0.6",
+            "ovos-number-parser>=0.0.1",
+            "ovos-mark1-utils~=0.0.1"
         ],
         "system": {},
         "skill": []
     },
+    "desktopFile": false,
+    "warning": "",
+    "systemDeps": false,
     "incompatible_skills": [],
     "platforms": [
         "i386",
@@ -45,18 +56,6 @@
         "arm"
     ],
     "branch": "master",
-    "license": "Unknown",
-    "icon": "",
-    "category": "",
-    "categories": [],
-    "tags": [],
-    "credits": [
-        "- JarbasAI",
-        "- mikejgray (revival)"
-    ],
-    "skillname": "ovos-skill-easter-eggs",
-    "authorname": "OpenVoiceOS",
     "foldername": null,
-    "easter eggs": "pop culture references skill",
-    "grandma mode": "This skill has some spicy language options. It starts in grandma mode by default. To disable grandma mode, say \"hurt me plenty.\" If you want to go back into grandma mode, say \"I'm too young to die.\""
+    "short_description": null
 }

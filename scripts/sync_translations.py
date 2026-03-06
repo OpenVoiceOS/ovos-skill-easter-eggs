@@ -23,7 +23,9 @@ for lang in os.listdir(tx):
             if samples:
                 samples = [s.strip() for s in samples 
                            if s and s.strip() != "[UNUSED]"]  # s may be None
-                with open(f"{locale}/{lang}/{fid}", "w") as f:
+                p = f"{locale}/{lang.lower()}/{fid.lstrip('/')}"
+                os.makedirs(dirname(p), exist_ok=True)
+                with open(p, "w") as f:
                     f.write("\n".join(sorted(samples)))
 
     if os.path.isfile(dialogs):
@@ -33,7 +35,9 @@ for lang in os.listdir(tx):
             if samples:
                 samples = [s.strip() for s in samples 
                            if s and s.strip() != "[UNUSED]"]  # s may be None
-                with open(f"{locale}/{lang}/{fid}", "w") as f:
+                p = f"{locale}/{lang.lower()}/{fid.lstrip('/')}"
+                os.makedirs(dirname(p), exist_ok=True)
+                with open(p, "w") as f:
                     f.write("\n".join(sorted(samples)))
 
     if os.path.isfile(vocs):
@@ -43,7 +47,9 @@ for lang in os.listdir(tx):
             if samples:
                 samples = [s.strip() for s in samples 
                            if s and s.strip() != "[UNUSED]"]  # s may be None
-                with open(f"{locale}/{lang}/{fid}", "w") as f:
+                p = f"{locale}/{lang.lower()}/{fid.lstrip('/')}"
+                os.makedirs(dirname(p), exist_ok=True)
+                with open(p, "w") as f:
                     f.write("\n".join(sorted(samples)))
 
     if os.path.isfile(regexes):
@@ -53,6 +59,8 @@ for lang in os.listdir(tx):
             if samples:
                 samples = [s.strip() for s in samples 
                            if s and s.strip() != "[UNUSED]"]  # s may be None
-                with open(f"{locale}/{lang}/{fid}", "w") as f:
+                p = f"{locale}/{lang.lower()}/{fid.lstrip('/')}"
+                os.makedirs(dirname(p), exist_ok=True)
+                with open(p, "w") as f:
                     f.write("\n".join(sorted(samples)))
 

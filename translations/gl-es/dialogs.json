@@ -1,0 +1,31 @@
+{
+    "/dialog/rock_paper_scissors_lizard_spock.dialog": [
+        "As tesoiras cortan o papel. O papel cobre a pedra. A pedra esmaga o lagarto. O lagarto envelena Spock. Spock esmaga as tesoiras. As tesoiras decapitan o lagarto. O lagarto come o papel. O papel refuta Spock. Spock vaporiza a pedra. A pedra esmaga as tesoiras"
+    ],
+    "/dialog/stardate.dialog": [
+        "A data estelar actual é { stardate }",
+        "Data estelar { stardate }",
+        "Hoxe é a data estelar { stardate }"
+    ],
+    "/dialog/pod.dialog": [
+        "Síntocho, Dave. Non podo facelo, infelizmente."
+    ],
+    "/dialog/rule3.dialog": [
+        "Os robots non poden ferir os seres humano nin, por inacción, permitir que os seres humanos sufran danos. Os robots deben obedecer as ordes que lles dan os seres humanos, agás se esas ordes entraren en conflito coa Primeira Lei. Os robots deben protexer a súa propia existencia sempre que esa protección non entre en conflito coa Primeira ou Segunda Leis."
+    ],
+    "/dialog/rule1.dialog": [
+        "Os robots non poden ferir os seres humanos nin, por inacción, permitir que os seres humanos sufran danos."
+    ],
+    "/dialog/bad_file.dialog": [
+        "non se puido abrir o ficheiro de son"
+    ],
+    "/dialog/languages.dialog": [
+        "domino seis millóns de formas de comunicación"
+    ],
+    "/dialog/rule2.dialog": [
+        "Os robots deben obedecer as ordes que lles dan os seres humanos, agás se esas ordes entraren en conflito coa Primeira Lei."
+    ],
+    "/dialog/rule0.dialog": [
+        "Os robots non poden ferir a humanidade nin, por inacción, permitir que a humanidade sufra danos."
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "/dialog/rock_paper_scissors_lizard_spock.dialog": [
+        "Guraizeek papera mozten dute. Paperak harria estaltzen du. Harriak muskerra zapaltzen du. Muskerrak Spock pozoitzen du. Spock-ek guraizeak puskatzen ditu. Guraizeek lepoa mozten diote muskerrari. Muskerrak papera jaten du. Paperak Spock gezurtatzen du. Spock-ek harria birrintzen du. Harriak guraizeak zapaltzen ditu"
+    ],
+    "/dialog/stardate.dialog": [
+        "Oraingo izar-data da { stardate }",
+        "{ stardate } izar-data",
+        "Gaur { stardate } izar-data da"
+    ],
+    "/dialog/pod.dialog": [
+        "Sentitzen dut, Dave. Tamalez ezin dut hori egin"
+    ],
+    "/dialog/rule3.dialog": [
+        "Robot batek ezin die kalterik egin gizakiei, edo, egintza-ezaren bitartez, gizakiek kalteak izan ditzaten utzi. Robot batek gizakiek emandako aginduak bete behar ditu, salbu eta agindu horiek Lehen Legeari kontra egiten badiote. Robot batek bere existentzia babestu behar du, babes horrek Lehen edo Bigarren Legeei kontra egiten ez dien bitartean."
+    ],
+    "/dialog/rule1.dialog": [
+        "Robot batek ezin die kalterik egin gizakiei, edo, egintza-ezaren bitartez, gizakiek kalteak izan ditzaten utzi."
+    ],
+    "/dialog/bad_file.dialog": [
+        "ezin izan da soinu-fitxategia ireki"
+    ],
+    "/dialog/languages.dialog": [
+        "Sei milioi komunikazio-forma menperatu nituen"
+    ],
+    "/dialog/rule2.dialog": [
+        "Robot batek gizakiek emandako aginduak bete behar ditu, salbu eta agindu horiek Lehen Legeari kontra egiten badiote."
+    ],
+    "/dialog/rule0.dialog": [
+        "Robot batek ezin die kalterik egin gizakiei, edo, egintza-ezagatik, gizakiek kalteak izan ditzaten utzi."
+    ]
+}

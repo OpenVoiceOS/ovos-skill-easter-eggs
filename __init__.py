@@ -5,11 +5,11 @@ from os import getenv, listdir
 from os.path import dirname, join
 
 from dateutil.tz import gettz
-from lingua_franca.parse import extract_number
-from lingua_franca.time import default_timezone
 from ovos_bus_client.apis.ocp import OCPInterface
 from ovos_bus_client.message import Message
+from ovos_config.locale import get_default_tz
 from ovos_mark1.faceplate.animations import FallingDots
+from ovos_number_parser import extract_number
 from ovos_workshop.decorators import intent_handler, skill_api_method
 from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
@@ -38,7 +38,7 @@ class EasterEggsSkill(OVOSSkill):
         return (
             gettz(self.location_timezone)
             if self.location_timezone
-            else default_timezone()
+            else get_default_tz()
         )
 
     def _set_easter_egg_events(self):
@@ -116,7 +116,7 @@ class EasterEggsSkill(OVOSSkill):
     @intent_handler("law_of_robotics.intent")
     def handle_robotic_laws_intent(self, message: Message):
         law = str(message.data.get("ordinal", ""))
-        law = extract_number(law, ordinals=True)
+        law = extract_number(law, ordinals=True, lang=self.lang)
         self.log.debug("law: %s", law)
         if not law:
             self.log.debug("No specific law detected, reciting all three")
@@ -296,6 +296,12 @@ class EasterEggsSkill(OVOSSkill):
                     return True
                 if "alan" in v.get("model", "") and tts.get("module", "") == k:
                     return True
+        return False
+
+    def _sounds_like_sam(self) -> bool:
+        tts = self.config_core.get("tts", {})
+        if "sam" in tts.get("module", "").lower():
+            return True
         return False
 
     @skill_api_method

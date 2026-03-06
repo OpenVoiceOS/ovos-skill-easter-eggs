@@ -73,9 +73,10 @@ class TestEasterEggSkill:
         test_skill.speak.assert_called_once_with("Ok, we'll tone it down a bit.")
         assert test_skill.settings["grandma_mode_enabled"] is True
 
-    def test_handle_adult_mode(self, test_skill):
-        # TODO: Fully implement
-        assert True
+    def test_handle_adult_mode(self, test_skill, reset_skill_mocks):
+        test_skill.handle_adult_mode(None)
+        test_skill.speak.assert_called_once_with("Do you feel lucky, punk?")
+        assert test_skill.settings["grandma_mode_enabled"] is False
 
     def test_handle_stardate_intent(self, test_skill, reset_skill_mocks):
         test_skill.handle_stardate_intent(None)
@@ -88,8 +89,8 @@ class TestEasterEggSkill:
         assert True
 
     def test_handle_pod_intent(self, test_skill, reset_skill_mocks):
-        # TODO: Fully implement
-        assert True
+        test_skill.handle_pod_intent(None)
+        test_skill.speak_dialog.assert_called_once_with("pod")
 
     def test_handle_robotic_laws_intent(self, test_skill, reset_skill_mocks):
         # TODO: Fully implement
@@ -98,12 +99,12 @@ class TestEasterEggSkill:
     def test_handle_rock_paper_scissors_lizard_spock_intent(
         self, test_skill, reset_skill_mocks
     ):
-        # TODO: Fully implement
-        assert True
+        test_skill.handle_rock_paper_scissors_lizard_spock_intent(None)
+        test_skill.speak_dialog.assert_called_once_with("rock_paper_scissors_lizard_spock")
 
     def test_handle_number_of_languages_intent(self, test_skill, reset_skill_mocks):
-        # TODO: Fully implement
-        assert True
+        test_skill.handle_number_of_languages_intent(None)
+        test_skill.speak_dialog.assert_called_once_with("languages")
 
     def test_handle_portal_intent(self, test_skill, reset_skill_mocks):
         with patch("skill_easter_eggs.EasterEggsSkill._play_in_ocp") as mock_ocp_play:
@@ -134,24 +135,37 @@ class TestEasterEggSkill:
                 assert spicy_arnold in arnold_spicy
 
     def test_handle_hal_intent(self, test_skill, reset_skill_mocks):
-        # TODO: Fully implement
-        assert True
+        test_skill.handle_hal_intent(None)
+        test_skill.play_audio.assert_called_once()
+        assert "skill_easter_eggs/sounds/hal/" in test_skill.play_audio.call_args.args[0]
 
-    def test_handle_dukenukem_intent(self, test_skill, reset_skill_mocks):
-        # TODO: Fully implement
-        assert True
+    def test_handle_dukenukem_intent_grandma_mode(self, test_skill, reset_skill_mocks):
+        with patch("skill_easter_eggs.EasterEggsSkill.grandma_mode", True):
+            test_skill.handle_dukenukem_intent(None)
+        test_skill.speak.assert_called_once_with("Duke Who-Kem?")
+        test_skill.play_audio.assert_not_called()
 
-    def test_handle_handle_arnold_intent(self, test_skill, reset_skill_mocks):
-        # TODO: Fully implement
-        assert True
+    def test_handle_dukenukem_intent_adult_mode(self, test_skill, reset_skill_mocks):
+        with patch("skill_easter_eggs.EasterEggsSkill.grandma_mode", False):
+            test_skill.handle_dukenukem_intent(None)
+        test_skill.play_audio.assert_called_once()
+        assert "skill_easter_eggs/sounds/dukenukem/" in test_skill.play_audio.call_args.args[0]
+
+    def test_handle_arnold_intent(self, test_skill, reset_skill_mocks):
+        test_skill.handle_arnold_intent(None)
+        test_skill.play_audio.assert_called_once()
+        assert "skill_easter_eggs/sounds/arnold/" in test_skill.play_audio.call_args.args[0]
 
     def test_handle_bender_intent(self, test_skill, reset_skill_mocks):
-        # TODO: Fully implement
-        assert True
+        test_skill.handle_bender_intent(None)
+        test_skill.play_audio.assert_called_once()
+        assert "skill_easter_eggs/sounds/bender/" in test_skill.play_audio.call_args.args[0]
 
     def test_handle_glados_intent(self, test_skill, reset_skill_mocks):
-        # TODO: Fully implement
-        assert True
+        with patch("skill_easter_eggs.EasterEggsSkill._play_in_ocp") as mock_ocp:
+            test_skill.handle_glados_intent(None)
+        mock_ocp.assert_called_once()
+        assert mock_ocp.call_args.kwargs.get("title") == "GlaDOS says..."
 
     def test_handle_conan_intent(self, test_skill, reset_skill_mocks):
         test_skill.handle_conan_intent(None)
@@ -245,8 +259,9 @@ class TestEasterEggSkill:
             assert mock.call(rule) not in test_skill.speak_dialog.mock_calls
 
     def test_get_display_date(self, test_skill):
-        # TODO: Fully implement
-        assert True
+        result = test_skill.get_display_date()
+        assert isinstance(result, float)
+        assert result > 41000  # TNG origin is 1987; we're well past it
 
     def test_play_in_ocp(self, test_skill):
         with open(join(self.conf_dir, "mycroft.conf"), "w", encoding="utf-8") as f:
@@ -314,6 +329,28 @@ class TestEasterEggSkill:
                 }
             ]
         )
+
+    def test_laws_of_robotics_invalid(self, test_skill, reset_skill_mocks):
+        test_skill.handle_robotic_laws_intent(Message("test", {"ordinal": "fourth"}))
+        test_skill.speak_dialog.assert_called_once_with("invalid_law")
+
+    def test_sounds_like_popey_default_server(self, test_skill):
+        # ovos-tts-plugin-server with no per-plugin config is the Alan Pope default
+        test_skill.config_core = {"tts": {"module": "ovos-tts-plugin-server"}}
+        assert test_skill._sounds_like_popey() is True
+
+    def test_sounds_like_sam(self, test_skill):
+        test_skill.config_core = {"tts": {"module": "some-sam-tts-plugin"}}
+        assert test_skill._sounds_like_sam() is True
+        test_skill.config_core = {"tts": {"module": "ovos-tts-plugin-mimic"}}
+        assert test_skill._sounds_like_sam() is False
+
+    def test_handle_sing_intent_user_declines(self, test_skill, reset_skill_mocks):
+        with patch.object(test_skill, "_sounds_like_popey", return_value=False), \
+             patch.object(test_skill, "ask_yesno", return_value="no"):
+            test_skill.handle_sing_intent(None)
+        test_skill.play_audio.assert_not_called()
+        test_skill.speak_dialog.assert_not_called()
 
     def test_christmas_day_is_scheduled(self, test_skill):
         active_events = [x[0] for x in test_skill.event_scheduler.events.events]
