@@ -1,11 +1,20 @@
 # Changelog
 
+## [1.0.1a7](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.1a7) (2026-03-06)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.1a6...1.0.1a7)
+
+**Merged pull requests:**
+
+- chore: loosen package restrictions [\#59](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/59) ([mikejgray](https://github.com/mikejgray))
+
 ## [1.0.1a6](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.1a6) (2026-03-06)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.1a5...1.0.1a6)
 
 **Merged pull requests:**
 
+- chore\(deps\): update actions/checkout action to v6 [\#57](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/57) ([renovate[bot]](https://github.com/apps/renovate))
 - chore: Configure Renovate [\#55](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/55) ([renovate[bot]](https://github.com/apps/renovate))
 
 ## [1.0.1a5](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.1a5) (2025-02-12)
