@@ -1,0 +1,46 @@
+{
+    "/dialog/bad_file.dialog": [
+        "Impossible d'ouvrir le fichier audio."
+    ],
+    "/dialog/invalid_law.dialog": [
+        "Je ne connais que les trois lois de la robotique, d\u00e9sol\u00e9e."
+    ],
+    "/dialog/languages.dialog": [
+        "Je ma\u00eetrise six millions de formes de communication."
+    ],
+    "/dialog/pod.dialog": [
+        "Je suis d\u00e9sol\u00e9e, Dave. J'ai bien peur de ne pas pouvoir faire \u00e7a."
+    ],
+    "/dialog/rock_paper_scissors_lizard_spock.dialog": [
+        "Les ciseaux coupent le papier, le papier recouvre la pierre, la pierre \u00e9crase le l\u00e9zard, le l\u00e9zard empoisonne Spock, Spock casse les ciseaux, les ciseaux d\u00e9capitent le l\u00e9zard, le l\u00e9zard mange le papier, le papier r\u00e9fute Spock, Spock vaporise la pierre, la pierre \u00e9crase les ciseaux."
+    ],
+    "/dialog/rule0.dialog": [
+        "Un robot ne peut pas porter atteinte \u00e0 l'humanit\u00e9 ni, par son inaction, permettre que l'humanit\u00e9 soit mise en danger."
+    ],
+    "/dialog/rule1.dialog": [
+        "Un robot ne peut pas porter atteinte \u00e0 un \u00eatre humain ni, par son inaction, permettre qu'un \u00eatre humain soit mis en danger."
+    ],
+    "/dialog/rule2.dialog": [
+        "Un robot doit ob\u00e9ir aux ordres donn\u00e9s par les \u00eatres humains, sauf si ces ordres entrent en conflit avec la Premi\u00e8re Loi."
+    ],
+    "/dialog/rule3.dialog": [
+        "Un robot ne peut pas porter atteinte \u00e0 un \u00eatre humain ni, par son inaction, permettre qu'un \u00eatre humain soit mis en danger. Un robot doit ob\u00e9ir aux ordres donn\u00e9s par les \u00eatres humains, sauf si ces ordres entrent en conflit avec la Premi\u00e8re Loi. Un robot doit prot\u00e9ger sa propre existence tant que cette protection n'entre pas en conflit avec la Premi\u00e8re ou la Deuxi\u00e8me Loi."
+    ],
+    "/dialog/santa.dialog": [
+        "Ho ho ho !",
+        "Joyeux No\u00ebl ! Ho ho ho !"
+    ],
+    "/dialog/singing.dialog": [
+        "Je veux bien chanter pour vous.",
+        "C'est parti.",
+        "Ma voix me rend un peu nerveuse, mais je me lance."
+    ],
+    "/dialog/stardate.dialog": [
+        "Date stellaire { stardate }",
+        "La date stellaire actuelle est { stardate }",
+        "Aujourd'hui, nous sommes \u00e0 la date stellaire { stardate }"
+    ],
+    "/dialog/too_shy.dialog": [
+        "Je suis trop timide pour essayer sans ma voix d'origine. Voulez-vous l'entendre ?"
+    ]
+}
