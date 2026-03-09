@@ -1,0 +1,3 @@
+Date stellaire {{ stardate }}
+La date stellaire actuelle est {{ stardate }}
+Aujourd'hui, nous sommes à la date stellaire {{ stardate }}
