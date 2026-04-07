@@ -1,4 +1,3 @@
-import pytest
 from skill_easter_eggs.stardate import StarDate
 
 

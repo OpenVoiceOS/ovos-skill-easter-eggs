@@ -25,7 +25,7 @@ class StarDate:
         return time.mktime(date.timetuple())
 
     def getStardate(self):
-        if self.date != None:
+        if self.date is not None:
             stardateRequested = parse(self.date)
         else:
             stardateRequested = datetime.now()
@@ -100,7 +100,7 @@ class StarDate:
 
             if self.verbose:
                 print("Argument Verbose : " + str(self.verbose))
-                if self.date != None:
+                if self.date is not None:
                     print("Argument Date : " + self.date)
                 else:
                     print("Argument Date : " + datetime.now().strftime("%Y-%m-%d %H:%M:%S"))

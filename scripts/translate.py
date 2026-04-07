@@ -30,15 +30,15 @@ for lang in target_langs:
 
         tx_lines = []
         with open(src) as f:
-            lines = [l for l in f.read().split("\n") if l and not l.startswith("#")]
+            lines = [line for line in f.read().split("\n") if line and not line.startswith("#")]
 
-        for l in lines:
-            expanded = expand_options(l)
-            for l2 in expanded:
+        for line in lines:
+            expanded = expand_options(line)
+            for expanded_line in expanded:
                 try:
-                    translated = tx.translate(l2, target=lang, source=src_lang)
+                    translated = tx.translate(expanded_line, target=lang, source=src_lang)
                     tx_lines.append(translated)
-                except:
+                except Exception:
                     continue
 
         with open(dst, "w") as f:
