@@ -5,8 +5,8 @@ from googletranslate_neon_plugin import GoogleTranslator
 
 tx = GoogleTranslator()
 
-src_lang = "en-us"
-target_langs = ["es-es", "de-de", "fr-fr", "it-it", "pt-pt"]
+src_lang = "en-US"
+target_langs = ["es-ES", "de-DE", "fr-FR", "it-IT", "pt-PT"]
 
 exts = [".voc", ".dialog", ".intent", ".entity"]
 res_folder = join(dirname(dirname(__file__)), "locale")

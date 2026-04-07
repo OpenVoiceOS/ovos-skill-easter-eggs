@@ -26,7 +26,7 @@ jsonf = join(desktop_dir, "skill.json")
 desktopf = join(desktop_dir, f"{repo}.desktop")
 skill_code = join(base_dir, "__init__.py")
 
-res_folder = join(base_dir, "locale", "en-us")
+res_folder = join(base_dir, "locale", "en-US")
 
 
 def read_samples(path):
