@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.2a2](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.2a2) (2026-04-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.2a1...1.0.2a2)
+
+**Merged pull requests:**
+
+- chore: migrate to OVOS standard workflows [\#68](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/68) ([mikejgray](https://github.com/mikejgray))
+- fix: rename bare lang code locale directories [\#65](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/65) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [1.0.2a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.2a1) (2026-03-09)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.1...1.0.2a1)
