@@ -1,8 +1,8 @@
 # Changelog
 
-## [1.0.2a2](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.2a2) (2026-04-09)
+## [1.0.2a3](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.2a3) (2026-04-09)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.2a1...1.0.2a2)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.2a1...1.0.2a3)
 
 **Merged pull requests:**
 
