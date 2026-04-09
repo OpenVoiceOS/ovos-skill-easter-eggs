@@ -25,9 +25,9 @@ for lang in os.listdir(locale):
             else:
                 fid = f
             with open(f"{root}/{f}") as fi:
-                strings = [l.replace("{{", "{").replace("}}", "}")
-                           for l in fi.read().split("\n") if l.strip()
-                           and not l.startswith("#")]
+                strings = [line.replace("{{", "{").replace("}}", "}")
+                           for line in fi.read().split("\n") if line.strip()
+                           and not line.startswith("#")]
 
             if fid.endswith(".intent"):
                 intents[fid] = strings

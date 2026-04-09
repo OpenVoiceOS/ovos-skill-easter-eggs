@@ -1,6 +1,6 @@
 # Specify intents to test
 # Basic intent match tests only:
-en-us:
+en-US:
   arnold_intent:
     - arnold say
     - terminator say
@@ -98,7 +98,7 @@ en-us:
     - speak the first law of robotics
     - speak first law of robotics
 
-de-de:
+de-DE:
   adult_mode_intent:
     - hurt me plenty
   arnold_intent:

@@ -1,0 +1,7 @@
+include requirements/requirements.txt
+include requirements/requirements-dev.txt
+include README.md
+include LICENSE
+include CHANGELOG.md
+recursive-include locale *
+recursive-include sounds *
