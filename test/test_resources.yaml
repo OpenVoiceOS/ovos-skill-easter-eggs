@@ -2,7 +2,7 @@
 
 # Specify languages to be tested
 languages:
-  - "en-us"
+  - "en-US"
 
 regex: []
 

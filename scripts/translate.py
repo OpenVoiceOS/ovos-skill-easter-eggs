@@ -5,8 +5,8 @@ from googletranslate_neon_plugin import GoogleTranslator
 
 tx = GoogleTranslator()
 
-src_lang = "en-us"
-target_langs = ["es-es", "de-de", "fr-fr", "it-it", "pt-pt"]
+src_lang = "en-US"
+target_langs = ["es-ES", "de-DE", "fr-FR", "it-IT", "pt-PT"]
 
 exts = [".voc", ".dialog", ".intent", ".entity"]
 res_folder = join(dirname(dirname(__file__)), "locale")
@@ -30,15 +30,15 @@ for lang in target_langs:
 
         tx_lines = []
         with open(src) as f:
-            lines = [l for l in f.read().split("\n") if l and not l.startswith("#")]
+            lines = [line for line in f.read().split("\n") if line and not line.startswith("#")]
 
-        for l in lines:
-            expanded = expand_options(l)
-            for l2 in expanded:
+        for line in lines:
+            expanded = expand_options(line)
+            for expanded_line in expanded:
                 try:
-                    translated = tx.translate(l2, target=lang, source=src_lang)
+                    translated = tx.translate(expanded_line, target=lang, source=src_lang)
                     tx_lines.append(translated)
-                except:
+                except Exception:
                     continue
 
         with open(dst, "w") as f:

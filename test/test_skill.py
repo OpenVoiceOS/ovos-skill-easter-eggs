@@ -137,7 +137,7 @@ class TestEasterEggSkill:
     def test_handle_hal_intent(self, test_skill, reset_skill_mocks):
         test_skill.handle_hal_intent(None)
         test_skill.play_audio.assert_called_once()
-        assert "skill_easter_eggs/sounds/hal/" in test_skill.play_audio.call_args.args[0]
+        assert "sounds/hal/" in test_skill.play_audio.call_args.args[0]
 
     def test_handle_dukenukem_intent_grandma_mode(self, test_skill, reset_skill_mocks):
         with patch("skill_easter_eggs.EasterEggsSkill.grandma_mode", True):
@@ -149,17 +149,17 @@ class TestEasterEggSkill:
         with patch("skill_easter_eggs.EasterEggsSkill.grandma_mode", False):
             test_skill.handle_dukenukem_intent(None)
         test_skill.play_audio.assert_called_once()
-        assert "skill_easter_eggs/sounds/dukenukem/" in test_skill.play_audio.call_args.args[0]
+        assert "sounds/dukenukem/" in test_skill.play_audio.call_args.args[0]
 
     def test_handle_arnold_intent(self, test_skill, reset_skill_mocks):
         test_skill.handle_arnold_intent(None)
         test_skill.play_audio.assert_called_once()
-        assert "skill_easter_eggs/sounds/arnold/" in test_skill.play_audio.call_args.args[0]
+        assert "sounds/arnold/" in test_skill.play_audio.call_args.args[0]
 
     def test_handle_bender_intent(self, test_skill, reset_skill_mocks):
         test_skill.handle_bender_intent(None)
         test_skill.play_audio.assert_called_once()
-        assert "skill_easter_eggs/sounds/bender/" in test_skill.play_audio.call_args.args[0]
+        assert "sounds/bender/" in test_skill.play_audio.call_args.args[0]
 
     def test_handle_glados_intent(self, test_skill, reset_skill_mocks):
         with patch("skill_easter_eggs.EasterEggsSkill._play_in_ocp") as mock_ocp:
@@ -171,7 +171,7 @@ class TestEasterEggSkill:
         test_skill.handle_conan_intent(None)
         test_skill.play_audio.assert_called_once()
         assert (
-            "skill_easter_eggs/sounds/conan/"
+            "sounds/conan/"
             in test_skill.play_audio.call_args.kwargs.get("filename", "")
         )
         assert test_skill.speak_dialog.called is False
@@ -180,7 +180,7 @@ class TestEasterEggSkill:
         test_skill.handle_bill_and_ted_intent(None)
         test_skill.play_audio.assert_called_once()
         assert (
-            "skill_easter_eggs/sounds/billandted/"
+            "sounds/billandted/"
             in test_skill.play_audio.call_args.kwargs.get("filename", "")
         )
         assert test_skill.speak_dialog.called is False
@@ -189,7 +189,7 @@ class TestEasterEggSkill:
         test_skill.handle_malibu_stacey_intent(None)
         test_skill.play_audio.assert_called_once()
         assert (
-            "skill_easter_eggs/sounds/malibustacey/"
+            "sounds/malibustacey/"
             in test_skill.play_audio.call_args.kwargs.get("filename", "")
         )
         assert test_skill.speak_dialog.called is False
@@ -222,7 +222,7 @@ class TestEasterEggSkill:
         test_skill.handle_sing_intent(None)
         test_skill.play_audio.assert_called_once()
         assert (
-            "skill_easter_eggs/sounds/sing/"
+            "sounds/sing/"
             in test_skill.play_audio.call_args.kwargs.get("filename", "")
         )
         test_skill.speak_dialog.assert_called_once_with("singing", wait=5)

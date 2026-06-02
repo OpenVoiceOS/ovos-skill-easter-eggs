@@ -1,10 +1,9 @@
 from ovos_skills_manager import SkillEntry
 from os.path import exists, join, dirname
-from shutil import rmtree
 import os
 from os import makedirs
 import json
-from ovos_utils.bracket_expansion import expand_parentheses, expand_options
+from ovos_utils.bracket_expansion import expand_options
 
 
 branch = "dev"
@@ -27,7 +26,7 @@ jsonf = join(desktop_dir, "skill.json")
 desktopf = join(desktop_dir, f"{repo}.desktop")
 skill_code = join(base_dir, "__init__.py")
 
-res_folder = join(base_dir, "locale", "en-us")
+res_folder = join(base_dir, "locale", "en-US")
 
 
 def read_samples(path):
