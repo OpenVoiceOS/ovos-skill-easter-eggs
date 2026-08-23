@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skill-easter-eggs"
+dynamic = ["version"]
+description = "Some funny things for OpenVoiceOS, mostly quotes from movies"
+readme = "README.md"
+license = {text = "BSD-3-Clause"}
+authors = [
+    {name = "JarbasAi", email = "jarbasai@mailfence.com"}
+]
+keywords = ["ovos", "skill", "plugin"]
+requires-python = ">=3.10"
+dependencies = [
+    "python-dateutil~=2.9.0",
+    "ovos-utils>=0.0.38",
+    "ovos_workshop>=0.0.15",
+    "ovos_bus_client>=0.0.6",
+    "ovos-number-parser>=0.0.1",
+    "ovos-mark1-utils~=0.0.1"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0,<9",
+    "pytest-cov>=4.0.0",
+    "ovos-config",
+    "ovos-plugin-manager>=2.1.0,<3.0.0"
+]
+# End-to-end intent-routing extras. ovoscope pulls a prerelease ovos-utils
+# (floor-pinned so pip resolves it without --pre); the adapt and padatious
+# pipeline plugins build the C fann2 extension, so this extra is only wired
+# into the ovoscope workflow (which provides swig + libfann-dev).
+e2e = [
+    "ovoscope>=1.4.0a1,<2.0.0",
+    "ovos-utils>=0.12.0a1",
+    "pytest>=7.0.0,<9",
+    "pytest-cov>=4.0.0",
+    "pytest-timeout>=2.0.0",
+    "ovos-adapt-parser>=1.0.9",
+    "ovos-padatious>=1.4.3"
+]
+
+[project.urls]
+Homepage = "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs"
+
+[project.entry-points."opm.skill"]
+"skill-easter-eggs.openvoiceos" = "skill_easter_eggs:EasterEggsSkill"
+
+[tool.setuptools]
+packages = ["skill_easter_eggs"]
+
+[tool.setuptools.package-dir]
+skill_easter_eggs = ""
+
+[tool.setuptools.dynamic]
+version = {attr = "skill_easter_eggs.version.__version__"}
+
+[tool.setuptools.package-data]
+skill_easter_eggs = [
+    "*.json",
+    "locale/**/*",
+    "sounds/**/*",
+]
+
+[tool.pytest.ini_options]
+addopts = "--cov=skill_easter_eggs --cov-report=term-missing"
+
+[tool.coverage.run]
+omit = [
+    "*/version.py",
+    "test/*",
+]

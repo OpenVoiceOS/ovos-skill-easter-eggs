@@ -1,4 +1,0 @@
-ovos_plugin_manager
-pytest
-pytest-cov
-ovos_config

@@ -9,7 +9,6 @@ en-US:
     - current stardate
     - current star date
     - current startdate
-    - current start date
   adult_mode_intent:
     - hurt me plenty
   grandma_mode_intent:
@@ -59,8 +58,6 @@ en-US:
   rock_paper_scissors_lizard_spock_intent:
     - rock paper scissors lizard spock
   bill_and_ted_intent:
-    - stallion
-    - stallions
     - wild stallions
     - wild stallion
   malibu_stacey_intent:
