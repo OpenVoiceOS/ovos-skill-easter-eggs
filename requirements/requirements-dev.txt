@@ -2,3 +2,5 @@ ovos_plugin_manager
 pytest
 pytest-cov
 ovos_config
+padacioso>=1.0.2a3
+pyyaml
