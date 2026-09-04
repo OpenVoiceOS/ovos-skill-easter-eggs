@@ -7,23 +7,7 @@ languages:
 regex: []
 
 # vocab is lowercase .voc file basenames
-vocab:
-  - arnold_keyword
-  - bender_keyword
-  - duke_nukem_keyword
-  - glados_keyword
-  - hal_keyword
-  - languages_you_speak_keyword
-  - pod_bay_doors_keyword
-  - portal_keyword
-  - rock_paper_scissors_lizard_spock_keyword
-  - stardate_keyword
-  - adult_mode_keyword
-  - grandma_mode_keyword
-  - conan_keyword
-  - bill_and_ted_keyword
-  - malibu_stacey_keyword
-  - sing_keyword
+vocab: []
 
 # dialog is .dialog file basenames (case-sensitive)
 dialog:
@@ -42,22 +26,22 @@ intents:
   # Padatious intents are the `.intent` file names
   padatious:
     - law_of_robotics.intent
+    - stardate_intent.intent
+    - pod_bay_doors_intent.intent
+    - rock_paper_scissors_lizard_spock_intent.intent
+    - languages_you_speak_intent.intent
+    - portal_intent.intent
+    - hal_intent.intent
+    - duke_nukem_intent.intent
+    - arnold_intent.intent
+    - bender_intent.intent
+    - glados_intent.intent
+    - adult_mode_intent.intent
+    - grandma_mode_intent.intent
+    - conan_intent.intent
+    - bill_and_ted_intent.intent
+    - malibu_stacey_intent.intent
+    - sing_intent.intent
 
   # Adapt intents are the names passed to `IntentBuilder`
-  adapt:
-    - stardate_intent
-    - pod_bay_doors_intent
-    - rock_paper_scissors_lizard_spock_intent
-    - languages_you_speak_intent
-    - portal_intent
-    - hal_intent
-    - duke_nukem_intent
-    - arnold_intent
-    - bender_intent
-    - glados_intent
-    - adult_mode_intent
-    - grandma_mode_intent
-    - conan_intent
-    - bill_and_ted_intent
-    - malibu_stacey_intent
-    - sing_intent
+  adapt: []
