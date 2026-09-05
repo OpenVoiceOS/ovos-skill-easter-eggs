@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.3a2](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.3a2) (2026-09-05)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.3a1...1.0.3a2)
+
+**Merged pull requests:**
+
+- refactor: migrate Adapt intents to lang-agnostic .intent [\#77](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/77) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [1.0.3a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.3a1) (2026-09-05)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.2...1.0.3a1)
