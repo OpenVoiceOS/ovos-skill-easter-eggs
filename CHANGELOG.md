@@ -1,23 +1,13 @@
 # Changelog
 
-## [1.0.2a3](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.2a3) (2026-04-09)
+## [1.0.3a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.3a1) (2026-09-05)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.2a1...1.0.2a3)
-
-**Merged pull requests:**
-
-- chore: migrate to OVOS standard workflows [\#68](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/68) ([mikejgray](https://github.com/mikejgray))
-- fix: rename bare lang code locale directories [\#65](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/65) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
-
-## [1.0.2a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.2a1) (2026-03-09)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.1...1.0.2a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.2...1.0.3a1)
 
 **Merged pull requests:**
 
-- Add fr-fr locale [\#64](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/64) ([goldyfruit](https://github.com/goldyfruit))
-- Merge pull request \#62 from OpenVoiceOS/dev [\#63](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/63) ([mikejgray](https://github.com/mikejgray))
-- 1.0.1 [\#62](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/62) ([github-actions[bot]](https://github.com/apps/github-actions))
+- docs: rewrite README in Simplified Technical English [\#74](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/74) ([JarbasAl](https://github.com/JarbasAl))
+- feat: add da-DK and sv-SE translations [\#73](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/73) ([andlo](https://github.com/andlo))
 
 
 
