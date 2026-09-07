@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0a2](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.1.0a2) (2026-09-07)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.1.0a1...1.1.0a2)
+
+**Merged pull requests:**
+
+- test: add golden e2e suite [\#75](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/75) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [1.1.0a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.1.0a1) (2026-09-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.4a1...1.1.0a1)
