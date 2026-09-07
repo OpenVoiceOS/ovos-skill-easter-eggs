@@ -1,12 +1,18 @@
 # Easter Eggs
 
-pop culture references skill
+This skill for [OpenVoiceOS](https://github.com/OpenVoiceOS) answers pop-culture references and movie quotes.
 
-## Description
+## Install
 
-Some funny things for OpenVoiceOS, mostly quotes from movies
+Install the skill with pip.
 
-## Examples
+```bash
+pip install ovos-skill-easter-eggs
+```
+
+## Usage
+
+Say one of these phrases to the assistant.
 
 - "Current stardate?"
 - "Open the pod bay doors."
@@ -23,13 +29,22 @@ Some funny things for OpenVoiceOS, mostly quotes from movies
 - "You know the best band in the world? Wyld Stallions?"
 - "Sing me a song"
 
-## Grandma Mode
+### Grandma mode
 
-This skill has some spicy language options. It starts in grandma mode by default. To disable grandma mode, say "hurt me plenty."
+This skill has some spicy language options. It starts in grandma mode by default. Say "hurt me plenty" to disable grandma mode.
 
-If you want to go back into grandma mode, say "I'm too young to die."
+Say "I'm too young to die" to turn grandma mode back on.
+
+## Related projects
+
+- [OpenVoiceOS/OpenVoiceOS](https://github.com/OpenVoiceOS/OpenVoiceOS) — the core assistant platform this skill runs on.
+- [OpenVoiceOS/ovos-workshop](https://github.com/OpenVoiceOS/ovos-workshop) — the skill framework this skill builds on.
 
 ## Credits
 
 - JarbasAI
 - mikejgray (revival)
+
+## License
+
+This project uses the Apache License 2.0. See [LICENSE](LICENSE) for the full text.

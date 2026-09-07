@@ -1,0 +1,3 @@
+Stjärndatum {{ stardate }}
+Aktuellt stjärndatum är {{ stardate }}
+Idag är det stjärndatum {{ stardate }}
