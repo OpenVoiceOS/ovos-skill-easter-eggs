@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.0a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.1.0a1) (2026-09-07)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.4a1...1.1.0a1)
+
+**Merged pull requests:**
+
+- feat: oc-FR locale parity [\#82](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/82) ([JarbasAl](https://github.com/JarbasAl))
+- feat: es-ES ca-ES pt-PT it-IT kab pt-BR nl-NL locale parity [\#81](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/81) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [1.0.4a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.4a1) (2026-09-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.3a2...1.0.4a1)
