@@ -1,0 +1,3 @@
+Data estel·lar {{ stardate }}
+La data estel·lar actual és {{ stardate }}
+Avui és la data estel·lar {{ stardate }}

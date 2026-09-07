@@ -1,0 +1,3 @@
+Data stellare {{ stardate }}
+La data stellare attuale è {{ stardate }}
+Oggi è la data stellare {{ stardate }}

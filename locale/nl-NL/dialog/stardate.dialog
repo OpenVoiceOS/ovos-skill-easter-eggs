@@ -1,0 +1,3 @@
+Sterdatum {{ stardate }}
+De huidige sterdatum is {{ stardate }}
+Vandaag is het sterdatum {{ stardate }}
