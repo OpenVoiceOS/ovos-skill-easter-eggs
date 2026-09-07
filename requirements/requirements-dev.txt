@@ -1,6 +1,8 @@
 ovos_plugin_manager
 pytest
 pytest-cov
+pytest-timeout
 ovos_config
 padacioso>=1.0.2a3
 pyyaml
+ovoscope>=1.5.0
