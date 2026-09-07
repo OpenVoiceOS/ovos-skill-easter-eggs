@@ -1,0 +1,3 @@
+Fecha estelar {{ stardate }}
+La fecha estelar actual es {{ stardate }}
+Hoy es la fecha estelar {{ stardate }}
