@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.4a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.4a1) (2026-09-07)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.3a2...1.0.4a1)
+
+**Merged pull requests:**
+
+- fix: ship every en-US intent in all locales [\#80](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/80) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [1.0.3a2](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.0.3a2) (2026-09-05)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.0.3a1...1.0.3a2)
