@@ -102,5 +102,10 @@ setup(
     package_data={SKILL_PKG: find_resource_files()},
     include_package_data=True,
     entry_points={"ovos.plugin.skill": PLUGIN_ENTRY_POINT},
-    extras_require={"test": get_requirements("requirements/requirements-dev.txt")}
+    extras_require={
+        "test": get_requirements("requirements/requirements-dev.txt"),
+        # alias for gh-automations' coverage workflow, which requests the
+        # "dev" extra before falling back to "test"
+        "dev": get_requirements("requirements/requirements-dev.txt"),
+    }
 )
