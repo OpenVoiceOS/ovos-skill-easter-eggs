@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0a3](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.1.0a3) (2026-09-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.1.0a2...1.1.0a3)
+
+**Merged pull requests:**
+
+- translate\(kab\): update rule3.dialog [\#95](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/95) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab\): update santa.dialog [\#94](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/94) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab\): update sing\_intent.intent [\#93](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/93) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab\): update singing.dialog [\#92](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/92) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab\): update too\_shy.dialog [\#90](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/90) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab\): update languages\_you\_speak\_intent.intent [\#89](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/89) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [1.1.0a2](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.1.0a2) (2026-09-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.1.0a1...1.1.0a2)
