@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.1.0a6](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.1.0a6) (2026-09-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.1.0a5...1.1.0a6)
+
+## [1.1.0a5](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.1.0a5) (2026-09-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.1.0a4...1.1.0a5)
+
+**Merged pull requests:**
+
+- translate\(kab\): update bad\_file.dialog [\#105](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/105) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
+## [1.1.0a4](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.1.0a4) (2026-09-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.1.0a3...1.1.0a4)
+
+**Merged pull requests:**
+
+- translate\(kab\): update invalid\_law.dialog [\#100](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/100) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab\): update law\_of\_robotics.intent [\#99](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/99) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab\): update rule2.dialog [\#98](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/98) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab\): update rule1.dialog [\#97](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/97) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [1.1.0a3](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.1.0a3) (2026-09-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.1.0a2...1.1.0a3)
