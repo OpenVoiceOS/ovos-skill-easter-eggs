@@ -1,13 +1,12 @@
 # Changelog
 
-## [1.1.0a11](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.1.0a11) (2026-09-24)
+## [1.1.0a8](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.1.0a8) (2026-09-24)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.1.0a6...1.1.0a11)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.1.0a7...1.1.0a8)
 
-**Merged pull requests:**
+## [1.1.0a7](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.1.0a7) (2026-09-24)
 
-- translate\(kab\): update duke\_nukem\_intent.intent [\#101](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/101) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
-- translate\(kab\): update rule0.dialog [\#96](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/96) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.1.0a6...1.1.0a7)
 
 ## [1.1.0a6](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.1.0a6) (2026-09-24)
 
