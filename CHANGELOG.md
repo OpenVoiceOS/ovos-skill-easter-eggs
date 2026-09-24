@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.1a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.2.1a1) (2026-09-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.2.0a1...1.2.1a1)
+
+**Merged pull requests:**
+
+- fix\(dialog\): use {stardate} slot syntax in every locale [\#122](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/122) ([mikejgray](https://github.com/mikejgray))
+
 ## [1.2.0a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.2.0a1) (2026-09-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.1.0a15...1.2.0a1)
