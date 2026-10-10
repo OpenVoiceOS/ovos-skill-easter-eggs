@@ -1,3 +1,8 @@
 arnold say
 terminator say
 schwarzenegger say
+what would (arnold|the terminator|schwarzenegger|arnold schwarzenegger) say
+(arnold|terminator|the terminator|schwarzenegger) say something
+say something like (arnold|the terminator|schwarzenegger|arnold schwarzenegger)
+(talk|speak|sound) like (arnold|the terminator|schwarzenegger|arnold schwarzenegger)
+do your (arnold|terminator|schwarzenegger) (impression|voice)
