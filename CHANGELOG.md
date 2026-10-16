@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.4a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.2.4a1) (2026-10-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.2.3a1...1.2.4a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): ship missing dialogs for de-DE and gl-ES, drop dead keyword vocab [\#88](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/88) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [1.2.3a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.2.3a1) (2026-10-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.2.2...1.2.3a1)
