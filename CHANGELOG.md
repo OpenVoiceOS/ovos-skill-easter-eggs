@@ -1,38 +1,12 @@
 # Changelog
 
-## [1.2.4a3](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.2.4a3) (2026-10-16)
+## [1.2.5a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.2.5a1) (2026-10-16)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.2.4a2...1.2.4a3)
-
-**Merged pull requests:**
-
-- chore: merge master into dev to restore shared history [\#130](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/130) ([mikejgray](https://github.com/mikejgray))
-- Release 1.2.2a1 [\#126](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/126) ([github-actions[bot]](https://github.com/apps/github-actions))
-- Release 1.0.2a3 [\#71](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/71) ([github-actions[bot]](https://github.com/apps/github-actions))
-
-## [1.2.4a2](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.2.4a2) (2026-10-16)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.2.4a1...1.2.4a2)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.2.4...1.2.5a1)
 
 **Merged pull requests:**
 
-- translate\(kab\): update grandma\_mode\_intent.intent [\#102](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/102) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
-
-## [1.2.4a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.2.4a1) (2026-10-16)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.2.3a1...1.2.4a1)
-
-**Merged pull requests:**
-
-- fix\(locale\): ship missing dialogs for de-DE and gl-ES, drop dead keyword vocab [\#88](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/88) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
-
-## [1.2.3a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.2.3a1) (2026-10-16)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.2.2...1.2.3a1)
-
-**Merged pull requests:**
-
-- translate\(kab\): update bad\_file.dialog [\#124](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/124) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- chore\(translations\): drop dead vocabs.json source files [\#132](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/132) ([mikejgray](https://github.com/mikejgray))
 
 
 
