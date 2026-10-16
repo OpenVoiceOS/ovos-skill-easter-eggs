@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.4a2](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.2.4a2) (2026-10-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.2.4a1...1.2.4a2)
+
+**Merged pull requests:**
+
+- translate\(kab\): update grandma\_mode\_intent.intent [\#102](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/102) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [1.2.4a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.2.4a1) (2026-10-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.2.3a1...1.2.4a1)
