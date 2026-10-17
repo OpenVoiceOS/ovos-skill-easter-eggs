@@ -134,10 +134,6 @@ class EasterEggsSkill(OVOSSkill):
     def handle_rock_paper_scissors_lizard_spock_intent(self, _):
         self.speak_dialog("rock_paper_scissors_lizard_spock")
 
-    @intent_handler("languages_you_speak_intent.intent")
-    def handle_number_of_languages_intent(self, _):
-        self.speak_dialog("languages")
-
     @intent_handler("portal_intent.intent")
     def handle_portal_intent(self, _):
         path, files = self.get_reference_files("sounds/portal", "mp3")
