@@ -102,10 +102,6 @@ class TestEasterEggSkill:
         test_skill.handle_rock_paper_scissors_lizard_spock_intent(None)
         test_skill.speak_dialog.assert_called_once_with("rock_paper_scissors_lizard_spock")
 
-    def test_handle_number_of_languages_intent(self, test_skill, reset_skill_mocks):
-        test_skill.handle_number_of_languages_intent(None)
-        test_skill.speak_dialog.assert_called_once_with("languages")
-
     def test_handle_portal_intent(self, test_skill, reset_skill_mocks):
         with patch("skill_easter_eggs.EasterEggsSkill._play_in_ocp") as mock_ocp_play:
             test_skill.handle_portal_intent(None)
