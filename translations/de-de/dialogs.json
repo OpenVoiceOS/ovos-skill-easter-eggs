@@ -19,9 +19,6 @@
     "/dialog/bad_file.dialog": [
         "konnte keine Sounddatei \u00f6ffnen"
     ],
-    "/dialog/languages.dialog": [
-        "Ich beherrschte sechs Millionen Formen der Kommunikation"
-    ],
     "/dialog/rule2.dialog": [
         "Ein Roboter muss den Befehlen des Menschen gehorchen, au\u00dfer wenn solche Befehle mit dem Ersten Gesetz in Konflikt geraten."
     ]
