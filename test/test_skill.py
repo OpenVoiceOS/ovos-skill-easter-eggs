@@ -10,7 +10,6 @@ from unittest.mock import Mock, patch
 import pytest
 from genericpath import isdir
 from ovos_bus_client import Message
-from ovos_config.locale import setup_locale
 from ovos_plugin_manager.skills import find_skill_plugins
 from ovos_utils.fakebus import FakeBus
 from skill_easter_eggs import EasterEggsSkill
@@ -53,7 +52,6 @@ class TestEasterEggSkill:
     if not isdir(test_fs):
         makedirs(data_dir)
         makedirs(conf_dir)
-    setup_locale()
 
     with open(join(conf_dir, "mycroft.conf"), "w", encoding="utf-8") as f:
         f.write(dumps({"Audio": {"backends": {"ocp": {"active": True}}}}))
