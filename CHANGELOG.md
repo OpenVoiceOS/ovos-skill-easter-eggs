@@ -1,12 +1,20 @@
 # Changelog
 
-## [1.2.5a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.2.5a1) (2026-10-16)
+## [1.3.0a2](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.3.0a2) (2026-11-04)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.2.4...1.2.5a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.3.0a1...1.3.0a2)
 
 **Merged pull requests:**
 
-- chore\(translations\): drop dead vocabs.json source files [\#132](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/132) ([mikejgray](https://github.com/mikejgray))
+- chore!: drop Python 3.10 support [\#138](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/138) ([mikejgray](https://github.com/mikejgray))
+
+## [1.3.0a1](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/tree/1.3.0a1) (2026-10-22)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/compare/1.2.5...1.3.0a1)
+
+**Merged pull requests:**
+
+- feat: remove the languages easter egg; diagnostics answers it [\#134](https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/pull/134) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
