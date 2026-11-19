@@ -62,7 +62,7 @@ def _speak_dialogs(mc, text, session_id):
         "ships as a resource but is never spoken. handle_robotic_laws_intent "
         "(__init__.py) only ever calls speak_dialog('rule1'/'rule2'/'rule3') "
         "or 'invalid_law' -- there is no branch for law == '0'. Separately, "
-        "extract_number('zeroth', ordinals=True) does not resolve 'zeroth' "
+        "the number reader does not resolve 'zeroth' "
         "to a number, so 'what is the zeroth law of robotics' falls into "
         "the `if not law` branch and recites all three laws instead of "
         "either speaking rule0 or invalid_law. rule0.dialog is effectively "

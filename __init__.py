@@ -5,11 +5,11 @@ from os import getenv, listdir
 from os.path import dirname, join
 
 from dateutil.tz import gettz
+from numtag import tag_numbers
 from ovos_bus_client.apis.ocp import OCPInterface
 from ovos_bus_client.message import Message
 from ovos_config.locale import get_default_tz
 from ovos_mark1.faceplate.animations import FallingDots
-from ovos_number_parser import extract_number
 from ovos_workshop.decorators import intent_handler, skill_api_method
 from ovos_workshop.skills import OVOSSkill
 from skill_easter_eggs.constants import ANNUAL, ASCII_SNOW, SPICY_SOUNDS
@@ -106,8 +106,8 @@ class EasterEggsSkill(OVOSSkill):
 
     @intent_handler("law_of_robotics.intent")
     def handle_robotic_laws_intent(self, message: Message):
-        law = str(message.data.get("ordinal", ""))
-        law = extract_number(law, ordinals=True, lang=self.lang)
+        mentions = tag_numbers(str(message.data.get("ordinal", "")), self.lang)
+        law = mentions[0].value if mentions else ""
         self.log.debug("law: %s", law)
         if not law:
             self.log.debug("No specific law detected, reciting all three")
@@ -115,8 +115,6 @@ class EasterEggsSkill(OVOSSkill):
             self.speak_dialog("rule2")
             self.speak_dialog("rule3")
             return
-        # lingua-franca currently returns a number, but let's not trust, let's ensure
-        law = str(law)
         if law == "1":
             self.log.debug("First law of robotics requested")
             self.speak_dialog("rule1")
