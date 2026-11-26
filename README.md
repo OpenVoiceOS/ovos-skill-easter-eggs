@@ -18,7 +18,6 @@ Say one of these phrases to the assistant.
 - "Open the pod bay doors."
 - "First law of robotics?"
 - "How to play rock paper scissors lizard spock?"
-- "How many languages do you speak?"
 - "Do you like Portal?"
 - "What would Duke Nukem say?"
 - "What would HAL 9000 say?"

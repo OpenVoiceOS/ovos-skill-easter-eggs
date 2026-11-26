@@ -12,7 +12,6 @@ vocab: []
 # dialog is .dialog file basenames (case-sensitive)
 dialog:
   - bad_file
-  - languages
   - pod
   - rock_paper_scissors_lizard_spock
   - rule0
@@ -29,7 +28,6 @@ intents:
     - stardate_intent.intent
     - pod_bay_doors_intent.intent
     - rock_paper_scissors_lizard_spock_intent.intent
-    - languages_you_speak_intent.intent
     - portal_intent.intent
     - hal_intent.intent
     - duke_nukem_intent.intent

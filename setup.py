@@ -92,6 +92,7 @@ setup(
     version=get_version(),
     url=f"https://github.com/OpenVoiceOS/{SKILL_NAME}",
     license="BSD-3-Clause",
+    python_requires=">=3.11",
     install_requires=get_requirements("requirements/requirements.txt"),
     author="Jarbas",
     author_email="jarbas@openvoiceos.com",

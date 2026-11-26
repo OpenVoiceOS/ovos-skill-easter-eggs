@@ -58,11 +58,6 @@ en-US:
     - how nine thousand say
     - what would hal 9000 say
     - say something like hal
-  languages_you_speak_intent:
-    - languages do you speak
-    - languages can you speak
-    - how many languages do you speak
-    - what languages can you speak
   pod_bay_doors_intent:
     - open the pod bay doors
     - open pod bay doors
@@ -158,9 +153,6 @@ de-DE:
     - HAL 9000 sagen
     - all sagen
     - all 9000 sagen
-  languages_you_speak_intent:
-    - Welche Sprachen sprichst du
-    - Welche Sprachen kannst du sprechen
   #  lawkeyword:
   #    - Rechte
   #    - Gesetze
