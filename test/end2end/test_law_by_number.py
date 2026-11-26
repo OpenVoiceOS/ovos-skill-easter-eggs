@@ -47,3 +47,15 @@ def _spoken(mc, text, lang):
 def test_second_law_is_spoken(minicroft, lang, text):
     rule2 = (LOCALE / lang / "dialog" / "rule2.dialog").read_text(encoding="utf-8").strip()
     assert _spoken(minicroft, text, lang) == [rule2]
+
+
+@pytest.mark.timeout(60)
+@pytest.mark.xfail(
+    strict=True,
+    reason="DEFECT: locale/en-US/dialog/rule3.dialog holds all three laws, not the Third Law only",
+)
+def test_third_law_is_spoken_alone(minicroft):
+    assert _spoken(minicroft, "what is the third law of robotics", "en-US") == [
+        "A robot must protect its own existence as long as such protection "
+        "does not conflict with the First or Second Laws."
+    ]
