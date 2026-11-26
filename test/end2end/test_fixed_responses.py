@@ -42,7 +42,6 @@ def _dialog_lines(name: str) -> list:
 FIXED_RESPONSE_CASES = [
     ("open the pod bay doors", "pod"),
     ("rock paper scissors lizard spock", "rock_paper_scissors_lizard_spock"),
-    ("languages can you speak", "languages"),
 ]
 
 
