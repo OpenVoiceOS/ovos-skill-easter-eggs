@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skill-easter-eggs"
+dynamic = ["version"]
+readme = "README.md"
+license = {text = "BSD-3-Clause"}
+authors = [{name = "Jarbas", email = "jarbas@openvoiceos.com"}]
+requires-python = ">=3.11"
+dependencies = [
+    "python-dateutil~=2.9.0",
+    "ovos-utils>=0.0.38",
+    "ovos_workshop>=0.0.15",
+    "ovos_bus_client>=0.0.6",
+    "numtag>=0.40.0a1",
+    "ovos-mark1-utils~=0.0.1",
+]
+
+[project.optional-dependencies]
+test = [
+    "ovos_plugin_manager",
+    "pytest",
+    "pytest-cov",
+    "pytest-timeout",
+    "ovos_config",
+    "padacioso>=1.0.2a3",
+    "pyyaml",
+    "ovoscope>=1.5.0",
+]
+# gh-automations' coverage workflow requests "dev" before "test"
+dev = [
+    "ovos_plugin_manager",
+    "pytest",
+    "pytest-cov",
+    "pytest-timeout",
+    "ovos_config",
+    "padacioso>=1.0.2a3",
+    "pyyaml",
+    "ovoscope>=1.5.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/OpenVoiceOS/skill-easter-eggs"
+
+[project.entry-points."ovos.plugin.skill"]
+"skill-easter-eggs.openvoiceos" = "skill_easter_eggs:EasterEggsSkill"
+
+[tool.setuptools]
+packages = ["skill_easter_eggs"]
+include-package-data = true
+
+[tool.setuptools.package-dir]
+skill_easter_eggs = "."
+
+[tool.setuptools.package-data]
+skill_easter_eggs = ["skill.json", "locale/**/*", "sounds/**/*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "skill_easter_eggs._version.__version__"}
+
+[tool.pytest.ini_options]
+addopts = "--cov=skill_easter_eggs --cov-report=term-missing"
+
+[tool.coverage.run]
+omit = ["*/version.py", "*/_version.py"]

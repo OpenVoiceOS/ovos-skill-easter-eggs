@@ -1,6 +1,7 @@
 # pylint: disable=unused-import,missing-docstring,invalid-name
 import random
 from datetime import datetime
+from fractions import Fraction
 from os import getenv, listdir
 from os.path import dirname, join
 
@@ -9,11 +10,24 @@ from ovos_bus_client.apis.ocp import OCPInterface
 from ovos_bus_client.message import Message
 from ovos_config.locale import get_default_tz
 from ovos_mark1.faceplate.animations import FallingDots
-from ovos_number_parser import extract_number
 from ovos_workshop.decorators import intent_handler, skill_api_method
 from ovos_workshop.skills import OVOSSkill
+from numtag import Reason, tag_numbers
 from skill_easter_eggs.constants import ANNUAL, ASCII_SNOW, SPICY_SOUNDS
 from skill_easter_eggs.stardate import StarDate
+
+
+def extract_number(utterance: str, lang: str) -> int | None:
+    """The number in the utterance, cardinal or ordinal, or None.
+
+    A mention with the article reason is no number. Of the other
+    mentions, the highest confidence wins.
+    """
+    mentions = [m for m in tag_numbers(utterance, lang)
+                if Reason.ARTICLE not in m.reasons]
+    if not mentions:
+        return None
+    return int(Fraction(max(mentions, key=lambda m: m.confidence).value))
 
 
 class EasterEggsSkill(OVOSSkill):
@@ -107,7 +121,7 @@ class EasterEggsSkill(OVOSSkill):
     @intent_handler("law_of_robotics.intent")
     def handle_robotic_laws_intent(self, message: Message):
         law = str(message.data.get("ordinal", ""))
-        law = extract_number(law, ordinals=True, lang=self.lang)
+        law = extract_number(law, self.lang)
         self.log.debug("law: %s", law)
         if not law:
             self.log.debug("No specific law detected, reciting all three")
@@ -115,7 +129,6 @@ class EasterEggsSkill(OVOSSkill):
             self.speak_dialog("rule2")
             self.speak_dialog("rule3")
             return
-        # lingua-franca currently returns a number, but let's not trust, let's ensure
         law = str(law)
         if law == "1":
             self.log.debug("First law of robotics requested")
